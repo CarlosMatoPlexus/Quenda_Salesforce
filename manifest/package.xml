@@ -36,6 +36,7 @@
         <members>QSF_WS_InfoREST</members>
         <members>QSF_WS_InfoREST_Test</members>
         <members>QSF_WS_PUT_Controller</members>
+        <members>SingleRequestMock</members>
         <name>ApexClass</name>
     </types>
     <!-- PÁGINAS VISUALFORCE -->
@@ -61,6 +62,10 @@
         <members>User.QSF_Place_Id__c</members>
         <members>User.QSF_Place__c</members>
         <members>User.QSF_Quenda_User_Id__c</members>
+        <members>Contact.Name</members>
+        <members>Contact.IdentityNumber__c</members>        
+        <members>Contact.Age__c</members>
+        <members>Interaction__c.PointofDelivery__c</members>
         <name>CustomField</name>
     </types>
     <!-- FLOWS -->
@@ -225,5 +230,12 @@
         <members>CL_ReclamosLatam: InteraccionesQuenda</members> 
         <name>ReportFolder</name>
     </types>-->
+    
+    <!-- Custom setting -->
+    <types>
+        <members>OneOrg__c</members>
+        <name>CustomObject</name> <!-- o CustomObject si es setting -->
+    </types>
+
     <version>62.0</version>
 </Package>

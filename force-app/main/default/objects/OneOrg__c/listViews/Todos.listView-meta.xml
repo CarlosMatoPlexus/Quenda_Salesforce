@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Todos</fullName>
+    <columns>SETUP_OWNER_NAME</columns>
+    <columns>B2B__c</columns>
+    <columns>B2C__c</columns>
+    <columns>BrasilTriggers__c</columns>
+    <columns>BrasilValidationRules__c</columns>
+    <columns>BrasilWorkflow__c</columns>
+    <columns>ChileTriggers__c</columns>
+    <columns>ChileValidationRules__c</columns>
+    <columns>ChileWorkflow__c</columns>
+    <columns>ColombiaTriggers__c</columns>
+    <columns>ColombiaValidationRules__c</columns>
+    <columns>ColombiaWorkflow__c</columns>
+    <columns>PeruTriggers__c</columns>
+    <columns>PeruValidationRules__c</columns>
+    <columns>PeruWorkflow__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos</label>
+    <language>es</language>
+</ListView>
