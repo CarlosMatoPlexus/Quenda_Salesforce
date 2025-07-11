@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Interação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Interações</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Número da Interação</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Interaction Argentina --></label>
+        <name>InteractionArgentina</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Interaction Brasil --></label>
+        <name>InteractionBrasil</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Interaction Chile --></label>
+        <name>InteractionChile</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Interaction Colombia --></label>
+        <name>InteractionColombia</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Interaction Peru --></label>
+        <name>InteractionPeru</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Interaction Peru CTI --></label>
+        <name>Interaction_Peru_CTI</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Não é possible modificar ao Motivo da interação se ela estiver fechada.</errorMessage>
+        <name>ModifyInteractionReason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El teléfono no es válido. Asegúrese de ingresar un número de teléfono de 8 a 10 dígitos. Debe ser numérico. --></errorMessage>
+        <name>Numero_telefonico_8_a_10_digitos</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Você não tem permissão para alterar o proprietário da interação para Usuário da Integración Brasil --></errorMessage>
+        <name>OwnerAssignmentNotAllowed</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- ComprobanteDeAtencion --></label>
+        <name>ComprobanteDeAtencion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ComprobanteDeAtencion_Lightning --></label>
+        <name>ComprobanteDeAtencion_Lightning</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Prioridad --></help>
+    <label>Prioridade</label>
+    <name>Priority__c</name>
+    <picklistValues>
+        <masterLabel>N</masterLabel>
+        <translation><!-- N --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N1</masterLabel>
+        <translation><!-- N1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N2</masterLabel>
+        <translation><!-- N2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P</masterLabel>
+        <translation><!-- P --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P1</masterLabel>
+        <translation><!-- P1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P2</masterLabel>
+        <translation><!-- P2 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

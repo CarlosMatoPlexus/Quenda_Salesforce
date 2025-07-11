@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numero_telefonico_8_a_10_digitos</fullName>
+    <active>true</active>
+    <description>El teléfono no es válido. Asegúrese de ingresar un número de teléfono de 8 a 10 dígitos. Debe ser numérico.</description>
+    <errorConditionFormula>AND( 
+	RecordType.DeveloperName == &quot;InteractionColombia&quot;, 
+	NOT(ISBLANK(Caller__c)), 
+	OR( 
+		NOT(ISNUMBER(Caller__c)), 
+		AND(
+			NOT(LEN(Caller__c)==10),
+NOT(LEN(Caller__c)==9),
+			NOT(LEN(Caller__c)==8)) 
+) 
+)</errorConditionFormula>
+    <errorMessage>El teléfono no es válido. Asegúrese de ingresar un número de teléfono de 8 a 10 dígitos. Debe ser numérico.</errorMessage>
+</ValidationRule>

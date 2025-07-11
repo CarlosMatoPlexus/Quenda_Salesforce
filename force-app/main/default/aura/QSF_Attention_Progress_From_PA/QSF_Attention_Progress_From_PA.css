@@ -1,0 +1,84 @@
+.THIS .div_menu {  
+    padding-bottom:2%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:2%; 
+}
+
+.THIS .box-time-size{
+    width:63px;
+    
+}
+
+.THIS .box-size-complete{
+    width:205px;
+    font-size:17px;
+}
+.THIS .div_button {  
+    padding-top:7%;
+    padding-bottom:2%;
+    padding-left:0%;
+    padding-right:0%; 
+}
+
+
+.THIS .btStartPA {
+  text-transform: uppercase;
+  background-color: #7DCF64;
+  font-size:12px;
+  color: #fff;  
+  width:299px;
+  height:40px;
+}
+
+.THIS .size_queue {  
+    font-size:15px;
+}
+
+.THIS .ticket-icon {
+    fill: #65CAE4 !important;
+    
+}
+.THIS .start-icon {
+    padding-left:4%;
+}
+
+
+.THIS .title_custom {
+  
+    font-size: small;
+    
+}
+
+.THIS .div_inline {
+    display: inline-block;
+    width: 120px;
+}
+.THIS .user-place {
+    font-weight: bold;
+    text-align: center;
+    background-color: #C8C8C8;
+    color: #fff;  
+    width:auto;
+    height:auto;
+}
+
+.THIS .error {
+    color: #dd4b39;
+    font-size: 18px;
+    font-weight: bold;
+}
+.THIS .clearButton{
+text-align: center;
+}
+
+.THIS .clearButton::-webkit-clear-button {
+
+    display: none; 
+    -webkit-appearance: none; 
+}
+
+.THIS .clearButton::-webkit-inner-spin-button {
+    display: none; 
+    -webkit-appearance: none;
+}

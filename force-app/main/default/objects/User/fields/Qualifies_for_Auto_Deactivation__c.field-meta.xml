@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualifies_for_Auto_Deactivation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This check is meant to identify the users that are subect to be auto-deactivated if they&apos;re not logged in an specified period of time</description>
+    <label>Qualifies for Auto-Deactivation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

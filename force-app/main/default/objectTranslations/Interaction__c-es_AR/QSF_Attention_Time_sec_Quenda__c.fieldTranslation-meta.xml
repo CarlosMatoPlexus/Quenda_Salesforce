@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Tiempo de atención Quenda (sec)</label>
+    <name>QSF_Attention_Time_sec_Quenda__c</name>
+</CustomFieldTranslation>

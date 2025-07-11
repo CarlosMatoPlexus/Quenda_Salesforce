@@ -1,0 +1,170 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes">
+    <lightning:workspaceAPI aura:id="workspace" />
+    <lightning:utilityBarAPI aura:id="UtilityBarEx" />
+  <!-- ANTIGUA <ltng:require styles="{!join(',', $Resource.slds231 + '/assets/styles/salesforce-lightning-design-system.css')}" 
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' ,
+                           'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js', $Resource.CountTimer)}"
+                   afterScriptsLoaded="{!c.jsLoaded}" /> -->
+    
+     <!--NUEVA -->
+    <ltng:require styles="{!join(',', $Resource.slds231 + '/assets/styles/salesforce-lightning-design-system.css')}" 
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' ,
+                           'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js',
+                           $Resource.QSF_CountTimerNewVersion)}"
+                   afterScriptsLoaded="{!c.jsLoaded}" />
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="place" type="Object"/>
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="unattendedShiftNumber" type="Object" />
+    <aura:attribute name="nextShiftInfo" type="Object"/>
+    <aura:attribute name="oldShiftInfo" type="Object" default=""/> <!-- Ticket "anterior" para la funcionalidad "llamar y siguiente"-->
+    <aura:attribute name="idSelectedService" type="Long" default="0"/>
+    <aura:attribute name="spinnerMsg" type="String" default="Conectando..."/>
+    <aura:attribute name="oldTabId" type="String"/>
+    <aura:attribute name="RecoveredTicket" type="Boolean" default="false"/>
+    <aura:attribute name="automaticAttentionTime" type="String"/>
+    
+    <aura:attribute name="interactionTabId" type="String"/>
+    <aura:attribute name="previousView" type="String"/>
+    <aura:attribute name="authenticated" type="Boolean" default="false"/>
+    <aura:attribute name="timeOutId" type="String" default=""/>
+    
+    <aura:attribute name="IdealTimeAttentionTimeOutId" type="String"/>
+    <aura:attribute name="IdealTimeAttentionIntervalId" type="String"/>
+    <aura:attribute name="progressToggleIcon" type="Boolean"/>
+    <aura:attribute name="isOpenComponent" type="Boolean"/>
+     <aura:attribute name="attentionTimeInSeconds" type="integer"/>
+    <aura:attribute name="lastOperationFinishAndNext" type="Boolean" default="false" />
+    
+    
+    <aura:attribute name="timer" type="String"/>
+    <aura:attribute name="timerCount" type="String"/>
+    <aura:attribute name="timerZero" type="String" default="00:00:00"/>
+    
+    <aura:attribute name="NoTransitTime" type="Boolean" default="true"/> <!-- Con TRUE version normal... Con FALSE se ven nuevos botones y algunas funcionalidades de Tiempo atencion sin transito -->
+    
+    <!-- INDICADOR TIPO DE ENTORNO (CLASSIC O LIGHTNING) -->
+	<aura:attribute name="isLEX" type="Boolean" default=""/>
+    
+    <!--ERROR DISPLAY ATTRIBUTES-->
+    <aura:attribute name="errorStatus" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    
+    <!--ATTRIBUTES FOR ACCESS TOKEN -->
+    <aura:attribute name="accessToken" type="String"/>
+    <aura:attribute name="statusAccessToken" type="String" default="INIT"/> <!-- INIT / ERROR / OK-->
+    <aura:attribute name="failedFunctionName" type="String" default=""/>
+    
+    <!-- DO INIT & HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInitTab}"/>
+    <aura:handler name="change" value="{!v.statusAccessToken}" action="{!c.getAccessToken}"/>
+    <aura:handler name="change" value="{!v.place}" action="{!c.placeChange}"/>
+    <aura:handler name="change" value="{!v.attentionTimeInSeconds}" action="{!c.IdealTimeAttentionCheck}"/>
+    
+    <!-- EVENTS -->
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <!-- SPINNER -->
+    <lightning:spinner aura:id="mySpinner" variant="brand" size="large" class="slds-hide" title="{!v.spinnerMsg}" alternativeText="Texto"/>
+    
+
+    <div align="center">
+        <!-- USUARIO Y PUESTO-->
+        <div class="slds-grid"/>
+        <div class="user-place" align="center">{!$Label.c.QSF_User_CL}: {!v.currentUser.FirstName} - {!$Label.c.QSF_Place_CL}: {!v.place.nombre}
+        </div>  
+      
+        <!-- TIMER & UNATTENDED CLIENT NUMBER-->   
+        <div class="slds-grid" style="margin:3%">
+            <div class="slds-col slds-size--2-of-3" align="right" style="padding-right:2%" >
+                <h3 id="timer_count" class='timer element'></h3>
+            </div>
+            <div class="slds-col slds-size--1-of-3">
+                <div class="slds-grid slds-grid_align-end" style="padding-right:7%" >
+                    <div class="size_queue">{!v.unattendedShiftNumber}</div>
+                    <div style="padding-bottom:5%" ><lightning:icon iconName="utility:people" title="{!$Label.c.QSF_Customers_queued_CL}" size="small" alternativeText="Personas en cola"/></div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin:4%"> 
+            
+       <!-- CLIENT INFORMATION: NAME / TICKET / SERVICE -->
+            <div class="slds-col btn-group-vertical">
+                <div class="slds-border_bottom" >               
+                    <aura:if isTrue="{!v.authenticated}"> 
+                        <div class="slds-grid" style="padding-left:3%">
+                            <div class="slds-col slds-size--1-of-7" style="padding-top:1%" >
+                                <lightning:icon iconName="action:user" variant="" size="xx-small"/>   
+                            </div>
+                            <div class="slds-col slds-size--6-of-7" align="left">
+                                <h3 class="title_custom">{!$Label.c.QSF_Name_and_Surname_CL}</h3>
+                                <h2 style="margin-right:1%" title="{!$Label.c.QSF_Name_and_Surname_CL}">{!v.nextShiftInfo.Nombre}</h2>
+                            </div>
+                        </div>
+                    </aura:if>
+                    <div class="slds-grid" style="padding-top:5%; padding-bottom:3%; padding-left:5%"> 
+                        <div class="slds-col slds-size--2-of-3" align="left" >
+                            <h3 class="title_custom">{!$Label.c.QSF_Service_CL}</h3>
+                            <h2 title="Motivo">{!v.nextShiftInfo.servicio}</h2>
+                        </div>
+                        <div class="slds-col slds-size--1-of-3" align="left" >
+                            <div class="slds-grid">
+                                <div class="slds-col" >
+                                    <h3 class="title_custom" title="ticket">{!$Label.c.QSF_Ticket_CL}:</h3>
+                                    <h2 title="ticket-number">{!v.nextShiftInfo.codTicket} &nbsp;<lightning:icon iconName="utility:work_order_type" variant="" size="x-small"/></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+       <!-- BUTTONS: RECALL/ABSENT/RESEND/END&PAUSE/END&NEXT-->   
+            <div style="padding-top:5%">
+                
+                <div class="slds-align-top div_menu" style="padding-top:4%;">
+                    <lightning:button aura:id="btStartAttention" class="slds-button slds-button_neutral btStartAttention slds-hide" title="{!$Label.c.QSF_Start_Attention_CL}" onclick="{!c.StartAttention}">
+                       {!$Label.c.QSF_Start_Attention_CL}
+                        <lightning:icon class="endAndNext-icon" iconName="utility:macros" size="x-small" variant="bare"/>
+                    </lightning:button>
+                </div> 
+                
+                <div class="slds-align-bottom div_menu" > 
+                    <lightning:button aura:id="btrecall" class="slds-button slds-button_neutral btrecall" title="{!$Label.c.QSF_Call_client_again_CL}" onclick="{!c.Recall}">
+                        {!$Label.c.QSF_Recall_CL}
+                        <lightning:icon class="recall-icon" iconName="utility:refresh" size="x-small" variant="bare"/>
+                    </lightning:button>
+                    <lightning:button aura:id="btabsent" class="slds-button slds-button_neutral btabsent" title="{!$Label.c.QSF_Finish_due_to_absence_CL}" onclick="{!c.Absent}">
+                        {!$Label.c.QSF_Absent_CL}
+                        <lightning:icon class="absent-icon" iconName="utility:clear" size="x-small" variant="bare"/>
+                    </lightning:button>
+                </div>	
+                <div class="slds-align-bottom div_menu" style="padding-top:3%" >
+                    <lightning:button aura:id="btresend" class="slds-button slds-button_neutral btresend" title="{!$Label.c.QSF_Send_client_to_another_service_CL}" onclick="{!c.Forwarding}">
+                        {!$Label.c.QSF_Resend_CL}
+                        <lightning:icon class="resend-icon" iconName="utility:questions_and_answers" size="x-small" variant="bare"/>
+                    </lightning:button>
+                    <lightning:button aura:id="btendAttention" class="slds-button slds-button_neutral btendAttention" title="{!$Label.c.QSF_Finish_and_return_to_init_CL}" onclick="{!c.EndAttention}">
+                        {!$Label.c.QSF_End_and_Pause_CL}
+                        <lightning:icon class="endAttention-icon" iconName="utility:pause" size="x-small" variant="bare"/>
+                    </lightning:button>
+                </div>    
+                <div class="slds-align-top div_menu" style="padding-top:4%;">
+                    <lightning:button aura:id="btendAndNext" class="slds-button slds-button_neutral btendAndNext" title="{!$Label.c.QSF_Finish_and_call_next_client_CL}" onclick="{!c.EndAndNext}">
+                        {!$Label.c.QSF_Finish_and_Call_Next_CL}
+                        <lightning:icon class="endAndNext-icon" iconName="utility:sort" size="x-small" variant="bare"/>
+                    </lightning:button>
+                </div> 
+            </div>
+            
+             <aura:if isTrue="{!v.errorStatus}">
+                <div aura:id="displayError" class="slds-align-top error-display" style="width:300px"> 	
+                    {!v.errorMessage}
+                </div>
+            </aura:if>
+            
+        </div>
+    </div> 
+</aura:component>

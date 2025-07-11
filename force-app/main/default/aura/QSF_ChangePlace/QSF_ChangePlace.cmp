@@ -1,0 +1,106 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes">
+    <ltng:require styles="/resource/slds231/assets/styles/salesforce-lightning-design-system.css"
+                   scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', $Resource.CountTimer)}"/>
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="place" type="Object"/> <!--con id y nombre-->
+    <aura:attribute name="selectedPlace" type="Object"/> <!--con id y nombre-->
+    <aura:attribute name="freeWorkplacesList" type="List"/>
+    <aura:attribute name="previousShiftInfo" type="Object"/>
+    <aura:attribute name="nextShiftInfo" type="Object"/>
+    <aura:attribute name="spinnerMsg" type="String"/>
+    <aura:attribute name="loadingMessage" type="String" default='Cargando puestos libres disponibles...'/>
+    <aura:attribute name="automaticAttentionTime" type="integer"/>
+    <aura:attribute name="isActiveAutomaticRecall" type="Boolean"/>
+    
+    <aura:attribute name="idSelectedStatus" type="Long" /> 
+    
+    
+    <!-- INDICADOR TIPO DE ENTORNO (CLASSIC O LIGHTNING) -->
+	<aura:attribute name="isLEX" type="Boolean" default=""/>
+    
+    <!--ERROR DISPLAY ATTRIBUTES-->
+    <aura:attribute name="errorStatus" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    
+    <!--ATTRIBUTES FOR ACCESS TOKEN -->
+    <aura:attribute name="accessToken" type="String"/>
+    <aura:attribute name="statusAccessToken" type="String" default="INIT"/> <!-- INIT / ERROR / OK-->
+    <aura:attribute name="failedFunctionName" type="String" default=""/>
+    
+    <!-- DO INIT & HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" description="Call to the doInit method at the beginning"/>
+    <aura:handler name="change" value="{!v.statusAccessToken}" action="{!c.getAccessToken}"/>
+    <aura:handler name="change" value="{!v.currentUser}" action="{!c.getFreePlaces}"/>
+    
+    <!-- EVENTS -->
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <!-- SPINNER -->
+    <lightning:spinner aura:id="mySpinner" variant="brand" size="large" class="slds-hide" title="{!v.spinnerMsg}" alternativeText="..."/>
+   
+    
+    <div align="center">
+        
+        <!-- USER & PLACE HEADER-->
+        <div class="slds-grid"/>
+        <div class="user-place" align="center">{!$Label.c.QSF_User_CL}: {!v.currentUser.FirstName} - {!$Label.c.QSF_Place_CL}: {!v.place.nombre}
+        </div>   
+        
+        <div style="margin:4%"> 
+            
+            <!-- TEXT PUESTO -->
+            <div class="slds-grid">
+                <div align="center" class="slds-grid slds-grid--align-spread" style="padding-top:3%">
+                    <div class="slds-col"><p>{!$Label.c.QSF_Choose_New_Place_CL}:</p></div>
+                </div>
+            </div>
+            
+            <!-- FREE WORK PLACES LIST -->   
+            <div align="left" style="padding-top:3%">
+                <div class="slds-combobox_container" >
+                    <div class="slds-form-element ">
+                        <div class="slds-form-element__control slds-grow"> 
+                           <!-- <div class="slds-select_container"> -->
+                                <lightning:select aura:id="selectPlace" name="selectPlace" class="slds-has-error"
+                                                  onchange="{!c.hideErrors}">
+                                    <option disabled="disabled" selected="true" value="" text="">{!v.loadingMessage}</option>
+                                    
+                                    <aura:iteration items="{!v.freeWorkplacesList}" var="currentWorkplace" indexVar="indx">
+                                        <option value="{!indx}" selected="{!currentWorkplace.selected}">
+                                        {!$Label.c.QSF_Place_CL} - {!currentWorkplace.nombre}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                           
+                        </div> 
+                        
+                    </div>
+                </div>
+            </div>   
+            
+            <!-- CHANGE AND CANCEL BUTTON --> 
+            <div style="padding-top:6%"> 
+                <lightning:button aura:id="change_place_button" class="slds-button slds-button_neutral change_place_button" onclick="{!c.changeClick}" >
+                    {!$Label.c.QSF_Change_CL}
+                    <lightning:icon class="start-icon" iconName="utility:retweet" size="x-small" variant="bare"/> 
+                </lightning:button>
+                <lightning:button aura:id="cancel_button" class="slds-button slds-button_neutral cancel_button" onclick="{!c.cancelClick}" >
+                    {!$Label.c.QSF_Cancel_CL}
+                    <lightning:icon class="start-icon" iconName="utility:close" size="x-small" variant="bare"/> 
+                </lightning:button>
+            </div>	
+            
+            
+            <!--ERROR MESSAGE-->
+            <aura:if isTrue="{!v.errorStatus}">
+                <div aura:id="displayError" class="slds-align-top error-display" style="width:300px"> 	
+                    {!v.errorMessage}
+                </div>
+            </aura:if>
+           
+        </div> 
+        
+    </div>
+    
+</aura:component>

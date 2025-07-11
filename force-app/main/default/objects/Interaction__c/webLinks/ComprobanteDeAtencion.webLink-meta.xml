@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ComprobanteDeAtencion</fullName>
+    <availability>online</availability>
+    <description>Botón para generar el comprobante de atención de la interacción</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Comprobante de Atención</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/support/console/30.0/integration.js&quot;)} 
+	{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)} 
+	{!REQUIRESCRIPT(&apos;/soap/ajax/32.0/connection.js&apos;)} 
+	{!REQUIRESCRIPT(&apos;/support/console/34.0/integration.js&apos;)} 
+	{!REQUIRESCRIPT(&apos;https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&apos;)} 
+	{!REQUIRESCRIPT(&apos;https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js&apos;)} 
+
+	if(sforce.console.isInConsole()) {
+		sforce.console.getFocusedPrimaryTabId(function(result) { 
+		var primaryTabId = result.id; 
+console.log(&apos;{!Interaction__c.Id}&apos;);
+		sforce.console.openSubtab(primaryTabId , &quot;apex/ATCL_VFP095_InteractionProof?interactionId={!Interaction__c.Id}&quot;, true, &quot;{!$Label.ATCL_InteractionProof}&quot;); })
+	}</url>
+</WebLink>

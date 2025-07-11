@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unity__c</fullName>
+    <description>Indicates the Unity of the call center related with a user</description>
+    <label>Unity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Callcenter Konecta</fullName>
+                <default>false</default>
+                <label>Callcenter Konecta</label>
+            </value>
+            <value>
+                <fullName>Callcenter DTS</fullName>
+                <default>false</default>
+                <label>Callcenter DTS</label>
+            </value>
+            <value>
+                <fullName>OF.COM. APOQUINDO</fullName>
+                <default>false</default>
+                <label>OF.COM. APOQUINDO</label>
+            </value>
+            <value>
+                <fullName>OF.COM. INDEPENDENCIA</fullName>
+                <default>false</default>
+                <label>OF.COM. INDEPENDENCIA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. COLINA</fullName>
+                <default>false</default>
+                <label>OF.COM. COLINA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. LA CISTERNA</fullName>
+                <default>false</default>
+                <label>OF.COM. LA CISTERNA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. LA FLORIDA</fullName>
+                <default>false</default>
+                <label>OF.COM. LA FLORIDA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. LO PRADO</fullName>
+                <default>false</default>
+                <label>OF.COM. LO PRADO</label>
+            </value>
+            <value>
+                <fullName>OF.COM. MAC-IVER</fullName>
+                <default>false</default>
+                <label>OF.COM. MAC-IVER</label>
+            </value>
+            <value>
+                <fullName>OF.COM. MAIPU</fullName>
+                <default>false</default>
+                <label>OF.COM. MAIPU</label>
+            </value>
+            <value>
+                <fullName>OF.COM. MALL PLAZA NORTE</fullName>
+                <default>false</default>
+                <label>OF.COM. MALL PLAZA NORTE</label>
+            </value>
+            <value>
+                <fullName>OF.COM. MATUCANA</fullName>
+                <default>false</default>
+                <label>OF.COM. MATUCANA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. METRO U.DE CHILE</fullName>
+                <default>false</default>
+                <label>OF.COM. METRO U.DE CHILE</label>
+            </value>
+            <value>
+                <fullName>OF.COM. ÑUÑOA</fullName>
+                <default>false</default>
+                <label>OF.COM. ÑUÑOA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. PROVIDENCIA</fullName>
+                <default>false</default>
+                <label>OF.COM. PROVIDENCIA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. SAN RAMON</fullName>
+                <default>false</default>
+                <label>OF.COM. SAN RAMON</label>
+            </value>
+            <value>
+                <fullName>Callcenter Surasistencia</fullName>
+                <default>false</default>
+                <label>Callcenter Surasistencia</label>
+            </value>
+            <value>
+                <fullName>Callcenter Helpbank</fullName>
+                <default>false</default>
+                <label>Callcenter Helpbank</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>3</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>4</label>
+            </value>
+            <value>
+                <fullName>5</fullName>
+                <default>false</default>
+                <label>5</label>
+            </value>
+            <value>
+                <fullName>6</fullName>
+                <default>false</default>
+                <label>6</label>
+            </value>
+            <value>
+                <fullName>7</fullName>
+                <default>false</default>
+                <label>7</label>
+            </value>
+            <value>
+                <fullName>8</fullName>
+                <default>false</default>
+                <label>8</label>
+            </value>
+            <value>
+                <fullName>9</fullName>
+                <default>false</default>
+                <label>9</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>10</label>
+            </value>
+            <value>
+                <fullName>11</fullName>
+                <default>false</default>
+                <label>11</label>
+            </value>
+            <value>
+                <fullName>12</fullName>
+                <default>false</default>
+                <label>12</label>
+            </value>
+            <value>
+                <fullName>13</fullName>
+                <default>false</default>
+                <label>13</label>
+            </value>
+            <value>
+                <fullName>14</fullName>
+                <default>false</default>
+                <label>14</label>
+            </value>
+            <value>
+                <fullName>15</fullName>
+                <default>false</default>
+                <label>15</label>
+            </value>
+            <value>
+                <fullName>C.S. Minka</fullName>
+                <default>false</default>
+                <label>C.S. Minka</label>
+            </value>
+            <value>
+                <fullName>C.S. Megaplaza</fullName>
+                <default>false</default>
+                <label>C.S. Megaplaza</label>
+            </value>
+            <value>
+                <fullName>C.S. San Juan de Lurigancho</fullName>
+                <default>false</default>
+                <label>C.S. San Juan de Lurigancho</label>
+            </value>
+            <value>
+                <fullName>C.S. Maranga</fullName>
+                <default>false</default>
+                <label>C.S. Maranga</label>
+            </value>
+            <value>
+                <fullName>C.S. Callao</fullName>
+                <default>false</default>
+                <label>C.S. Callao</label>
+            </value>
+            <value>
+                <fullName>C.S. Puente Piedra</fullName>
+                <default>false</default>
+                <label>C.S. Puente Piedra</label>
+            </value>
+            <value>
+                <fullName>C.S. Ventanilla</fullName>
+                <default>false</default>
+                <label>C.S. Ventanilla</label>
+            </value>
+            <value>
+                <fullName>C.S. Pueblo Libre</fullName>
+                <default>false</default>
+                <label>C.S. Pueblo Libre</label>
+            </value>
+            <value>
+                <fullName>C.S. Huaral</fullName>
+                <default>false</default>
+                <label>C.S. Huaral</label>
+            </value>
+            <value>
+                <fullName>C.S. Comas</fullName>
+                <default>false</default>
+                <label>C.S. Comas</label>
+            </value>
+            <value>
+                <fullName>C.S. Canto Grande</fullName>
+                <default>false</default>
+                <label>C.S. Canto Grande</label>
+            </value>
+            <value>
+                <fullName>C.S. Barranca</fullName>
+                <default>false</default>
+                <label>C.S. Barranca</label>
+            </value>
+            <value>
+                <fullName>C.S. Torrico</fullName>
+                <default>false</default>
+                <label>C.S. Torrico</label>
+            </value>
+            <value>
+                <fullName>C.S. Huacho</fullName>
+                <default>false</default>
+                <label>C.S. Huacho</label>
+            </value>
+            <value>
+                <fullName>OF.COM. ALMAGRO</fullName>
+                <default>false</default>
+                <label>OF.COM. ALMAGRO</label>
+            </value>
+            <value>
+                <fullName>OF.COM. SAN JOSÉ</fullName>
+                <default>false</default>
+                <label>OF.COM. SAN JOSÉ</label>
+            </value>
+            <value>
+                <fullName>OF.COM. ALBERDI</fullName>
+                <default>false</default>
+                <label>OF.COM. ALBERDI</label>
+            </value>
+            <value>
+                <fullName>OF.COM. CENTENARIO</fullName>
+                <default>false</default>
+                <label>OF.COM. CENTENARIO</label>
+            </value>
+            <value>
+                <fullName>OF.COM. AVELLANEDA</fullName>
+                <default>false</default>
+                <label>OF.COM. AVELLANEDA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. LANÚS</fullName>
+                <default>false</default>
+                <label>OF.COM. LANÚS</label>
+            </value>
+            <value>
+                <fullName>OF.COM. FLORENCIO VARELA</fullName>
+                <default>false</default>
+                <label>OF.COM. FLORENCIO VARELA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. QUILMES</fullName>
+                <default>false</default>
+                <label>OF.COM. QUILMES</label>
+            </value>
+            <value>
+                <fullName>OF.COM. BERAZATEGUI</fullName>
+                <default>false</default>
+                <label>OF.COM. BERAZATEGUI</label>
+            </value>
+            <value>
+                <fullName>OF.COM. LOMAS DE ZAMORA</fullName>
+                <default>false</default>
+                <label>OF.COM. LOMAS DE ZAMORA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. CUARTEL IX</fullName>
+                <default>false</default>
+                <label>OF.COM. CUARTEL IX</label>
+            </value>
+            <value>
+                <fullName>OF.COM. MONTE GRANDE</fullName>
+                <default>false</default>
+                <label>OF.COM. MONTE GRANDE</label>
+            </value>
+            <value>
+                <fullName>OF.COM. EZEIZA</fullName>
+                <default>false</default>
+                <label>OF.COM. EZEIZA</label>
+            </value>
+            <value>
+                <fullName>OF.COM. CAÑUELAS</fullName>
+                <default>false</default>
+                <label>OF.COM. CAÑUELAS</label>
+            </value>
+            <value>
+                <fullName>OF.COM. SAN VICENTE</fullName>
+                <default>false</default>
+                <label>OF.COM. SAN VICENTE</label>
+            </value>
+            <value>
+                <fullName>OF.COM. ADROGUÉ</fullName>
+                <default>false</default>
+                <label>OF.COM. ADROGUÉ</label>
+            </value>
+            <value>
+                <fullName>UNI001</fullName>
+                <default>false</default>
+                <label>UNI001</label>
+            </value>
+            <value>
+                <fullName>UNI002</fullName>
+                <default>false</default>
+                <label>UNI002</label>
+            </value>
+            <value>
+                <fullName>UNI004</fullName>
+                <default>false</default>
+                <label>UNI004</label>
+            </value>
+            <value>
+                <fullName>UNI005</fullName>
+                <default>false</default>
+                <label>UNI005</label>
+            </value>
+            <value>
+                <fullName>UNI006</fullName>
+                <default>false</default>
+                <label>UNI006</label>
+            </value>
+            <value>
+                <fullName>UNI007</fullName>
+                <default>false</default>
+                <label>UNI007</label>
+            </value>
+            <value>
+                <fullName>UNI008</fullName>
+                <default>false</default>
+                <label>UNI008</label>
+            </value>
+            <value>
+                <fullName>UNI009</fullName>
+                <default>false</default>
+                <label>UNI009</label>
+            </value>
+            <value>
+                <fullName>UNI010</fullName>
+                <default>false</default>
+                <label>UNI010</label>
+            </value>
+            <value>
+                <fullName>UNI013</fullName>
+                <default>false</default>
+                <label>UNI013</label>
+            </value>
+            <value>
+                <fullName>UNI015</fullName>
+                <default>false</default>
+                <label>UNI015</label>
+            </value>
+            <value>
+                <fullName>UNI016</fullName>
+                <default>false</default>
+                <label>UNI016</label>
+            </value>
+            <value>
+                <fullName>UNI017</fullName>
+                <default>false</default>
+                <label>UNI017</label>
+            </value>
+            <value>
+                <fullName>UNI018</fullName>
+                <default>false</default>
+                <label>UNI018</label>
+            </value>
+            <value>
+                <fullName>UNI019</fullName>
+                <default>false</default>
+                <label>UNI019</label>
+            </value>
+            <value>
+                <fullName>UNI020</fullName>
+                <default>false</default>
+                <label>UNI020</label>
+            </value>
+            <value>
+                <fullName>UNI021</fullName>
+                <default>false</default>
+                <label>UNI021</label>
+            </value>
+            <value>
+                <fullName>UNI022</fullName>
+                <default>false</default>
+                <label>UNI022</label>
+            </value>
+            <value>
+                <fullName>UNI023</fullName>
+                <default>false</default>
+                <label>UNI023</label>
+            </value>
+            <value>
+                <fullName>UNI024</fullName>
+                <default>false</default>
+                <label>UNI024</label>
+            </value>
+            <value>
+                <fullName>UNI025</fullName>
+                <default>false</default>
+                <label>UNI025</label>
+            </value>
+            <value>
+                <fullName>UNI026</fullName>
+                <default>false</default>
+                <label>UNI026</label>
+            </value>
+            <value>
+                <fullName>UNI027</fullName>
+                <default>false</default>
+                <label>UNI027</label>
+            </value>
+            <value>
+                <fullName>UNI028</fullName>
+                <default>false</default>
+                <label>UNI028</label>
+            </value>
+            <value>
+                <fullName>UNI029</fullName>
+                <default>false</default>
+                <label>UNI029</label>
+            </value>
+            <value>
+                <fullName>UNI030</fullName>
+                <default>false</default>
+                <label>UNI030</label>
+            </value>
+            <value>
+                <fullName>UNI031</fullName>
+                <default>false</default>
+                <label>UNI031</label>
+            </value>
+            <value>
+                <fullName>UNI032</fullName>
+                <default>false</default>
+                <label>UNI032</label>
+            </value>
+            <value>
+                <fullName>UNI033</fullName>
+                <default>false</default>
+                <label>UNI033</label>
+            </value>
+            <value>
+                <fullName>UNI034</fullName>
+                <default>false</default>
+                <label>UNI034</label>
+            </value>
+            <value>
+                <fullName>UNI035</fullName>
+                <default>false</default>
+                <label>UNI035</label>
+            </value>
+            <value>
+                <fullName>UNI036</fullName>
+                <default>false</default>
+                <label>UNI036</label>
+            </value>
+            <value>
+                <fullName>UNI037</fullName>
+                <default>false</default>
+                <label>UNI037</label>
+            </value>
+            <value>
+                <fullName>Calle</fullName>
+                <default>false</default>
+                <label>Calle</label>
+            </value>
+            <value>
+                <fullName>C.S. San Miguel</fullName>
+                <default>false</default>
+                <label>C.S. San Miguel</label>
+            </value>
+            <value>
+                <fullName>Oficinas Digitex</fullName>
+                <default>false</default>
+                <label>Oficinas Digitex</label>
+            </value>
+            <value>
+                <fullName>16</fullName>
+                <default>false</default>
+                <label>16</label>
+            </value>
+            <value>
+                <fullName>17</fullName>
+                <default>false</default>
+                <label>17</label>
+            </value>
+            <value>
+                <fullName>18</fullName>
+                <default>false</default>
+                <label>18</label>
+            </value>
+            <value>
+                <fullName>UNI038</fullName>
+                <default>false</default>
+                <label>UNI038</label>
+            </value>
+            <value>
+                <fullName>UNI039</fullName>
+                <default>false</default>
+                <label>UNI039</label>
+            </value>
+            <value>
+                <fullName>UNI040</fullName>
+                <default>false</default>
+                <label>UNI040</label>
+            </value>
+            <value>
+                <fullName>UNI041</fullName>
+                <default>false</default>
+                <label>UNI041</label>
+            </value>
+            <value>
+                <fullName>UNI042</fullName>
+                <default>false</default>
+                <label>UNI042</label>
+            </value>
+            <value>
+                <fullName>UNI043</fullName>
+                <default>false</default>
+                <label>UNI043</label>
+            </value>
+            <value>
+                <fullName>UNI044</fullName>
+                <default>false</default>
+                <label>UNI044</label>
+            </value>
+            <value>
+                <fullName>UNI045</fullName>
+                <default>false</default>
+                <label>UNI045</label>
+            </value>
+            <value>
+                <fullName>UNI046</fullName>
+                <default>false</default>
+                <label>UNI046</label>
+            </value>
+            <value>
+                <fullName>UNI047</fullName>
+                <default>false</default>
+                <label>UNI047</label>
+            </value>
+            <value>
+                <fullName>UNI048</fullName>
+                <default>false</default>
+                <label>UNI048</label>
+            </value>
+            <value>
+                <fullName>UNI049</fullName>
+                <default>false</default>
+                <label>UNI049</label>
+            </value>
+            <value>
+                <fullName>UNI050</fullName>
+                <default>false</default>
+                <label>UNI050</label>
+            </value>
+            <value>
+                <fullName>UNI051</fullName>
+                <default>false</default>
+                <label>UNI051</label>
+            </value>
+            <value>
+                <fullName>UNI052</fullName>
+                <default>false</default>
+                <label>UNI052</label>
+            </value>
+            <value>
+                <fullName>UNI053</fullName>
+                <default>false</default>
+                <label>UNI053</label>
+            </value>
+            <value>
+                <fullName>UNI054</fullName>
+                <default>false</default>
+                <label>UNI054</label>
+            </value>
+            <value>
+                <fullName>UNI055</fullName>
+                <default>false</default>
+                <label>UNI055</label>
+            </value>
+            <value>
+                <fullName>UNI056</fullName>
+                <default>false</default>
+                <label>UNI056</label>
+            </value>
+            <value>
+                <fullName>UNI057</fullName>
+                <default>false</default>
+                <label>UNI057</label>
+            </value>
+            <value>
+                <fullName>UNI058</fullName>
+                <default>false</default>
+                <label>UNI058</label>
+            </value>
+            <value>
+                <fullName>UNI059</fullName>
+                <default>false</default>
+                <label>UNI059</label>
+            </value>
+            <value>
+                <fullName>UNI060</fullName>
+                <default>false</default>
+                <label>UNI060</label>
+            </value>
+            <value>
+                <fullName>UNI061</fullName>
+                <default>false</default>
+                <label>UNI061</label>
+            </value>
+            <value>
+                <fullName>UNI062</fullName>
+                <default>false</default>
+                <label>UNI062</label>
+            </value>
+            <value>
+                <fullName>UNI063</fullName>
+                <default>false</default>
+                <label>UNI063</label>
+            </value>
+            <value>
+                <fullName>UNI064</fullName>
+                <default>false</default>
+                <label>UNI064</label>
+            </value>
+            <value>
+                <fullName>UNI065</fullName>
+                <default>false</default>
+                <label>UNI065</label>
+            </value>
+            <value>
+                <fullName>UNI066</fullName>
+                <default>false</default>
+                <label>UNI066</label>
+            </value>
+            <value>
+                <fullName>UNI067</fullName>
+                <default>false</default>
+                <label>UNI067</label>
+            </value>
+            <value>
+                <fullName>UNI068</fullName>
+                <default>false</default>
+                <label>UNI068</label>
+            </value>
+            <value>
+                <fullName>UNI069</fullName>
+                <default>false</default>
+                <label>UNI069</label>
+            </value>
+            <value>
+                <fullName>UNI070</fullName>
+                <default>false</default>
+                <label>UNI070</label>
+            </value>
+            <value>
+                <fullName>UNI071</fullName>
+                <default>false</default>
+                <label>UNI071</label>
+            </value>
+            <value>
+                <fullName>UNI072</fullName>
+                <default>false</default>
+                <label>UNI072</label>
+            </value>
+            <value>
+                <fullName>UNI073</fullName>
+                <default>false</default>
+                <label>UNI073</label>
+            </value>
+            <value>
+                <fullName>UNI074</fullName>
+                <default>false</default>
+                <label>UNI074</label>
+            </value>
+            <value>
+                <fullName>UNI075</fullName>
+                <default>false</default>
+                <label>UNI075</label>
+            </value>
+            <value>
+                <fullName>UNI076</fullName>
+                <default>false</default>
+                <label>UNI076</label>
+            </value>
+            <value>
+                <fullName>UNI077</fullName>
+                <default>false</default>
+                <label>UNI077</label>
+            </value>
+            <value>
+                <fullName>UNI078</fullName>
+                <default>false</default>
+                <label>UNI078</label>
+            </value>
+            <value>
+                <fullName>UNI003</fullName>
+                <default>false</default>
+                <label>UNI003</label>
+            </value>
+            <value>
+                <fullName>UNI011</fullName>
+                <default>false</default>
+                <label>UNI011</label>
+            </value>
+            <value>
+                <fullName>UNI012</fullName>
+                <default>false</default>
+                <label>UNI012</label>
+            </value>
+            <value>
+                <fullName>UNI014</fullName>
+                <default>false</default>
+                <label>UNI014</label>
+            </value>
+            <value>
+                <fullName>UNI079</fullName>
+                <default>false</default>
+                <label>UNI079</label>
+            </value>
+            <value>
+                <fullName>19</fullName>
+                <default>false</default>
+                <label>19</label>
+            </value>
+            <value>
+                <fullName>UNI080</fullName>
+                <default>false</default>
+                <label>UNI080</label>
+            </value>
+            <value>
+                <fullName>UNI083</fullName>
+                <default>false</default>
+                <label>UNI083</label>
+            </value>
+            <value>
+                <fullName>UNI084</fullName>
+                <default>false</default>
+                <label>UNI084</label>
+            </value>
+            <value>
+                <fullName>UNI085</fullName>
+                <default>false</default>
+                <label>UNI085</label>
+            </value>
+            <value>
+                <fullName>UNI086</fullName>
+                <default>false</default>
+                <label>UNI086</label>
+            </value>
+            <value>
+                <fullName>UNI087</fullName>
+                <default>false</default>
+                <label>UNI087</label>
+            </value>
+            <value>
+                <fullName>UNI088</fullName>
+                <default>false</default>
+                <label>UNI088</label>
+            </value>
+            <value>
+                <fullName>UNI089</fullName>
+                <default>false</default>
+                <label>UNI089</label>
+            </value>
+            <value>
+                <fullName>Contact Center</fullName>
+                <default>false</default>
+                <label>Contact Center</label>
+            </value>
+            <value>
+                <fullName>UNI090</fullName>
+                <default>false</default>
+                <label>UNI090</label>
+            </value>
+            <value>
+                <fullName>I&amp;N</fullName>
+                <default>false</default>
+                <label>I&amp;N</label>
+            </value>
+            <value>
+                <fullName>UNI115</fullName>
+                <default>false</default>
+                <label>UNI115</label>
+            </value>
+            <value>
+                <fullName>UNI116</fullName>
+                <default>false</default>
+                <label>UNI116</label>
+            </value>
+            <value>
+                <fullName>UNI117</fullName>
+                <default>false</default>
+                <label>UNI117</label>
+            </value>
+            <value>
+                <fullName>Callcenter Kallplat</fullName>
+                <default>false</default>
+                <label>Callcenter Kallplat</label>
+            </value>
+            <value>
+                <fullName>OF.COM. PRESIDENTE PERÓN</fullName>
+                <default>false</default>
+                <label>OF.COM. PRESIDENTE PERÓN</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

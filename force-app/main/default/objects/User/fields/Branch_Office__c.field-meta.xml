@@ -1,0 +1,4563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Office__c</fullName>
+    <description>Custom Picklist for Users on Branch Offices</description>
+    <label>Branch Office</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CompanySelectorAux__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ABADIA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>ABADIA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>ABADIANIA</fullName>
+                <default>false</default>
+                <label>ABADIANIA</label>
+            </value>
+            <value>
+                <fullName>ABAIARA</fullName>
+                <default>false</default>
+                <label>ABAIARA</label>
+            </value>
+            <value>
+                <fullName>ACARAPE</fullName>
+                <default>false</default>
+                <label>ACARAPE</label>
+            </value>
+            <value>
+                <fullName>ACARAU</fullName>
+                <default>false</default>
+                <label>ACARAU</label>
+            </value>
+            <value>
+                <fullName>ACOPIARA</fullName>
+                <default>false</default>
+                <label>ACOPIARA</label>
+            </value>
+            <value>
+                <fullName>ACREUNA</fullName>
+                <default>false</default>
+                <label>ACREUNA</label>
+            </value>
+            <value>
+                <fullName>ADELÂNDIA</fullName>
+                <default>false</default>
+                <label>ADELÂNDIA</label>
+            </value>
+            <value>
+                <fullName>ÁGUA FRIA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>ÁGUA FRIA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>AGUA LIMPA</fullName>
+                <default>false</default>
+                <label>AGUA LIMPA</label>
+            </value>
+            <value>
+                <fullName>AGUAS LINDAS DE GOIAS</fullName>
+                <default>false</default>
+                <label>AGUAS LINDAS DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>AIUABA</fullName>
+                <default>false</default>
+                <label>AIUABA</label>
+            </value>
+            <value>
+                <fullName>ALCANTARA</fullName>
+                <default>false</default>
+                <label>ALCANTARA</label>
+            </value>
+            <value>
+                <fullName>ALCANTARA2</fullName>
+                <default>false</default>
+                <label>ALCANTARA2</label>
+            </value>
+            <value>
+                <fullName>ALDEOTA</fullName>
+                <default>false</default>
+                <label>ALDEOTA</label>
+            </value>
+            <value>
+                <fullName>ALEXANIA</fullName>
+                <default>false</default>
+                <label>ALEXANIA</label>
+            </value>
+            <value>
+                <fullName>ALOANDIA</fullName>
+                <default>false</default>
+                <label>ALOANDIA</label>
+            </value>
+            <value>
+                <fullName>ALTANEIRA</fullName>
+                <default>false</default>
+                <label>ALTANEIRA</label>
+            </value>
+            <value>
+                <fullName>ALTO HORIZONTE</fullName>
+                <default>false</default>
+                <label>ALTO HORIZONTE</label>
+            </value>
+            <value>
+                <fullName>ALTO PARAISO</fullName>
+                <default>false</default>
+                <label>ALTO PARAISO</label>
+            </value>
+            <value>
+                <fullName>ALTO SANTO</fullName>
+                <default>false</default>
+                <label>ALTO SANTO</label>
+            </value>
+            <value>
+                <fullName>ALVORADA DO NORTE</fullName>
+                <default>false</default>
+                <label>ALVORADA DO NORTE</label>
+            </value>
+            <value>
+                <fullName>AMARALINA</fullName>
+                <default>false</default>
+                <label>AMARALINA</label>
+            </value>
+            <value>
+                <fullName>AMERICANO DO BRASIL</fullName>
+                <default>false</default>
+                <label>AMERICANO DO BRASIL</label>
+            </value>
+            <value>
+                <fullName>AMONTADA</fullName>
+                <default>false</default>
+                <label>AMONTADA</label>
+            </value>
+            <value>
+                <fullName>AMORINOPOLIS</fullName>
+                <default>false</default>
+                <label>AMORINOPOLIS</label>
+            </value>
+            <value>
+                <fullName>ANAPOLIS</fullName>
+                <default>false</default>
+                <label>ANAPOLIS</label>
+            </value>
+            <value>
+                <fullName>ANGRA DOS REIS</fullName>
+                <default>false</default>
+                <label>ANGRA DOS REIS</label>
+            </value>
+            <value>
+                <fullName>ANHANGUERA</fullName>
+                <default>false</default>
+                <label>ANHANGUERA</label>
+            </value>
+            <value>
+                <fullName>ANICUNS</fullName>
+                <default>false</default>
+                <label>ANICUNS</label>
+            </value>
+            <value>
+                <fullName>ANTONINA DO NORTE</fullName>
+                <default>false</default>
+                <label>ANTONINA DO NORTE</label>
+            </value>
+            <value>
+                <fullName>APARECIDA DE GOIANIA</fullName>
+                <default>false</default>
+                <label>APARECIDA DE GOIANIA</label>
+            </value>
+            <value>
+                <fullName>APARECIDA DO RIO DOCE</fullName>
+                <default>false</default>
+                <label>APARECIDA DO RIO DOCE</label>
+            </value>
+            <value>
+                <fullName>APORÉ</fullName>
+                <default>false</default>
+                <label>APORÉ</label>
+            </value>
+            <value>
+                <fullName>APUIARES</fullName>
+                <default>false</default>
+                <label>APUIARES</label>
+            </value>
+            <value>
+                <fullName>AQUIRAZ</fullName>
+                <default>false</default>
+                <label>AQUIRAZ</label>
+            </value>
+            <value>
+                <fullName>ARACATI</fullName>
+                <default>false</default>
+                <label>ARACATI</label>
+            </value>
+            <value>
+                <fullName>ARACOIABA</fullName>
+                <default>false</default>
+                <label>ARACOIABA</label>
+            </value>
+            <value>
+                <fullName>ARAÇU</fullName>
+                <default>false</default>
+                <label>ARAÇU</label>
+            </value>
+            <value>
+                <fullName>ARAGARCAS</fullName>
+                <default>false</default>
+                <label>ARAGARCAS</label>
+            </value>
+            <value>
+                <fullName>ARAGOIANIA</fullName>
+                <default>false</default>
+                <label>ARAGOIANIA</label>
+            </value>
+            <value>
+                <fullName>ARAGUAPAZ</fullName>
+                <default>false</default>
+                <label>ARAGUAPAZ</label>
+            </value>
+            <value>
+                <fullName>ARARENDA</fullName>
+                <default>false</default>
+                <label>ARARENDA</label>
+            </value>
+            <value>
+                <fullName>ARARIPE</fullName>
+                <default>false</default>
+                <label>ARARIPE</label>
+            </value>
+            <value>
+                <fullName>ARARUAMA</fullName>
+                <default>false</default>
+                <label>ARARUAMA</label>
+            </value>
+            <value>
+                <fullName>ARATUBA</fullName>
+                <default>false</default>
+                <label>ARATUBA</label>
+            </value>
+            <value>
+                <fullName>AREAL</fullName>
+                <default>false</default>
+                <label>AREAL</label>
+            </value>
+            <value>
+                <fullName>ARENOPOLIS</fullName>
+                <default>false</default>
+                <label>ARENOPOLIS</label>
+            </value>
+            <value>
+                <fullName>ARNEIROZ</fullName>
+                <default>false</default>
+                <label>ARNEIROZ</label>
+            </value>
+            <value>
+                <fullName>ARRAIAL DO CABO</fullName>
+                <default>false</default>
+                <label>ARRAIAL DO CABO</label>
+            </value>
+            <value>
+                <fullName>ARUANÃ</fullName>
+                <default>false</default>
+                <label>ARUANÃ</label>
+            </value>
+            <value>
+                <fullName>ASSARE</fullName>
+                <default>false</default>
+                <label>ASSARE</label>
+            </value>
+            <value>
+                <fullName>AURILANDIA</fullName>
+                <default>false</default>
+                <label>AURILANDIA</label>
+            </value>
+            <value>
+                <fullName>AURORA</fullName>
+                <default>false</default>
+                <label>AURORA</label>
+            </value>
+            <value>
+                <fullName>AVELINÓPOLIS</fullName>
+                <default>false</default>
+                <label>AVELINÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>BAIXIO</fullName>
+                <default>false</default>
+                <label>BAIXIO</label>
+            </value>
+            <value>
+                <fullName>BALIZA</fullName>
+                <default>false</default>
+                <label>BALIZA</label>
+            </value>
+            <value>
+                <fullName>BANABUIU</fullName>
+                <default>false</default>
+                <label>BANABUIU</label>
+            </value>
+            <value>
+                <fullName>BARBALHA</fullName>
+                <default>false</default>
+                <label>BARBALHA</label>
+            </value>
+            <value>
+                <fullName>BARREIRA</fullName>
+                <default>false</default>
+                <label>BARREIRA</label>
+            </value>
+            <value>
+                <fullName>BARRO</fullName>
+                <default>false</default>
+                <label>BARRO</label>
+            </value>
+            <value>
+                <fullName>BARRO ALTO</fullName>
+                <default>false</default>
+                <label>BARRO ALTO</label>
+            </value>
+            <value>
+                <fullName>BARROQUINHA</fullName>
+                <default>false</default>
+                <label>BARROQUINHA</label>
+            </value>
+            <value>
+                <fullName>BATURITE</fullName>
+                <default>false</default>
+                <label>BATURITE</label>
+            </value>
+            <value>
+                <fullName>BEBERIBE</fullName>
+                <default>false</default>
+                <label>BEBERIBE</label>
+            </value>
+            <value>
+                <fullName>BELA CRUZ</fullName>
+                <default>false</default>
+                <label>BELA CRUZ</label>
+            </value>
+            <value>
+                <fullName>BELA VISTA DE GOIAS</fullName>
+                <default>false</default>
+                <label>BELA VISTA DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>BOA VIAGEM</fullName>
+                <default>false</default>
+                <label>BOA VIAGEM</label>
+            </value>
+            <value>
+                <fullName>BOM JARDIM</fullName>
+                <default>false</default>
+                <label>BOM JARDIM</label>
+            </value>
+            <value>
+                <fullName>BOM JESUS DE GOIAS</fullName>
+                <default>false</default>
+                <label>BOM JESUS DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>BOM JESUS DO ITABAPOANA</fullName>
+                <default>false</default>
+                <label>BOM JESUS DO ITABAPOANA</label>
+            </value>
+            <value>
+                <fullName>BONFINÓPOLIS</fullName>
+                <default>false</default>
+                <label>BONFINÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>BONOPOLIS</fullName>
+                <default>false</default>
+                <label>BONOPOLIS</label>
+            </value>
+            <value>
+                <fullName>BRAZABRANTES</fullName>
+                <default>false</default>
+                <label>BRAZABRANTES</label>
+            </value>
+            <value>
+                <fullName>BREJO SANTO</fullName>
+                <default>false</default>
+                <label>BREJO SANTO</label>
+            </value>
+            <value>
+                <fullName>BRITANIA</fullName>
+                <default>false</default>
+                <label>BRITANIA</label>
+            </value>
+            <value>
+                <fullName>BURITI ALEGRE</fullName>
+                <default>false</default>
+                <label>BURITI ALEGRE</label>
+            </value>
+            <value>
+                <fullName>BURITI DE GOIÁS</fullName>
+                <default>false</default>
+                <label>BURITI DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>BURITINÓPOLIS</fullName>
+                <default>false</default>
+                <label>BURITINÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>BUZIOS</fullName>
+                <default>false</default>
+                <label>BUZIOS</label>
+            </value>
+            <value>
+                <fullName>CABECEIRAS</fullName>
+                <default>false</default>
+                <label>CABECEIRAS</label>
+            </value>
+            <value>
+                <fullName>CABO FRIO</fullName>
+                <default>false</default>
+                <label>CABO FRIO</label>
+            </value>
+            <value>
+                <fullName>CACHOEIRA ALTA</fullName>
+                <default>false</default>
+                <label>CACHOEIRA ALTA</label>
+            </value>
+            <value>
+                <fullName>CACHOEIRA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>CACHOEIRA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>CACHOEIRA DE MACACU</fullName>
+                <default>false</default>
+                <label>CACHOEIRA DE MACACU</label>
+            </value>
+            <value>
+                <fullName>CACHOEIRA DOURADA</fullName>
+                <default>false</default>
+                <label>CACHOEIRA DOURADA</label>
+            </value>
+            <value>
+                <fullName>CAÇU</fullName>
+                <default>false</default>
+                <label>CAÇU</label>
+            </value>
+            <value>
+                <fullName>CAIAPONIA</fullName>
+                <default>false</default>
+                <label>CAIAPONIA</label>
+            </value>
+            <value>
+                <fullName>CALDAS NOVAS</fullName>
+                <default>false</default>
+                <label>CALDAS NOVAS</label>
+            </value>
+            <value>
+                <fullName>CALDAZINHA</fullName>
+                <default>false</default>
+                <label>CALDAZINHA</label>
+            </value>
+            <value>
+                <fullName>CAMBUCI</fullName>
+                <default>false</default>
+                <label>CAMBUCI</label>
+            </value>
+            <value>
+                <fullName>CAMOCIM</fullName>
+                <default>false</default>
+                <label>CAMOCIM</label>
+            </value>
+            <value>
+                <fullName>CAMPANHA CABO FRIO</fullName>
+                <default>false</default>
+                <label>CAMPANHA CABO FRIO</label>
+            </value>
+            <value>
+                <fullName>CAMPESTRE DE GOIÁS</fullName>
+                <default>false</default>
+                <label>CAMPESTRE DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>CAMPINAÇU</fullName>
+                <default>false</default>
+                <label>CAMPINAÇU</label>
+            </value>
+            <value>
+                <fullName>CAMPINORTE</fullName>
+                <default>false</default>
+                <label>CAMPINORTE</label>
+            </value>
+            <value>
+                <fullName>CAMPO ALEGRE DE GOIÁS</fullName>
+                <default>false</default>
+                <label>CAMPO ALEGRE DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>CAMPO LIMPO DE GOIÁS</fullName>
+                <default>false</default>
+                <label>CAMPO LIMPO DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>CAMPOS BELOS</fullName>
+                <default>false</default>
+                <label>CAMPOS BELOS</label>
+            </value>
+            <value>
+                <fullName>CAMPOS DOS GOYTACAZES</fullName>
+                <default>false</default>
+                <label>CAMPOS DOS GOYTACAZES</label>
+            </value>
+            <value>
+                <fullName>CAMPOS SALES</fullName>
+                <default>false</default>
+                <label>CAMPOS SALES</label>
+            </value>
+            <value>
+                <fullName>CAMPOS VERDES</fullName>
+                <default>false</default>
+                <label>CAMPOS VERDES</label>
+            </value>
+            <value>
+                <fullName>CANINDE</fullName>
+                <default>false</default>
+                <label>CANINDE</label>
+            </value>
+            <value>
+                <fullName>CANTAGALO</fullName>
+                <default>false</default>
+                <label>CANTAGALO</label>
+            </value>
+            <value>
+                <fullName>CAPISTRANO</fullName>
+                <default>false</default>
+                <label>CAPISTRANO</label>
+            </value>
+            <value>
+                <fullName>CARDOSO MOREIRA</fullName>
+                <default>false</default>
+                <label>CARDOSO MOREIRA</label>
+            </value>
+            <value>
+                <fullName>CARIDADE</fullName>
+                <default>false</default>
+                <label>CARIDADE</label>
+            </value>
+            <value>
+                <fullName>CARIRE</fullName>
+                <default>false</default>
+                <label>CARIRE</label>
+            </value>
+            <value>
+                <fullName>CARIRIACU</fullName>
+                <default>false</default>
+                <label>CARIRIACU</label>
+            </value>
+            <value>
+                <fullName>CARIUS</fullName>
+                <default>false</default>
+                <label>CARIUS</label>
+            </value>
+            <value>
+                <fullName>CARLITO PAMPLONA</fullName>
+                <default>false</default>
+                <label>CARLITO PAMPLONA</label>
+            </value>
+            <value>
+                <fullName>CARNAUBAL</fullName>
+                <default>false</default>
+                <label>CARNAUBAL</label>
+            </value>
+            <value>
+                <fullName>CASCAVEL</fullName>
+                <default>false</default>
+                <label>CASCAVEL</label>
+            </value>
+            <value>
+                <fullName>CASEMIRO DE ABREU</fullName>
+                <default>false</default>
+                <label>CASEMIRO DE ABREU</label>
+            </value>
+            <value>
+                <fullName>CASTELÂNDIA</fullName>
+                <default>false</default>
+                <label>CASTELÂNDIA</label>
+            </value>
+            <value>
+                <fullName>CATALAO</fullName>
+                <default>false</default>
+                <label>CATALAO</label>
+            </value>
+            <value>
+                <fullName>CATARINA</fullName>
+                <default>false</default>
+                <label>CATARINA</label>
+            </value>
+            <value>
+                <fullName>CATUNDA</fullName>
+                <default>false</default>
+                <label>CATUNDA</label>
+            </value>
+            <value>
+                <fullName>CATURAÍ</fullName>
+                <default>false</default>
+                <label>CATURAÍ</label>
+            </value>
+            <value>
+                <fullName>CAUCAIA</fullName>
+                <default>false</default>
+                <label>CAUCAIA</label>
+            </value>
+            <value>
+                <fullName>CAVALCANTE</fullName>
+                <default>false</default>
+                <label>CAVALCANTE</label>
+            </value>
+            <value>
+                <fullName>CEDRO</fullName>
+                <default>false</default>
+                <label>CEDRO</label>
+            </value>
+            <value>
+                <fullName>CENTRO</fullName>
+                <default>false</default>
+                <label>CENTRO</label>
+            </value>
+            <value>
+                <fullName>CEZARINA</fullName>
+                <default>false</default>
+                <label>CEZARINA</label>
+            </value>
+            <value>
+                <fullName>CHAPADÃO DO CÉU</fullName>
+                <default>false</default>
+                <label>CHAPADÃO DO CÉU</label>
+            </value>
+            <value>
+                <fullName>CHAVAL</fullName>
+                <default>false</default>
+                <label>CHAVAL</label>
+            </value>
+            <value>
+                <fullName>CHORO-LIMAO</fullName>
+                <default>false</default>
+                <label>CHORO-LIMAO</label>
+            </value>
+            <value>
+                <fullName>CHOROZINHO</fullName>
+                <default>false</default>
+                <label>CHOROZINHO</label>
+            </value>
+            <value>
+                <fullName>CIDADE OCIDENTAL</fullName>
+                <default>false</default>
+                <label>CIDADE OCIDENTAL</label>
+            </value>
+            <value>
+                <fullName>COCALZINHO DE GOIÁS</fullName>
+                <default>false</default>
+                <label>COCALZINHO DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>COLINAS DO SUL</fullName>
+                <default>false</default>
+                <label>COLINAS DO SUL</label>
+            </value>
+            <value>
+                <fullName>CONCEICAO DE MACABU</fullName>
+                <default>false</default>
+                <label>CONCEICAO DE MACABU</label>
+            </value>
+            <value>
+                <fullName>CONJUNTO CEARA</fullName>
+                <default>false</default>
+                <label>CONJUNTO CEARA</label>
+            </value>
+            <value>
+                <fullName>COREAU</fullName>
+                <default>false</default>
+                <label>COREAU</label>
+            </value>
+            <value>
+                <fullName>CORPORATIVO</fullName>
+                <default>false</default>
+                <label>CORPORATIVO</label>
+            </value>
+            <value>
+                <fullName>CÓRREGO DO OURO</fullName>
+                <default>false</default>
+                <label>CÓRREGO DO OURO</label>
+            </value>
+            <value>
+                <fullName>CORUMBÁ DE GOIAS</fullName>
+                <default>false</default>
+                <label>CORUMBÁ DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>CORUMBAIBA</fullName>
+                <default>false</default>
+                <label>CORUMBAIBA</label>
+            </value>
+            <value>
+                <fullName>CRATEUS</fullName>
+                <default>false</default>
+                <label>CRATEUS</label>
+            </value>
+            <value>
+                <fullName>CRATO</fullName>
+                <default>false</default>
+                <label>CRATO</label>
+            </value>
+            <value>
+                <fullName>CRISTALINA</fullName>
+                <default>false</default>
+                <label>CRISTALINA</label>
+            </value>
+            <value>
+                <fullName>CRISTIANOPOLIS</fullName>
+                <default>false</default>
+                <label>CRISTIANOPOLIS</label>
+            </value>
+            <value>
+                <fullName>CRIXAS</fullName>
+                <default>false</default>
+                <label>CRIXAS</label>
+            </value>
+            <value>
+                <fullName>CROATA</fullName>
+                <default>false</default>
+                <label>CROATA</label>
+            </value>
+            <value>
+                <fullName>CROMÍNIA</fullName>
+                <default>false</default>
+                <label>CROMÍNIA</label>
+            </value>
+            <value>
+                <fullName>CRUZ</fullName>
+                <default>false</default>
+                <label>CRUZ</label>
+            </value>
+            <value>
+                <fullName>CUMARI</fullName>
+                <default>false</default>
+                <label>CUMARI</label>
+            </value>
+            <value>
+                <fullName>DAMIANÓPOLIS</fullName>
+                <default>false</default>
+                <label>DAMIANÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>DAMOLANDIA</fullName>
+                <default>false</default>
+                <label>DAMOLANDIA</label>
+            </value>
+            <value>
+                <fullName>DAVINÓPOLIS</fullName>
+                <default>false</default>
+                <label>DAVINÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>DEP IRAPUA PINHEIRO</fullName>
+                <default>false</default>
+                <label>DEP IRAPUA PINHEIRO</label>
+            </value>
+            <value>
+                <fullName>DIORAMA</fullName>
+                <default>false</default>
+                <label>DIORAMA</label>
+            </value>
+            <value>
+                <fullName>DIVINÓPOLIS DE GOIÁS</fullName>
+                <default>false</default>
+                <label>DIVINÓPOLIS DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>DOVERLANDIA</fullName>
+                <default>false</default>
+                <label>DOVERLANDIA</label>
+            </value>
+            <value>
+                <fullName>EDEALINA</fullName>
+                <default>false</default>
+                <label>EDEALINA</label>
+            </value>
+            <value>
+                <fullName>EDEIA</fullName>
+                <default>false</default>
+                <label>EDEIA</label>
+            </value>
+            <value>
+                <fullName>ERERE</fullName>
+                <default>false</default>
+                <label>ERERE</label>
+            </value>
+            <value>
+                <fullName>ESTRELA DO NORTE</fullName>
+                <default>false</default>
+                <label>ESTRELA DO NORTE</label>
+            </value>
+            <value>
+                <fullName>EUSEBIO</fullName>
+                <default>false</default>
+                <label>EUSEBIO</label>
+            </value>
+            <value>
+                <fullName>FAINA</fullName>
+                <default>false</default>
+                <label>FAINA</label>
+            </value>
+            <value>
+                <fullName>FARIAS BRITO</fullName>
+                <default>false</default>
+                <label>FARIAS BRITO</label>
+            </value>
+            <value>
+                <fullName>FAZENDA NOVA</fullName>
+                <default>false</default>
+                <label>FAZENDA NOVA</label>
+            </value>
+            <value>
+                <fullName>FIRMINOPOLIS</fullName>
+                <default>false</default>
+                <label>FIRMINOPOLIS</label>
+            </value>
+            <value>
+                <fullName>FLORES DE GOIÁS</fullName>
+                <default>false</default>
+                <label>FLORES DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>FORMOSA</fullName>
+                <default>false</default>
+                <label>FORMOSA</label>
+            </value>
+            <value>
+                <fullName>FORMOSO</fullName>
+                <default>false</default>
+                <label>FORMOSO</label>
+            </value>
+            <value>
+                <fullName>FORQUILHA</fullName>
+                <default>false</default>
+                <label>FORQUILHA</label>
+            </value>
+            <value>
+                <fullName>FORTIM</fullName>
+                <default>false</default>
+                <label>FORTIM</label>
+            </value>
+            <value>
+                <fullName>FRECHEIRINHA</fullName>
+                <default>false</default>
+                <label>FRECHEIRINHA</label>
+            </value>
+            <value>
+                <fullName>GAMELEIRA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>GAMELEIRA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>GENERAL SAMPAIO</fullName>
+                <default>false</default>
+                <label>GENERAL SAMPAIO</label>
+            </value>
+            <value>
+                <fullName>GOIANAPOLIS</fullName>
+                <default>false</default>
+                <label>GOIANAPOLIS</label>
+            </value>
+            <value>
+                <fullName>GOIANDIRA</fullName>
+                <default>false</default>
+                <label>GOIANDIRA</label>
+            </value>
+            <value>
+                <fullName>GOIANESIA</fullName>
+                <default>false</default>
+                <label>GOIANESIA</label>
+            </value>
+            <value>
+                <fullName>GOIANIA LESTE</fullName>
+                <default>false</default>
+                <label>GOIANIA LESTE</label>
+            </value>
+            <value>
+                <fullName>GOIANIA SUDOESTE</fullName>
+                <default>false</default>
+                <label>GOIANIA SUDOESTE</label>
+            </value>
+            <value>
+                <fullName>GOIANIA SUL</fullName>
+                <default>false</default>
+                <label>GOIANIA SUL</label>
+            </value>
+            <value>
+                <fullName>GOIANIRA</fullName>
+                <default>false</default>
+                <label>GOIANIRA</label>
+            </value>
+            <value>
+                <fullName>GOIAS</fullName>
+                <default>false</default>
+                <label>GOIAS</label>
+            </value>
+            <value>
+                <fullName>GOIATUBA</fullName>
+                <default>false</default>
+                <label>GOIATUBA</label>
+            </value>
+            <value>
+                <fullName>GOUVELANDIA</fullName>
+                <default>false</default>
+                <label>GOUVELANDIA</label>
+            </value>
+            <value>
+                <fullName>GRACA</fullName>
+                <default>false</default>
+                <label>GRACA</label>
+            </value>
+            <value>
+                <fullName>GRANGEIRO</fullName>
+                <default>false</default>
+                <label>GRANGEIRO</label>
+            </value>
+            <value>
+                <fullName>GRANJA</fullName>
+                <default>false</default>
+                <label>GRANJA</label>
+            </value>
+            <value>
+                <fullName>GROAIRAS</fullName>
+                <default>false</default>
+                <label>GROAIRAS</label>
+            </value>
+            <value>
+                <fullName>GUAIUBA</fullName>
+                <default>false</default>
+                <label>GUAIUBA</label>
+            </value>
+            <value>
+                <fullName>GUAPIMIRIM</fullName>
+                <default>false</default>
+                <label>GUAPIMIRIM</label>
+            </value>
+            <value>
+                <fullName>GUAPO</fullName>
+                <default>false</default>
+                <label>GUAPO</label>
+            </value>
+            <value>
+                <fullName>GUARACIABA DO NORTE</fullName>
+                <default>false</default>
+                <label>GUARACIABA DO NORTE</label>
+            </value>
+            <value>
+                <fullName>GUARAÍTA</fullName>
+                <default>false</default>
+                <label>GUARAÍTA</label>
+            </value>
+            <value>
+                <fullName>GUARAMIRANGA</fullName>
+                <default>false</default>
+                <label>GUARAMIRANGA</label>
+            </value>
+            <value>
+                <fullName>GUARANI DE GOIÁS</fullName>
+                <default>false</default>
+                <label>GUARANI DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>GUARINOS</fullName>
+                <default>false</default>
+                <label>GUARINOS</label>
+            </value>
+            <value>
+                <fullName>HEITORAÍ</fullName>
+                <default>false</default>
+                <label>HEITORAÍ</label>
+            </value>
+            <value>
+                <fullName>HIDROLANDIA</fullName>
+                <default>false</default>
+                <label>HIDROLANDIA</label>
+            </value>
+            <value>
+                <fullName>HIDROLINA</fullName>
+                <default>false</default>
+                <label>HIDROLINA</label>
+            </value>
+            <value>
+                <fullName>HORIZONTE</fullName>
+                <default>false</default>
+                <label>HORIZONTE</label>
+            </value>
+            <value>
+                <fullName>IACIARA</fullName>
+                <default>false</default>
+                <label>IACIARA</label>
+            </value>
+            <value>
+                <fullName>IBARETAMA</fullName>
+                <default>false</default>
+                <label>IBARETAMA</label>
+            </value>
+            <value>
+                <fullName>IBIAPINA</fullName>
+                <default>false</default>
+                <label>IBIAPINA</label>
+            </value>
+            <value>
+                <fullName>IBICUITINGA</fullName>
+                <default>false</default>
+                <label>IBICUITINGA</label>
+            </value>
+            <value>
+                <fullName>ICAPUI</fullName>
+                <default>false</default>
+                <label>ICAPUI</label>
+            </value>
+            <value>
+                <fullName>ICO</fullName>
+                <default>false</default>
+                <label>ICO</label>
+            </value>
+            <value>
+                <fullName>IGUABA</fullName>
+                <default>false</default>
+                <label>IGUABA</label>
+            </value>
+            <value>
+                <fullName>IGUATU</fullName>
+                <default>false</default>
+                <label>IGUATU</label>
+            </value>
+            <value>
+                <fullName>INACIOLANDIA</fullName>
+                <default>false</default>
+                <label>INACIOLANDIA</label>
+            </value>
+            <value>
+                <fullName>INDEPENDENCIA</fullName>
+                <default>false</default>
+                <label>INDEPENDENCIA</label>
+            </value>
+            <value>
+                <fullName>INDIARA</fullName>
+                <default>false</default>
+                <label>INDIARA</label>
+            </value>
+            <value>
+                <fullName>INHUMAS</fullName>
+                <default>false</default>
+                <label>INHUMAS</label>
+            </value>
+            <value>
+                <fullName>IPAMERI</fullName>
+                <default>false</default>
+                <label>IPAMERI</label>
+            </value>
+            <value>
+                <fullName>IPAPORANGA</fullName>
+                <default>false</default>
+                <label>IPAPORANGA</label>
+            </value>
+            <value>
+                <fullName>IPAUMIRIM</fullName>
+                <default>false</default>
+                <label>IPAUMIRIM</label>
+            </value>
+            <value>
+                <fullName>IPORA</fullName>
+                <default>false</default>
+                <label>IPORA</label>
+            </value>
+            <value>
+                <fullName>IPU</fullName>
+                <default>false</default>
+                <label>IPU</label>
+            </value>
+            <value>
+                <fullName>IPUEIRAS</fullName>
+                <default>false</default>
+                <label>IPUEIRAS</label>
+            </value>
+            <value>
+                <fullName>IRACEMA</fullName>
+                <default>false</default>
+                <label>IRACEMA</label>
+            </value>
+            <value>
+                <fullName>IRAUCUBA</fullName>
+                <default>false</default>
+                <label>IRAUCUBA</label>
+            </value>
+            <value>
+                <fullName>ISRAELANDIA</fullName>
+                <default>false</default>
+                <label>ISRAELANDIA</label>
+            </value>
+            <value>
+                <fullName>ITABERAI</fullName>
+                <default>false</default>
+                <label>ITABERAI</label>
+            </value>
+            <value>
+                <fullName>ITABORAI</fullName>
+                <default>false</default>
+                <label>ITABORAI</label>
+            </value>
+            <value>
+                <fullName>ITAGUARI</fullName>
+                <default>false</default>
+                <label>ITAGUARI</label>
+            </value>
+            <value>
+                <fullName>ITAGUARU</fullName>
+                <default>false</default>
+                <label>ITAGUARU</label>
+            </value>
+            <value>
+                <fullName>ITAICABA</fullName>
+                <default>false</default>
+                <label>ITAICABA</label>
+            </value>
+            <value>
+                <fullName>ITAIPUACU</fullName>
+                <default>false</default>
+                <label>ITAIPUACU</label>
+            </value>
+            <value>
+                <fullName>ITAITINGA</fullName>
+                <default>false</default>
+                <label>ITAITINGA</label>
+            </value>
+            <value>
+                <fullName>ITAJA</fullName>
+                <default>false</default>
+                <label>ITAJA</label>
+            </value>
+            <value>
+                <fullName>ITALVA</fullName>
+                <default>false</default>
+                <label>ITALVA</label>
+            </value>
+            <value>
+                <fullName>ITAOCARA</fullName>
+                <default>false</default>
+                <label>ITAOCARA</label>
+            </value>
+            <value>
+                <fullName>ITAPACI</fullName>
+                <default>false</default>
+                <label>ITAPACI</label>
+            </value>
+            <value>
+                <fullName>ITAPAJE</fullName>
+                <default>false</default>
+                <label>ITAPAJE</label>
+            </value>
+            <value>
+                <fullName>ITAPERUNA</fullName>
+                <default>false</default>
+                <label>ITAPERUNA</label>
+            </value>
+            <value>
+                <fullName>ITAPIPOCA</fullName>
+                <default>false</default>
+                <label>ITAPIPOCA</label>
+            </value>
+            <value>
+                <fullName>ITAPIRAPUA</fullName>
+                <default>false</default>
+                <label>ITAPIRAPUA</label>
+            </value>
+            <value>
+                <fullName>ITAPIUNA</fullName>
+                <default>false</default>
+                <label>ITAPIUNA</label>
+            </value>
+            <value>
+                <fullName>ITAPURANGA</fullName>
+                <default>false</default>
+                <label>ITAPURANGA</label>
+            </value>
+            <value>
+                <fullName>ITAREMA</fullName>
+                <default>false</default>
+                <label>ITAREMA</label>
+            </value>
+            <value>
+                <fullName>ITARUMÃ</fullName>
+                <default>false</default>
+                <label>ITARUMÃ</label>
+            </value>
+            <value>
+                <fullName>ITATIAIA</fullName>
+                <default>false</default>
+                <label>ITATIAIA</label>
+            </value>
+            <value>
+                <fullName>ITATIRA</fullName>
+                <default>false</default>
+                <label>ITATIRA</label>
+            </value>
+            <value>
+                <fullName>ITAUÇU</fullName>
+                <default>false</default>
+                <label>ITAUÇU</label>
+            </value>
+            <value>
+                <fullName>ITUMBIARA</fullName>
+                <default>false</default>
+                <label>ITUMBIARA</label>
+            </value>
+            <value>
+                <fullName>IVOLÂNDIA</fullName>
+                <default>false</default>
+                <label>IVOLÂNDIA</label>
+            </value>
+            <value>
+                <fullName>JAGUARETAMA</fullName>
+                <default>false</default>
+                <label>JAGUARETAMA</label>
+            </value>
+            <value>
+                <fullName>JAGUARIBE</fullName>
+                <default>false</default>
+                <label>JAGUARIBE</label>
+            </value>
+            <value>
+                <fullName>JAGUARUANA</fullName>
+                <default>false</default>
+                <label>JAGUARUANA</label>
+            </value>
+            <value>
+                <fullName>JANDAIA</fullName>
+                <default>false</default>
+                <label>JANDAIA</label>
+            </value>
+            <value>
+                <fullName>JARAGUA</fullName>
+                <default>false</default>
+                <label>JARAGUA</label>
+            </value>
+            <value>
+                <fullName>JARDIM</fullName>
+                <default>false</default>
+                <label>JARDIM</label>
+            </value>
+            <value>
+                <fullName>JATAI</fullName>
+                <default>false</default>
+                <label>JATAI</label>
+            </value>
+            <value>
+                <fullName>JATI</fullName>
+                <default>false</default>
+                <label>JATI</label>
+            </value>
+            <value>
+                <fullName>JAUPACI</fullName>
+                <default>false</default>
+                <label>JAUPACI</label>
+            </value>
+            <value>
+                <fullName>JESÚPOLIS</fullName>
+                <default>false</default>
+                <label>JESÚPOLIS</label>
+            </value>
+            <value>
+                <fullName>JIJOCA DE JERICOACOARA</fullName>
+                <default>false</default>
+                <label>JIJOCA DE JERICOACOARA</label>
+            </value>
+            <value>
+                <fullName>JOVIÂNIA</fullName>
+                <default>false</default>
+                <label>JOVIÂNIA</label>
+            </value>
+            <value>
+                <fullName>JUAZEIRO DO NORTE</fullName>
+                <default>false</default>
+                <label>JUAZEIRO DO NORTE</label>
+            </value>
+            <value>
+                <fullName>JUAZEIRO DO NORTE - TRIANGULO</fullName>
+                <default>false</default>
+                <label>JUAZEIRO DO NORTE - TRIANGULO</label>
+            </value>
+            <value>
+                <fullName>JUCAS</fullName>
+                <default>false</default>
+                <label>JUCAS</label>
+            </value>
+            <value>
+                <fullName>JUSSARA</fullName>
+                <default>false</default>
+                <label>JUSSARA</label>
+            </value>
+            <value>
+                <fullName>LAGOA SANTA</fullName>
+                <default>false</default>
+                <label>LAGOA SANTA</label>
+            </value>
+            <value>
+                <fullName>LAVRAS DA MANGABEIRA</fullName>
+                <default>false</default>
+                <label>LAVRAS DA MANGABEIRA</label>
+            </value>
+            <value>
+                <fullName>LEOPOLDO DE BULHÕES</fullName>
+                <default>false</default>
+                <label>LEOPOLDO DE BULHÕES</label>
+            </value>
+            <value>
+                <fullName>LIMOEIRO DO NORTE</fullName>
+                <default>false</default>
+                <label>LIMOEIRO DO NORTE</label>
+            </value>
+            <value>
+                <fullName>LOJA OCEANICA</fullName>
+                <default>false</default>
+                <label>LOJA OCEANICA</label>
+            </value>
+            <value>
+                <fullName>Loja Praça XV</fullName>
+                <default>false</default>
+                <label>Loja Praça XV</label>
+            </value>
+            <value>
+                <fullName>LUZIANIA</fullName>
+                <default>false</default>
+                <label>LUZIANIA</label>
+            </value>
+            <value>
+                <fullName>LUZIANIA - JARDIM DO INGÁ</fullName>
+                <default>false</default>
+                <label>LUZIANIA - JARDIM DO INGÁ</label>
+            </value>
+            <value>
+                <fullName>MACAE</fullName>
+                <default>false</default>
+                <label>MACAE</label>
+            </value>
+            <value>
+                <fullName>MADALENA</fullName>
+                <default>false</default>
+                <label>MADALENA</label>
+            </value>
+            <value>
+                <fullName>MAGE</fullName>
+                <default>false</default>
+                <label>MAGE</label>
+            </value>
+            <value>
+                <fullName>MAIRIPOTABA</fullName>
+                <default>false</default>
+                <label>MAIRIPOTABA</label>
+            </value>
+            <value>
+                <fullName>MAMBAÍ</fullName>
+                <default>false</default>
+                <label>MAMBAÍ</label>
+            </value>
+            <value>
+                <fullName>MAMBUCABA</fullName>
+                <default>false</default>
+                <label>MAMBUCABA</label>
+            </value>
+            <value>
+                <fullName>MARACANAU</fullName>
+                <default>false</default>
+                <label>MARACANAU</label>
+            </value>
+            <value>
+                <fullName>MARANGUAPE</fullName>
+                <default>false</default>
+                <label>MARANGUAPE</label>
+            </value>
+            <value>
+                <fullName>MARA ROSA</fullName>
+                <default>false</default>
+                <label>MARA ROSA</label>
+            </value>
+            <value>
+                <fullName>MARCO</fullName>
+                <default>false</default>
+                <label>MARCO</label>
+            </value>
+            <value>
+                <fullName>MARICA</fullName>
+                <default>false</default>
+                <label>MARICA</label>
+            </value>
+            <value>
+                <fullName>MARTINOPOLE</fullName>
+                <default>false</default>
+                <label>MARTINOPOLE</label>
+            </value>
+            <value>
+                <fullName>MARZAGÃO</fullName>
+                <default>false</default>
+                <label>MARZAGÃO</label>
+            </value>
+            <value>
+                <fullName>MASSAPE</fullName>
+                <default>false</default>
+                <label>MASSAPE</label>
+            </value>
+            <value>
+                <fullName>MATRINCHÃ</fullName>
+                <default>false</default>
+                <label>MATRINCHÃ</label>
+            </value>
+            <value>
+                <fullName>MAURILÂNDIA</fullName>
+                <default>false</default>
+                <label>MAURILÂNDIA</label>
+            </value>
+            <value>
+                <fullName>MAURITI</fullName>
+                <default>false</default>
+                <label>MAURITI</label>
+            </value>
+            <value>
+                <fullName>MERUOCA</fullName>
+                <default>false</default>
+                <label>MERUOCA</label>
+            </value>
+            <value>
+                <fullName>MESSEJANA</fullName>
+                <default>false</default>
+                <label>MESSEJANA</label>
+            </value>
+            <value>
+                <fullName>MILAGRES</fullName>
+                <default>false</default>
+                <label>MILAGRES</label>
+            </value>
+            <value>
+                <fullName>MILHA</fullName>
+                <default>false</default>
+                <label>MILHA</label>
+            </value>
+            <value>
+                <fullName>MIMOSO DE GOIÁS</fullName>
+                <default>false</default>
+                <label>MIMOSO DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>MINACU</fullName>
+                <default>false</default>
+                <label>MINACU</label>
+            </value>
+            <value>
+                <fullName>MINEIROS</fullName>
+                <default>false</default>
+                <label>MINEIROS</label>
+            </value>
+            <value>
+                <fullName>MIRACEMA</fullName>
+                <default>false</default>
+                <label>MIRACEMA</label>
+            </value>
+            <value>
+                <fullName>MIRAIMA</fullName>
+                <default>false</default>
+                <label>MIRAIMA</label>
+            </value>
+            <value>
+                <fullName>MISSAO VELHA</fullName>
+                <default>false</default>
+                <label>MISSAO VELHA</label>
+            </value>
+            <value>
+                <fullName>MOIPORÁ</fullName>
+                <default>false</default>
+                <label>MOIPORÁ</label>
+            </value>
+            <value>
+                <fullName>MOMBACA</fullName>
+                <default>false</default>
+                <label>MOMBACA</label>
+            </value>
+            <value>
+                <fullName>MONSENHOR TABOSA</fullName>
+                <default>false</default>
+                <label>MONSENHOR TABOSA</label>
+            </value>
+            <value>
+                <fullName>MONTE ALEGRE DE GOIÁS</fullName>
+                <default>false</default>
+                <label>MONTE ALEGRE DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>MONTES CLAROS DE GOIÁS</fullName>
+                <default>false</default>
+                <label>MONTES CLAROS DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>MONTIVIDIU</fullName>
+                <default>false</default>
+                <label>MONTIVIDIU</label>
+            </value>
+            <value>
+                <fullName>MONTIVIDIU DO NORTE</fullName>
+                <default>false</default>
+                <label>MONTIVIDIU DO NORTE</label>
+            </value>
+            <value>
+                <fullName>MORADA NOVA</fullName>
+                <default>false</default>
+                <label>MORADA NOVA</label>
+            </value>
+            <value>
+                <fullName>MORAUJO</fullName>
+                <default>false</default>
+                <label>MORAUJO</label>
+            </value>
+            <value>
+                <fullName>MORRINHOS</fullName>
+                <default>false</default>
+                <label>MORRINHOS</label>
+            </value>
+            <value>
+                <fullName>MORRO AGUDO DE GOIÁS</fullName>
+                <default>false</default>
+                <label>MORRO AGUDO DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>MOSSAMEDES</fullName>
+                <default>false</default>
+                <label>MOSSAMEDES</label>
+            </value>
+            <value>
+                <fullName>MOVEL I</fullName>
+                <default>false</default>
+                <label>MOVEL I</label>
+            </value>
+            <value>
+                <fullName>MOVEL II</fullName>
+                <default>false</default>
+                <label>MOVEL II</label>
+            </value>
+            <value>
+                <fullName>MOVEL III</fullName>
+                <default>false</default>
+                <label>MOVEL III</label>
+            </value>
+            <value>
+                <fullName>MOZARLANDIA</fullName>
+                <default>false</default>
+                <label>MOZARLANDIA</label>
+            </value>
+            <value>
+                <fullName>MUCAMBO</fullName>
+                <default>false</default>
+                <label>MUCAMBO</label>
+            </value>
+            <value>
+                <fullName>MULUNGU</fullName>
+                <default>false</default>
+                <label>MULUNGU</label>
+            </value>
+            <value>
+                <fullName>MUNDO NOVO</fullName>
+                <default>false</default>
+                <label>MUNDO NOVO</label>
+            </value>
+            <value>
+                <fullName>MURIQUI</fullName>
+                <default>false</default>
+                <label>MURIQUI</label>
+            </value>
+            <value>
+                <fullName>MUTUNOPLIS</fullName>
+                <default>false</default>
+                <label>MUTUNOPLIS</label>
+            </value>
+            <value>
+                <fullName>NATIVIDADE</fullName>
+                <default>false</default>
+                <label>NATIVIDADE</label>
+            </value>
+            <value>
+                <fullName>NAZÁRIO</fullName>
+                <default>false</default>
+                <label>NAZÁRIO</label>
+            </value>
+            <value>
+                <fullName>NEROPOLIS</fullName>
+                <default>false</default>
+                <label>NEROPOLIS</label>
+            </value>
+            <value>
+                <fullName>NIQUELANDIA</fullName>
+                <default>false</default>
+                <label>NIQUELANDIA</label>
+            </value>
+            <value>
+                <fullName>NITEROI</fullName>
+                <default>false</default>
+                <label>NITEROI</label>
+            </value>
+            <value>
+                <fullName>NOVA AMÉRICA</fullName>
+                <default>false</default>
+                <label>NOVA AMÉRICA</label>
+            </value>
+            <value>
+                <fullName>NOVA AURORA</fullName>
+                <default>false</default>
+                <label>NOVA AURORA</label>
+            </value>
+            <value>
+                <fullName>NOVA CRIXAS</fullName>
+                <default>false</default>
+                <label>NOVA CRIXAS</label>
+            </value>
+            <value>
+                <fullName>NOVA IGUAÇU DE GOIÁS</fullName>
+                <default>false</default>
+                <label>NOVA IGUAÇU DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>NOVA JAGUARIBARA</fullName>
+                <default>false</default>
+                <label>NOVA JAGUARIBARA</label>
+            </value>
+            <value>
+                <fullName>NOVA OLINDA</fullName>
+                <default>false</default>
+                <label>NOVA OLINDA</label>
+            </value>
+            <value>
+                <fullName>NOVA ROMA</fullName>
+                <default>false</default>
+                <label>NOVA ROMA</label>
+            </value>
+            <value>
+                <fullName>NOVA RUSSAS</fullName>
+                <default>false</default>
+                <label>NOVA RUSSAS</label>
+            </value>
+            <value>
+                <fullName>NOVA VENEZA</fullName>
+                <default>false</default>
+                <label>NOVA VENEZA</label>
+            </value>
+            <value>
+                <fullName>NOVO BRASIL</fullName>
+                <default>false</default>
+                <label>NOVO BRASIL</label>
+            </value>
+            <value>
+                <fullName>NOVO GAMA</fullName>
+                <default>false</default>
+                <label>NOVO GAMA</label>
+            </value>
+            <value>
+                <fullName>NOVO ORIENTE</fullName>
+                <default>false</default>
+                <label>NOVO ORIENTE</label>
+            </value>
+            <value>
+                <fullName>NOVO PLANALTO</fullName>
+                <default>false</default>
+                <label>NOVO PLANALTO</label>
+            </value>
+            <value>
+                <fullName>OCARA</fullName>
+                <default>false</default>
+                <label>OCARA</label>
+            </value>
+            <value>
+                <fullName>ORIZONA</fullName>
+                <default>false</default>
+                <label>ORIZONA</label>
+            </value>
+            <value>
+                <fullName>OROS</fullName>
+                <default>false</default>
+                <label>OROS</label>
+            </value>
+            <value>
+                <fullName>OURO VERDE DE GOIÁS</fullName>
+                <default>false</default>
+                <label>OURO VERDE DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>OUVIDOR</fullName>
+                <default>false</default>
+                <label>OUVIDOR</label>
+            </value>
+            <value>
+                <fullName>PACAJUS</fullName>
+                <default>false</default>
+                <label>PACAJUS</label>
+            </value>
+            <value>
+                <fullName>PACATUBA</fullName>
+                <default>false</default>
+                <label>PACATUBA</label>
+            </value>
+            <value>
+                <fullName>PACOTI</fullName>
+                <default>false</default>
+                <label>PACOTI</label>
+            </value>
+            <value>
+                <fullName>PACUJA</fullName>
+                <default>false</default>
+                <label>PACUJA</label>
+            </value>
+            <value>
+                <fullName>PADRE BERNARDO</fullName>
+                <default>false</default>
+                <label>PADRE BERNARDO</label>
+            </value>
+            <value>
+                <fullName>PALESTINA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>PALESTINA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>PALHANO</fullName>
+                <default>false</default>
+                <label>PALHANO</label>
+            </value>
+            <value>
+                <fullName>PALMACIA</fullName>
+                <default>false</default>
+                <label>PALMACIA</label>
+            </value>
+            <value>
+                <fullName>PALMEIRAS DE GOIAS</fullName>
+                <default>false</default>
+                <label>PALMEIRAS DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>PALMELO</fullName>
+                <default>false</default>
+                <label>PALMELO</label>
+            </value>
+            <value>
+                <fullName>PALMINÓPOLIS</fullName>
+                <default>false</default>
+                <label>PALMINÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>PANAMÁ</fullName>
+                <default>false</default>
+                <label>PANAMÁ</label>
+            </value>
+            <value>
+                <fullName>PARACURU</fullName>
+                <default>false</default>
+                <label>PARACURU</label>
+            </value>
+            <value>
+                <fullName>PARAIPABA</fullName>
+                <default>false</default>
+                <label>PARAIPABA</label>
+            </value>
+            <value>
+                <fullName>PARAMBU</fullName>
+                <default>false</default>
+                <label>PARAMBU</label>
+            </value>
+            <value>
+                <fullName>PARAMOTI</fullName>
+                <default>false</default>
+                <label>PARAMOTI</label>
+            </value>
+            <value>
+                <fullName>PARANAIGUARA</fullName>
+                <default>false</default>
+                <label>PARANAIGUARA</label>
+            </value>
+            <value>
+                <fullName>PARANGABA</fullName>
+                <default>false</default>
+                <label>PARANGABA</label>
+            </value>
+            <value>
+                <fullName>PARATI</fullName>
+                <default>false</default>
+                <label>PARATI</label>
+            </value>
+            <value>
+                <fullName>PARAUNA</fullName>
+                <default>false</default>
+                <label>PARAUNA</label>
+            </value>
+            <value>
+                <fullName>PEDRA BRANCA</fullName>
+                <default>false</default>
+                <label>PEDRA BRANCA</label>
+            </value>
+            <value>
+                <fullName>PENAFORTE</fullName>
+                <default>false</default>
+                <label>PENAFORTE</label>
+            </value>
+            <value>
+                <fullName>PENTECOSTE</fullName>
+                <default>false</default>
+                <label>PENTECOSTE</label>
+            </value>
+            <value>
+                <fullName>PEREIRO</fullName>
+                <default>false</default>
+                <label>PEREIRO</label>
+            </value>
+            <value>
+                <fullName>PEROLÂNDIA</fullName>
+                <default>false</default>
+                <label>PEROLÂNDIA</label>
+            </value>
+            <value>
+                <fullName>PETROLINA</fullName>
+                <default>false</default>
+                <label>PETROLINA</label>
+            </value>
+            <value>
+                <fullName>PETROPOLIS</fullName>
+                <default>false</default>
+                <label>PETROPOLIS</label>
+            </value>
+            <value>
+                <fullName>PIABETA</fullName>
+                <default>false</default>
+                <label>PIABETA</label>
+            </value>
+            <value>
+                <fullName>PILAR DE GOIÁS</fullName>
+                <default>false</default>
+                <label>PILAR DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>PINDORETAMA</fullName>
+                <default>false</default>
+                <label>PINDORETAMA</label>
+            </value>
+            <value>
+                <fullName>PIQUET CARNEIRO</fullName>
+                <default>false</default>
+                <label>PIQUET CARNEIRO</label>
+            </value>
+            <value>
+                <fullName>PIRACANJUBA</fullName>
+                <default>false</default>
+                <label>PIRACANJUBA</label>
+            </value>
+            <value>
+                <fullName>PIRANHAS</fullName>
+                <default>false</default>
+                <label>PIRANHAS</label>
+            </value>
+            <value>
+                <fullName>PIRENOPOLIS</fullName>
+                <default>false</default>
+                <label>PIRENOPOLIS</label>
+            </value>
+            <value>
+                <fullName>PIRES DO RIO</fullName>
+                <default>false</default>
+                <label>PIRES DO RIO</label>
+            </value>
+            <value>
+                <fullName>PIRES FERREIRA</fullName>
+                <default>false</default>
+                <label>PIRES FERREIRA</label>
+            </value>
+            <value>
+                <fullName>PLANALTINA</fullName>
+                <default>false</default>
+                <label>PLANALTINA</label>
+            </value>
+            <value>
+                <fullName>PONTALINA</fullName>
+                <default>false</default>
+                <label>PONTALINA</label>
+            </value>
+            <value>
+                <fullName>PORANGA</fullName>
+                <default>false</default>
+                <label>PORANGA</label>
+            </value>
+            <value>
+                <fullName>PORANGATU</fullName>
+                <default>false</default>
+                <label>PORANGATU</label>
+            </value>
+            <value>
+                <fullName>PORCIÚNCULA</fullName>
+                <default>false</default>
+                <label>PORCIÚNCULA</label>
+            </value>
+            <value>
+                <fullName>PORTEIRÃO</fullName>
+                <default>false</default>
+                <label>PORTEIRÃO</label>
+            </value>
+            <value>
+                <fullName>PORTEIRAS</fullName>
+                <default>false</default>
+                <label>PORTEIRAS</label>
+            </value>
+            <value>
+                <fullName>PORTELANDIA</fullName>
+                <default>false</default>
+                <label>PORTELANDIA</label>
+            </value>
+            <value>
+                <fullName>POSSE</fullName>
+                <default>false</default>
+                <label>POSSE</label>
+            </value>
+            <value>
+                <fullName>POSTO APERIBÉ</fullName>
+                <default>false</default>
+                <label>POSTO APERIBÉ</label>
+            </value>
+            <value>
+                <fullName>POSTO CARAPEBUS</fullName>
+                <default>false</default>
+                <label>POSTO CARAPEBUS</label>
+            </value>
+            <value>
+                <fullName>POSTO CORDEIRO</fullName>
+                <default>false</default>
+                <label>POSTO CORDEIRO</label>
+            </value>
+            <value>
+                <fullName>POSTO DUAS BARRAS</fullName>
+                <default>false</default>
+                <label>POSTO DUAS BARRAS</label>
+            </value>
+            <value>
+                <fullName>POSTO LAJE DO MURIAÉ</fullName>
+                <default>false</default>
+                <label>POSTO LAJE DO MURIAÉ</label>
+            </value>
+            <value>
+                <fullName>POSTO MACUCO</fullName>
+                <default>false</default>
+                <label>POSTO MACUCO</label>
+            </value>
+            <value>
+                <fullName>POSTO NOVA FRIBURGO</fullName>
+                <default>false</default>
+                <label>POSTO NOVA FRIBURGO</label>
+            </value>
+            <value>
+                <fullName>POSTO PORTO REAL</fullName>
+                <default>false</default>
+                <label>POSTO PORTO REAL</label>
+            </value>
+            <value>
+                <fullName>POSTO S. JOSÉ DE UBÁ</fullName>
+                <default>false</default>
+                <label>POSTO S. JOSÉ DE UBÁ</label>
+            </value>
+            <value>
+                <fullName>POSTO SÃO SEBASTIÃO DO ALTO</fullName>
+                <default>false</default>
+                <label>POSTO SÃO SEBASTIÃO DO ALTO</label>
+            </value>
+            <value>
+                <fullName>POSTO SILVA JARDIM</fullName>
+                <default>false</default>
+                <label>POSTO SILVA JARDIM</label>
+            </value>
+            <value>
+                <fullName>POSTO SUMIDOURO</fullName>
+                <default>false</default>
+                <label>POSTO SUMIDOURO</label>
+            </value>
+            <value>
+                <fullName>POSTO TANGUÁ</fullName>
+                <default>false</default>
+                <label>POSTO TANGUÁ</label>
+            </value>
+            <value>
+                <fullName>POSTO VARRE-SAI</fullName>
+                <default>false</default>
+                <label>POSTO VARRE-SAI</label>
+            </value>
+            <value>
+                <fullName>POTENGI</fullName>
+                <default>false</default>
+                <label>POTENGI</label>
+            </value>
+            <value>
+                <fullName>POTIRETAMA</fullName>
+                <default>false</default>
+                <label>POTIRETAMA</label>
+            </value>
+            <value>
+                <fullName>PROF. JAMIL SAFADY</fullName>
+                <default>false</default>
+                <label>PROF. JAMIL SAFADY</label>
+            </value>
+            <value>
+                <fullName>PROJETOS SOCIAIS</fullName>
+                <default>false</default>
+                <label>PROJETOS SOCIAIS</label>
+            </value>
+            <value>
+                <fullName>QUIRINOPOLIS</fullName>
+                <default>false</default>
+                <label>QUIRINOPOLIS</label>
+            </value>
+            <value>
+                <fullName>QUISSAMÃ</fullName>
+                <default>false</default>
+                <label>QUISSAMÃ</label>
+            </value>
+            <value>
+                <fullName>QUITERIANOPOLES</fullName>
+                <default>false</default>
+                <label>QUITERIANOPOLES</label>
+            </value>
+            <value>
+                <fullName>QUIXADA</fullName>
+                <default>false</default>
+                <label>QUIXADA</label>
+            </value>
+            <value>
+                <fullName>QUIXELO</fullName>
+                <default>false</default>
+                <label>QUIXELO</label>
+            </value>
+            <value>
+                <fullName>QUIXERAMOBIM</fullName>
+                <default>false</default>
+                <label>QUIXERAMOBIM</label>
+            </value>
+            <value>
+                <fullName>QUIXERE</fullName>
+                <default>false</default>
+                <label>QUIXERE</label>
+            </value>
+            <value>
+                <fullName>REDENCAO</fullName>
+                <default>false</default>
+                <label>REDENCAO</label>
+            </value>
+            <value>
+                <fullName>RERIUTABA</fullName>
+                <default>false</default>
+                <label>RERIUTABA</label>
+            </value>
+            <value>
+                <fullName>RESENDE</fullName>
+                <default>false</default>
+                <label>RESENDE</label>
+            </value>
+            <value>
+                <fullName>RIO BONITO</fullName>
+                <default>false</default>
+                <label>RIO BONITO</label>
+            </value>
+            <value>
+                <fullName>RIO DAS OSTRAS</fullName>
+                <default>false</default>
+                <label>RIO DAS OSTRAS</label>
+            </value>
+            <value>
+                <fullName>RIO QUENTE</fullName>
+                <default>false</default>
+                <label>RIO QUENTE</label>
+            </value>
+            <value>
+                <fullName>RIO VERDE</fullName>
+                <default>false</default>
+                <label>RIO VERDE</label>
+            </value>
+            <value>
+                <fullName>RUBIATABA</fullName>
+                <default>false</default>
+                <label>RUBIATABA</label>
+            </value>
+            <value>
+                <fullName>RUSSAS</fullName>
+                <default>false</default>
+                <label>RUSSAS</label>
+            </value>
+            <value>
+                <fullName>SABOEIRO</fullName>
+                <default>false</default>
+                <label>SABOEIRO</label>
+            </value>
+            <value>
+                <fullName>SALITRE</fullName>
+                <default>false</default>
+                <label>SALITRE</label>
+            </value>
+            <value>
+                <fullName>SANCLERLANDIA</fullName>
+                <default>false</default>
+                <label>SANCLERLANDIA</label>
+            </value>
+            <value>
+                <fullName>SANTA BARBARA DE GOIAS</fullName>
+                <default>false</default>
+                <label>SANTA BARBARA DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>SANTA CRUZ DE GOIÁS</fullName>
+                <default>false</default>
+                <label>SANTA CRUZ DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>SANTA FÉ DE GOIÁS</fullName>
+                <default>false</default>
+                <label>SANTA FÉ DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>SANTA HELENA DE GOIAS</fullName>
+                <default>false</default>
+                <label>SANTA HELENA DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>SANTA MARIA MADALENA</fullName>
+                <default>false</default>
+                <label>SANTA MARIA MADALENA</label>
+            </value>
+            <value>
+                <fullName>SANTANA DO ACARAU</fullName>
+                <default>false</default>
+                <label>SANTANA DO ACARAU</label>
+            </value>
+            <value>
+                <fullName>SANTANA DO CARIRI</fullName>
+                <default>false</default>
+                <label>SANTANA DO CARIRI</label>
+            </value>
+            <value>
+                <fullName>SANTA QUITERIA</fullName>
+                <default>false</default>
+                <label>SANTA QUITERIA</label>
+            </value>
+            <value>
+                <fullName>SANTA RITA DO ARAGUAIA</fullName>
+                <default>false</default>
+                <label>SANTA RITA DO ARAGUAIA</label>
+            </value>
+            <value>
+                <fullName>SANTA RITA DO NOVO DESTINO</fullName>
+                <default>false</default>
+                <label>SANTA RITA DO NOVO DESTINO</label>
+            </value>
+            <value>
+                <fullName>SANTA ROSA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>SANTA ROSA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>SANTA TEREZA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>SANTA TEREZA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>SANTA TEREZINHA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>SANTA TEREZINHA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>SANTO ANTONIO DA BARRA</fullName>
+                <default>false</default>
+                <label>SANTO ANTONIO DA BARRA</label>
+            </value>
+            <value>
+                <fullName>SANTO ANTÔNIO DE GOIÁS</fullName>
+                <default>false</default>
+                <label>SANTO ANTÔNIO DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>SANTO ANTONIO DE PADUA</fullName>
+                <default>false</default>
+                <label>SANTO ANTONIO DE PADUA</label>
+            </value>
+            <value>
+                <fullName>SANTO ANTONIO DO DESCOBERTO</fullName>
+                <default>false</default>
+                <label>SANTO ANTONIO DO DESCOBERTO</label>
+            </value>
+            <value>
+                <fullName>SAO BENEDITO</fullName>
+                <default>false</default>
+                <label>SAO BENEDITO</label>
+            </value>
+            <value>
+                <fullName>SÃO DOMINGOS</fullName>
+                <default>false</default>
+                <label>SÃO DOMINGOS</label>
+            </value>
+            <value>
+                <fullName>SAO FIDELIS</fullName>
+                <default>false</default>
+                <label>SAO FIDELIS</label>
+            </value>
+            <value>
+                <fullName>SÃO FRANCISCO DE GOIÁS</fullName>
+                <default>false</default>
+                <label>SÃO FRANCISCO DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>SÃO FRANCISCO DO ITABAPOANA</fullName>
+                <default>false</default>
+                <label>SÃO FRANCISCO DO ITABAPOANA</label>
+            </value>
+            <value>
+                <fullName>SAO GONCALO</fullName>
+                <default>false</default>
+                <label>SAO GONCALO</label>
+            </value>
+            <value>
+                <fullName>SÃO JOÃO D&apos;ALIANÇA</fullName>
+                <default>false</default>
+                <label>SÃO JOÃO D&apos;ALIANÇA</label>
+            </value>
+            <value>
+                <fullName>SÃO JOÃO DA BARRA</fullName>
+                <default>false</default>
+                <label>SÃO JOÃO DA BARRA</label>
+            </value>
+            <value>
+                <fullName>SÃO JOÃO DA PARAÚNA</fullName>
+                <default>false</default>
+                <label>SÃO JOÃO DA PARAÚNA</label>
+            </value>
+            <value>
+                <fullName>SAO JOAO DO JAGUARIBE</fullName>
+                <default>false</default>
+                <label>SAO JOAO DO JAGUARIBE</label>
+            </value>
+            <value>
+                <fullName>SÃO JOSÉ DO VALE DO RIO PRETO</fullName>
+                <default>false</default>
+                <label>SÃO JOSÉ DO VALE DO RIO PRETO</label>
+            </value>
+            <value>
+                <fullName>SAO LUIS DE MONTES BELOS</fullName>
+                <default>false</default>
+                <label>SAO LUIS DE MONTES BELOS</label>
+            </value>
+            <value>
+                <fullName>SAO LUIS DO CURU</fullName>
+                <default>false</default>
+                <label>SAO LUIS DO CURU</label>
+            </value>
+            <value>
+                <fullName>SÃO LUIZ DO NORTE</fullName>
+                <default>false</default>
+                <label>SÃO LUIZ DO NORTE</label>
+            </value>
+            <value>
+                <fullName>SAO MIGUEL DO ARAGUAIA</fullName>
+                <default>false</default>
+                <label>SAO MIGUEL DO ARAGUAIA</label>
+            </value>
+            <value>
+                <fullName>SÃO MIGUEL DO PASSA QUATRO</fullName>
+                <default>false</default>
+                <label>SÃO MIGUEL DO PASSA QUATRO</label>
+            </value>
+            <value>
+                <fullName>SAO PEDRO DA ALDEIA</fullName>
+                <default>false</default>
+                <label>SAO PEDRO DA ALDEIA</label>
+            </value>
+            <value>
+                <fullName>SÃO SIMÃO</fullName>
+                <default>false</default>
+                <label>SÃO SIMÃO</label>
+            </value>
+            <value>
+                <fullName>SAQUAREMA</fullName>
+                <default>false</default>
+                <label>SAQUAREMA</label>
+            </value>
+            <value>
+                <fullName>SARACURUNA</fullName>
+                <default>false</default>
+                <label>SARACURUNA</label>
+            </value>
+            <value>
+                <fullName>SEDE - ADMIN CENTRAL</fullName>
+                <default>false</default>
+                <label>SEDE - ADMIN CENTRAL</label>
+            </value>
+            <value>
+                <fullName>SENADOR CANEDO</fullName>
+                <default>false</default>
+                <label>SENADOR CANEDO</label>
+            </value>
+            <value>
+                <fullName>SENADOR POMPEU</fullName>
+                <default>false</default>
+                <label>SENADOR POMPEU</label>
+            </value>
+            <value>
+                <fullName>SENADOR SA</fullName>
+                <default>false</default>
+                <label>SENADOR SA</label>
+            </value>
+            <value>
+                <fullName>SERRANOPOLIS</fullName>
+                <default>false</default>
+                <label>SERRANOPOLIS</label>
+            </value>
+            <value>
+                <fullName>SILVANIA</fullName>
+                <default>false</default>
+                <label>SILVANIA</label>
+            </value>
+            <value>
+                <fullName>SIMOLÂNDIA</fullName>
+                <default>false</default>
+                <label>SIMOLÂNDIA</label>
+            </value>
+            <value>
+                <fullName>SITO D&apos; ABADIA</fullName>
+                <default>false</default>
+                <label>SITO D&apos; ABADIA</label>
+            </value>
+            <value>
+                <fullName>SOBRAL</fullName>
+                <default>false</default>
+                <label>SOBRAL</label>
+            </value>
+            <value>
+                <fullName>SOLONOPOLE</fullName>
+                <default>false</default>
+                <label>SOLONOPOLE</label>
+            </value>
+            <value>
+                <fullName>TABULEIRO DO NORTE</fullName>
+                <default>false</default>
+                <label>TABULEIRO DO NORTE</label>
+            </value>
+            <value>
+                <fullName>TAMBORIL</fullName>
+                <default>false</default>
+                <label>TAMBORIL</label>
+            </value>
+            <value>
+                <fullName>TAQUARAL DE GOIÁS</fullName>
+                <default>false</default>
+                <label>TAQUARAL DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>TARRAFAS</fullName>
+                <default>false</default>
+                <label>TARRAFAS</label>
+            </value>
+            <value>
+                <fullName>TAUA</fullName>
+                <default>false</default>
+                <label>TAUA</label>
+            </value>
+            <value>
+                <fullName>TEJUSSUOCA</fullName>
+                <default>false</default>
+                <label>TEJUSSUOCA</label>
+            </value>
+            <value>
+                <fullName>TERESINA DE GOIÁS</fullName>
+                <default>false</default>
+                <label>TERESINA DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>TERESÓPOLIS</fullName>
+                <default>false</default>
+                <label>TERESÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>TEREZÓPOLIS DE GOIÁS</fullName>
+                <default>false</default>
+                <label>TEREZÓPOLIS DE GOIÁS</label>
+            </value>
+            <value>
+                <fullName>TIANGUA</fullName>
+                <default>false</default>
+                <label>TIANGUA</label>
+            </value>
+            <value>
+                <fullName>TRAIRI</fullName>
+                <default>false</default>
+                <label>TRAIRI</label>
+            </value>
+            <value>
+                <fullName>TRAJANO DE MORAIS</fullName>
+                <default>false</default>
+                <label>TRAJANO DE MORAIS</label>
+            </value>
+            <value>
+                <fullName>TRÊS RANCHOS</fullName>
+                <default>false</default>
+                <label>TRÊS RANCHOS</label>
+            </value>
+            <value>
+                <fullName>TRINDADE</fullName>
+                <default>false</default>
+                <label>TRINDADE</label>
+            </value>
+            <value>
+                <fullName>TROMBAS</fullName>
+                <default>false</default>
+                <label>TROMBAS</label>
+            </value>
+            <value>
+                <fullName>TURURU</fullName>
+                <default>false</default>
+                <label>TURURU</label>
+            </value>
+            <value>
+                <fullName>TURVANIA</fullName>
+                <default>false</default>
+                <label>TURVANIA</label>
+            </value>
+            <value>
+                <fullName>TURVELÂNDIA</fullName>
+                <default>false</default>
+                <label>TURVELÂNDIA</label>
+            </value>
+            <value>
+                <fullName>U_MOVEL1</fullName>
+                <default>false</default>
+                <label>U_MOVEL1</label>
+            </value>
+            <value>
+                <fullName>U_MOVEL2</fullName>
+                <default>false</default>
+                <label>U_MOVEL2</label>
+            </value>
+            <value>
+                <fullName>UBAJARA</fullName>
+                <default>false</default>
+                <label>UBAJARA</label>
+            </value>
+            <value>
+                <fullName>UIRAPURU</fullName>
+                <default>false</default>
+                <label>UIRAPURU</label>
+            </value>
+            <value>
+                <fullName>UMARI</fullName>
+                <default>false</default>
+                <label>UMARI</label>
+            </value>
+            <value>
+                <fullName>UMIRIM</fullName>
+                <default>false</default>
+                <label>UMIRIM</label>
+            </value>
+            <value>
+                <fullName>UNAMAR</fullName>
+                <default>false</default>
+                <label>UNAMAR</label>
+            </value>
+            <value>
+                <fullName>URUACU</fullName>
+                <default>false</default>
+                <label>URUACU</label>
+            </value>
+            <value>
+                <fullName>URUBURETAMA</fullName>
+                <default>false</default>
+                <label>URUBURETAMA</label>
+            </value>
+            <value>
+                <fullName>URUOCA</fullName>
+                <default>false</default>
+                <label>URUOCA</label>
+            </value>
+            <value>
+                <fullName>URUTAI</fullName>
+                <default>false</default>
+                <label>URUTAI</label>
+            </value>
+            <value>
+                <fullName>VALPARAISO DE GOIAS</fullName>
+                <default>false</default>
+                <label>VALPARAISO DE GOIAS</label>
+            </value>
+            <value>
+                <fullName>VARJÃO</fullName>
+                <default>false</default>
+                <label>VARJÃO</label>
+            </value>
+            <value>
+                <fullName>VARJOTA</fullName>
+                <default>false</default>
+                <label>VARJOTA</label>
+            </value>
+            <value>
+                <fullName>VARZEA ALEGRE</fullName>
+                <default>false</default>
+                <label>VARZEA ALEGRE</label>
+            </value>
+            <value>
+                <fullName>VIANÓPOLIS</fullName>
+                <default>false</default>
+                <label>VIANÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>VICENTINÓPOLIS</fullName>
+                <default>false</default>
+                <label>VICENTINÓPOLIS</label>
+            </value>
+            <value>
+                <fullName>VICOSA DO CEARA</fullName>
+                <default>false</default>
+                <label>VICOSA DO CEARA</label>
+            </value>
+            <value>
+                <fullName>VILA BOA</fullName>
+                <default>false</default>
+                <label>VILA BOA</label>
+            </value>
+            <value>
+                <fullName>VILA PROPÍCIO</fullName>
+                <default>false</default>
+                <label>VILA PROPÍCIO</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ALCANTARA2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ANGRA DOS REIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ARARUAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>AREAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ARRAIAL DO CABO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BOM JARDIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>BOM JESUS DO ITABAPOANA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>BUZIOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CABO FRIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CACHOEIRA DE MACACU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CAMBUCI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <controllingFieldValue>ENELSP</controllingFieldValue>
+            <valueName>CAMPANHA CABO FRIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CAMPOS DOS GOYTACAZES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CANTAGALO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CARDOSO MOREIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CASEMIRO DE ABREU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>CONCEICAO DE MACABU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>GUAPIMIRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>IGUABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ITABORAI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <controllingFieldValue>ENELSP</controllingFieldValue>
+            <valueName>ITAIPUACU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ITALVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <controllingFieldValue>ENELSP</controllingFieldValue>
+            <valueName>ITAOCARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ITAPERUNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>ITATIAIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>LOJA OCEANICA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>Loja Praça XV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>MACAE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>MAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <controllingFieldValue>ENELSP</controllingFieldValue>
+            <valueName>MAMBUCABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>MARICA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>MIRACEMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>MURIQUI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>NATIVIDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>NITEROI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>PARATI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>PETROPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>PIABETA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>PORCIÚNCULA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO APERIBÉ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO CARAPEBUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO CORDEIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO DUAS BARRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO LAJE DO MURIAÉ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO MACUCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO NOVA FRIBURGO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO PORTO REAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO S. JOSÉ DE UBÁ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO SÃO SEBASTIÃO DO ALTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO SILVA JARDIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO SUMIDOURO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO TANGUÁ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>POSTO VARRE-SAI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>PROJETOS SOCIAIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>QUISSAMÃ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>RESENDE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>RIO BONITO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>RIO DAS OSTRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SANTA MARIA MADALENA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SANTO ANTONIO DE PADUA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SAO FIDELIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SÃO FRANCISCO DO ITABAPOANA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SAO GONCALO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SÃO JOÃO DA BARRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SÃO JOSÉ DO VALE DO RIO PRETO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SAO PEDRO DA ALDEIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SAQUAREMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SARACURUNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>SEDE - ADMIN CENTRAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>TERESÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>TRAJANO DE MORAIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>U_MOVEL1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <valueName>U_MOVEL2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AMPLA</controllingFieldValue>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <controllingFieldValue>ENELSP</controllingFieldValue>
+            <valueName>UNAMAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ABAIARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ACARAPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ACARAU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ACOPIARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>AIUABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ALCANTARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ALDEOTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ALTANEIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ALTO SANTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>AMONTADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ANTONINA DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>APUIARES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>AQUIRAZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ARACATI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ARACOIABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ARARENDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ARARIPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ARATUBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ARNEIROZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ASSARE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>AURORA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BAIXIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BANABUIU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BARBALHA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BARREIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BARRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BARROQUINHA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BATURITE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BEBERIBE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BELA CRUZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BOA VIAGEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>BREJO SANTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CAMOCIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CAMPOS SALES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CANINDE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CAPISTRANO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CARIDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CARIRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CARIRIACU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CARIUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CARLITO PAMPLONA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CARNAUBAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CASCAVEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CATARINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CATUNDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CAUCAIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CEDRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CENTRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CHAVAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CHORO-LIMAO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CHOROZINHO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CONJUNTO CEARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>COREAU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CORPORATIVO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CRATEUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CRATO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CROATA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>CRUZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>DEP IRAPUA PINHEIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ERERE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>EUSEBIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>FARIAS BRITO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>FORQUILHA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>FORTIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>FRECHEIRINHA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GENERAL SAMPAIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GRACA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GRANGEIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GRANJA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GROAIRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GUAIUBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GUARACIABA DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>GUARAMIRANGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>HIDROLANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>HORIZONTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IBARETAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IBIAPINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IBICUITINGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ICAPUI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IGUATU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>INDEPENDENCIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IPAPORANGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IPAUMIRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IPU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IPUEIRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IRACEMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>IRAUCUBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ITAICABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ITAITINGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ITAPAJE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ITAPIPOCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ITAPIUNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ITAREMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>ITATIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JAGUARETAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JAGUARIBE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JAGUARUANA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JARDIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JATI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JIJOCA DE JERICOACOARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JUAZEIRO DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JUAZEIRO DO NORTE - TRIANGULO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>JUCAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>LAVRAS DA MANGABEIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>LIMOEIRO DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MADALENA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MARACANAU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MARANGUAPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MARCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MARTINOPOLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MASSAPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MAURITI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MERUOCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MESSEJANA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MILAGRES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MILHA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MIRAIMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MISSAO VELHA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MOMBACA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MONSENHOR TABOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MORADA NOVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MORAUJO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MORRINHOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MOVEL I</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MOVEL II</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MOVEL III</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MUCAMBO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>MULUNGU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>NOVA JAGUARIBARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>NOVA OLINDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>NOVA RUSSAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>NOVO ORIENTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>OCARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>OROS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PACAJUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PACATUBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PACOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PACUJA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PALHANO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PALMACIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PARACURU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PARAIPABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PARAMBU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PARAMOTI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PARANGABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PEDRA BRANCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PENAFORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PENTECOSTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PEREIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PINDORETAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PIQUET CARNEIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PIRES FERREIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PORANGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>PORTEIRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>POTENGI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>POTIRETAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>QUITERIANOPOLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>QUIXADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>QUIXELO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>QUIXERAMOBIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>QUIXERE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>REDENCAO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>RERIUTABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>RUSSAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SABOEIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SALITRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SANTANA DO ACARAU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SANTANA DO CARIRI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SANTA QUITERIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SAO BENEDITO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SAO JOAO DO JAGUARIBE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SAO LUIS DO CURU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SENADOR POMPEU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SENADOR SA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SOBRAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>SOLONOPOLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TABULEIRO DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TAMBORIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TARRAFAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TAUA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TEJUSSUOCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TIANGUA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TRAIRI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>TURURU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>UBAJARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>UMARI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>UMIRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>URUBURETAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>URUOCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>VARJOTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>VARZEA ALEGRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COELCE</controllingFieldValue>
+            <valueName>VICOSA DO CEARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ABADIA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ABADIANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ACREUNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ADELÂNDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ÁGUA FRIA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>AGUA LIMPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>AGUAS LINDAS DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ALEXANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ALOANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ALVORADA DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>AMARALINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>AMERICANO DO BRASIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>AMORINOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ANAPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ANHANGUERA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ANICUNS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>APARECIDA DE GOIANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>APARECIDA DO RIO DOCE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>APORÉ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ARAÇU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ARAGARCAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ARAGOIANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ARAGUAPAZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ARENOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ARUANÃ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>AURILANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>AVELINÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BALIZA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BARRO ALTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BELA VISTA DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BOM JESUS DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BONFINÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BONOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BRAZABRANTES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BRITANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BURITI ALEGRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BURITI DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>BURITINÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CABECEIRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CACHOEIRA ALTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CACHOEIRA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CACHOEIRA DOURADA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAÇU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAIAPONIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CALDAS NOVAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CALDAZINHA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAMPESTRE DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAMPINAÇU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAMPINORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAMPO ALEGRE DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAMPO LIMPO DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAMPOS BELOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAMPOS VERDES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CASTELÂNDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CATALAO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CATURAÍ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CAVALCANTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CEZARINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CHAPADÃO DO CÉU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CIDADE OCIDENTAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>COCALZINHO DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>COLINAS DO SUL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CÓRREGO DO OURO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CORUMBÁ DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CORUMBAIBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CRISTALINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CRISTIANOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CRIXAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CROMÍNIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>CUMARI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>DAMIANÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>DAMOLANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>DAVINÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>DIORAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>DIVINÓPOLIS DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>DOVERLANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>EDEALINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>EDEIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ESTRELA DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>FAINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>FAZENDA NOVA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>FIRMINOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>FLORES DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>FORMOSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>FORMOSO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GAMELEIRA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIANAPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIANDIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIANESIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIANIA LESTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIANIA SUDOESTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIANIA SUL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIANIRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOIATUBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GOUVELANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GUAPO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GUARAÍTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GUARANI DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>GUARINOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>HEITORAÍ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>HIDROLINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>IACIARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>INACIOLANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>INDIARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>INHUMAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>IPAMERI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>IPORA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ISRAELANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITABERAI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITAGUARI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITAGUARU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITAJA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITAPACI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITAPIRAPUA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITAPURANGA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITARUMÃ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITAUÇU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ITUMBIARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>IVOLÂNDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>JANDAIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>JARAGUA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>JATAI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>JAUPACI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>JESÚPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>JOVIÂNIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>JUSSARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>LAGOA SANTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>LEOPOLDO DE BULHÕES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>LUZIANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>LUZIANIA - JARDIM DO INGÁ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MAIRIPOTABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MAMBAÍ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MARA ROSA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MARZAGÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MATRINCHÃ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MAURILÂNDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MIMOSO DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MINACU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MINEIROS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MOIPORÁ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MONTE ALEGRE DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MONTES CLAROS DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MONTIVIDIU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MONTIVIDIU DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MORRO AGUDO DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MOSSAMEDES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MOZARLANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MUNDO NOVO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>MUTUNOPLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NAZÁRIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NEROPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NIQUELANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVA AMÉRICA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVA AURORA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVA CRIXAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVA IGUAÇU DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVA ROMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVA VENEZA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVO BRASIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVO GAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>NOVO PLANALTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>ORIZONA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>OURO VERDE DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>OUVIDOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PADRE BERNARDO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PALESTINA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PALMEIRAS DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PALMELO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PALMINÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PANAMÁ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PARANAIGUARA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PARAUNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PEROLÂNDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PETROLINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PILAR DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PIRACANJUBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PIRANHAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PIRENOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PIRES DO RIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PLANALTINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PONTALINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PORANGATU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PORTEIRÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PORTELANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>POSSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>PROF. JAMIL SAFADY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>QUIRINOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>RIO QUENTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>RIO VERDE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>RUBIATABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANCLERLANDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA BARBARA DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA CRUZ DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA FÉ DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA HELENA DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA RITA DO ARAGUAIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA RITA DO NOVO DESTINO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA ROSA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA TEREZA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTA TEREZINHA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTO ANTONIO DA BARRA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTO ANTÔNIO DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SANTO ANTONIO DO DESCOBERTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SÃO DOMINGOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SÃO FRANCISCO DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SÃO JOÃO D&apos;ALIANÇA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SÃO JOÃO DA PARAÚNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SAO LUIS DE MONTES BELOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SÃO LUIZ DO NORTE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SAO MIGUEL DO ARAGUAIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SÃO MIGUEL DO PASSA QUATRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SÃO SIMÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SENADOR CANEDO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SERRANOPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SILVANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SIMOLÂNDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>SITO D&apos; ABADIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TAQUARAL DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TERESINA DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TEREZÓPOLIS DE GOIÁS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TRÊS RANCHOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TRINDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TROMBAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TURVANIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>TURVELÂNDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>UIRAPURU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>URUACU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>URUTAI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>VALPARAISO DE GOIAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>VARJÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>VIANÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>VICENTINÓPOLIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>VILA BOA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CELG</controllingFieldValue>
+            <valueName>VILA PROPÍCIO</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

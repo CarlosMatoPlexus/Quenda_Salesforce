@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QSF_Attention_Time_text__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+AND((FinishDate__c - StartDate__c)&gt; 0 , OR(QSF_Forwarding_Time_Acc__c =0, ISBLANK(QSF_Forwarding_Time_Acc__c)),ISPICKVAL(Status__c,&quot;ESTA005&quot;)) , 
+&quot; 0 Días 0 horas 0 minutos 0 segundos &quot;
+, 
+IF( NOT(ISPICKVAL(Status__c,&quot;ESTA005&quot;)) , 
+TEXT( ROUND( QSF_Attention_Time_sec_Quenda__c/86400,0)) &amp; &quot; Días &quot; + 
+TEXT(FLOOR(MOD(QSF_Attention_Time_sec_Quenda__c/3600,24))) + &quot; horas &quot; + 
+TEXT( FLOOR(MOD(QSF_Attention_Time_sec_Quenda__c,3600)/60)) + &quot; minutos &quot; + 
+TEXT(ROUND(MOD(MOD(QSF_Attention_Time_sec_Quenda__c,3600),60),0)) + &quot; segundos&quot; 
+, 
+IF( AND(QSF_Forwarding_Time_Acc__c &lt;&gt; 0, NOT(ISBLANK(QSF_Forwarding_Time_Acc__c)),ISPICKVAL(Status__c,&quot;ESTA005&quot;)) ,
+TEXT( ROUND( QSF_Forwarding_Time_Acc__c/86400,0)) &amp; &quot; Días &quot; + 
+TEXT(FLOOR(MOD(QSF_Forwarding_Time_Acc__c/3600,24))) + &quot; horas &quot; + 
+TEXT( FLOOR(MOD(QSF_Forwarding_Time_Acc__c,3600)/60)) + &quot; minutos &quot; + 
+TEXT(ROUND(MOD(MOD(QSF_Forwarding_Time_Acc__c,3600),60),0)) + &quot; segundos&quot; ,&quot;&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Attention Time Quenda</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

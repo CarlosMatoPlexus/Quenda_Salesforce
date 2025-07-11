@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date format: DD/MM/YYYY - HH:MM:SS --></help>
+    <label><!-- StartDateSS --></label>
+    <name>StartDateSS__c</name>
+</CustomFieldTranslation>

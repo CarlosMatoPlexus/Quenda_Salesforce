@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interaction__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Interaction</label>
+    <referenceTo>Interaction__c</referenceTo>
+    <relationshipLabel>Interactions Connector</relationshipLabel>
+    <relationshipName>Interactions_Connector</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

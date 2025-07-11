@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Estado</label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>ESTA000</masterLabel>
+        <translation>Programada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA001</masterLabel>
+        <translation>Activa</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA002</masterLabel>
+        <translation>En atención</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA003</masterLabel>
+        <translation>Finalizada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA004</masterLabel>
+        <translation>Cancelada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA005</masterLabel>
+        <translation>Ausente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA006</masterLabel>
+        <translation>Reenviada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA007</masterLabel>
+        <translation><!-- ESTA007 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STS003</masterLabel>
+        <translation>Ausente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STS004</masterLabel>
+        <translation>Cancelada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STS005</masterLabel>
+        <translation>Finalizada</translation>
+    </picklistValues>
+</CustomFieldTranslation>

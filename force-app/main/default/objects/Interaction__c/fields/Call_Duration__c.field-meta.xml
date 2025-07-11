@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Duration__c</fullName>
+    <description>Duración de la llamada que generó la interacción</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Este campo se informa si la interaccion se crea proveniente de una llamada del CTI</inlineHelpText>
+    <label>Call Duration</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

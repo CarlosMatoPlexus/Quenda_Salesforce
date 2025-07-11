@@ -1,0 +1,20 @@
+<apex:page title="Agente en espera">
+<apex:slds />
+<apex:includeScript value="/support/console/29.0/integration.js"/>
+<apex:includeLightning />
+    <div id="lightning" />
+    
+<body style="margin:0;padding:0" >
+    <script>
+        $Lightning.use("c:QSF_Test", function() {
+          $Lightning.createComponent("c:QSF_Test_Cambio_Vistas",
+          { label : "Press Me!" },
+          "lightning",
+          function(cmp) {
+             console.log('Component created, do something cool here');
+          });
+        });
+    </script> 
+</body>
+  
+</apex:page>

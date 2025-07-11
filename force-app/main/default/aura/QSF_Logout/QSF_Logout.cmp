@@ -1,0 +1,70 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes">
+    <ltng:require styles="/resource/slds231/assets/styles/salesforce-lightning-design-system.css"
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', $Resource.CountTimer)}"/>
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="place" type="List"/> <!--con id y nombre-->
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="spinnerMsg" type="String"/>
+    <aura:attribute name="idSelectedStatus" type="Long" /> 
+    
+    <!-- INDICADOR TIPO DE ENTORNO (CLASSIC O LIGHTNING) -->
+	<aura:attribute name="isLEX" type="Boolean" default=""/>
+    
+    <!--ERROR DISPLAY ATTRIBUTES-->
+    <aura:attribute name="errorStatus" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    
+    <!--ATTRIBUTES FOR ACCESS TOKEN -->
+    <aura:attribute name="accessToken" type="String" default="false"/>
+    <aura:attribute name="statusAccessToken" type="String" default="INIT"/> <!-- INIT / ERROR / OK-->
+    <aura:attribute name="failedFunctionName" type="String" default=""/>
+    
+    <!-- DO INIT & HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" description="Call to the doInit method at the beginning"/>
+    <aura:handler name="change" value="{!v.statusAccessToken}" action="{!c.getAccessToken}"/>
+    
+    <!-- EVENTS -->
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <!-- SPINNER -->
+   	<lightning:spinner aura:id="mySpinner" variant="brand" size="large" class="slds-hide" title="{!v.spinnerMsg}" alternativeText="..."/>
+    <!--<c:QSF_Custom_Spinner show="{!v.showSpinner}" type="large" spinnerText="{!v.spinnerMsg}"/>-->
+
+    
+    <div align="center">
+        <div class="slds-grid user-place">
+        </div>   
+        <div style="margin:4%">   
+    
+    <!-- START BUTTON -->
+            <div class="slds-grid">
+                <div align="left" class="slds-col slds-size--1-of-7" style="padding-top:1%" >
+                    <lightning:buttonIcon iconName="utility:undo" variant="bare" onclick="{!c.handleClick}" alternativeText="{!$Label.c.QSF_Back_CL}" />
+                </div>
+            </div>
+            <div class="slds-grid">
+            <div align="center" class="slds-grid slds-grid--align-spread" style="padding-top:3%">
+                    <div class="slds-col"><p>{!$Label.c.QSF_Do_You_Wanna_Free_CL}</p></div>
+                </div>
+            </div>
+
+            <div align="center" class="slds-align-top" style="padding-top:5%;">
+                <lightning:button aura:id="free_place_button" class="slds-button slds-button_neutral free_place_button" onclick="{!c.Logout}"><!--{!c.Logout}-->
+                    {!$Label.c.QSF_Confirm_CL}
+                    <lightning:icon class="start-icon" iconName="utility:logout" size="x-small" variant="bare"/>
+                </lightning:button>
+            </div>
+            
+             <aura:if isTrue="{!v.errorStatus}">
+                <div aura:id="displayError" class="slds-align-top error-display" style="width:300px"> 	
+                    {!v.errorMessage}
+                </div>
+            </aura:if>
+            
+          </div>
+        
+    </div>
+    
+</aura:component>

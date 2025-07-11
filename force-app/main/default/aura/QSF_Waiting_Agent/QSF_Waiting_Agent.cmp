@@ -1,0 +1,192 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes">
+    <!--<ltng:require styles="/resource/slds231/assets/styles/salesforce-lightning-design-system.css"
+                  scripts="{!join(',', $Resource.QSF_JQuery ,
+                           'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js',
+                           $Resource.CountTimer)}" />-->
+    <ltng:require styles="/resource/slds231/assets/styles/salesforce-lightning-design-system.css"/>
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="place" type="Object" default=""/>
+    
+    <aura:attribute name="noAttentionStatusList" type="List" />
+    <aura:attribute name="availableServiceList" type="List"/>  
+    <aura:attribute name="idSelectedService" type="Long" default="0"/>
+    <aura:attribute name="idSelectedStatus" type="Long" default=""/>  
+    <aura:attribute name="selectedStatusValue" type="Object" default=""/>
+    <aura:attribute name="unattendedShiftNumber" type="integer" />
+    <aura:attribute name="unattendedShiftList" type="List" />
+    <aura:attribute name="loadingMessage" type="String" default="Disponible (...)"/>
+    <aura:attribute name="loadingMessageService" type="String" default="{!$Label.c.QSF_Any_service_loading_CL}"/>
+    <aura:attribute name="refreshIntervalId" type="String"/>
+    <aura:attribute name="AutoRecallIntervalId" type="String" default=""/>
+    <aura:attribute name="switch" type="Boolean" default="false" description="Boolean used to refresh the unnatended client number by time"/>
+    <aura:attribute name="refreshUnattendedShiftNumberValue" type="integer" default="20000" description="Frequency of resfresh unnattended shift number"/>
+    <aura:attribute name="isActiveAutomaticRecall" type="Boolean"/> 
+    <aura:attribute name="callAutomaticNow" type="Boolean"/> 
+    
+     <aura:attribute name="previousView" type="String"/>
+    
+    <aura:attribute name="nextShiftInfo" type="Object"/>
+    <aura:attribute name="previousShiftInfo" type="Object"/>
+    <aura:attribute name="automaticAttentionTime" type="String" default=""/> <!--Parametro tiempo para realizar La -->
+    <aura:attribute name="automaticAttentionFlag" type="Boolean" default="false"/> <!--Parametro bandera para realizar LLAMADA AUTOMATICA-->
+    <aura:attribute name="currentSeconds" type="String" default="0" />
+    
+    
+    <aura:attribute name="spinnerMsg" type="String" default='Conectando...'/>
+    
+    <!-- INDICADOR TIPO DE ENTORNO (CLASSIC O LIGHTNING) -->
+	<aura:attribute name="isLEX" type="Boolean" default=""/>
+    
+    <!--ERROR DISPLAY ATTRIBUTES-->
+    <aura:attribute name="errorStatus" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    
+    <!--ATTRIBUTES FOR ACCESS TOKEN -->
+    <aura:attribute name="accessToken" type="String"/>
+    <aura:attribute name="errorAccessToken" type="Boolean" default="false"/>  
+    <aura:attribute name="statusAccessToken" type="String" default="INIT"/> <!-- INIT / ERROR / OK-->
+    <aura:attribute name="failedFunctionName" type="String" default=""/>
+    
+    <!--ATTRIBUTES FOR ATTENTION PERMISSION PROFILES -->
+    <aura:attribute name="callNext" type="Boolean"/> <aura:attribute name="quickAttention" type="Boolean" /> 
+    <aura:attribute name="prioritizeTurn" type="Boolean"/><aura:attribute name="serviceSelection" type="Boolean"/>
+    <aura:attribute name="withoutTicket" type="Boolean"/>
+    
+    <!-- DO INIT & HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--<aura:handler name="change" value="{!v.automaticAttentionFlag}" action="{!c.NextTurn}"/>-->  <!--Evento para realizar LLAMADA AUTOMATICA-->
+    <aura:handler name="change" value="{!v.statusAccessToken}" action="{!c.getAccessToken}"/>
+    <aura:handler name="change" value="{!v.switch}" action="{!c.getNumber}"/>
+    <aura:handler name="change" value="{!v.unattendedShiftNumber}" action="{!c.autoRecall}"/>
+    <aura:handler name="change" value="{!v.callAutomaticNow}" action="{!c.callNextNow}"/>
+    <!--<aura:handler name="change" value="{!v.place}" action="{!c.placeChange}"/>--> <!-- LOAD INFO WHEN CHANGE THE USER PLACE -->
+    
+    <!-- EVENTS -->
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <!-- SPINNER -->
+    <lightning:spinner aura:id="mySpinner" variant="brand" size="large" class="slds-hide" title="{!v.spinnerMsg}" alternativeText="Texto"/>
+    
+    
+    
+    <div align="center" >
+        <!-- USER & PLACE HEADER-->
+        <div class="slds-grid"/>
+        <div class="user-place" align="center">{!$Label.c.QSF_User_CL}: {!v.currentUser.FirstName} - {!$Label.c.QSF_Place_CL}: {!v.place.nombre}
+        </div>
+        
+        
+        <!-- NO ATTENTION STATUS & UNATTENDED CLIENTS NUMBER-->
+        <div class="slds-grid slds-border_bottom" style="padding:4%; margin:2%; margin-top:5%; position:relative;">
+            <!--<div class="slds-col slds-size-1-of-2"  vertical-align="middle" align="left" >{!$Label.c.QSF_Available_CL}</div>-->
+            <div class="slds-col slds-size--1-of-2" style="position: absolute; bottom:1%; padding-bottom:2%; padding-left:0%" vertical-align="middle" align="left" >
+                 <!-- Actualmente desactivado-->
+                    <lightning:select aura:id="selectNoAttentionStatus"  name="selectNoAttentionStatus" label="" title="Estados de 'No Atención'" value="{!v.selectedStatusValue}" onchange="{!c.changeStatus}">
+                        <!--<option value="" selected="true">{!v.loadingMessage}</option>-->
+                        <aura:iteration items="{!v.noAttentionStatusList}" var="noAttentionStatus" indexVar="indx">
+                            <option value="{!indx}" text="{!noAttentionStatus.estado}" selected="{!noAttentionStatus.selected}" />
+                        </aura:iteration>
+                        
+                        <!--<option value="Servicio 1">Servicio 1</option>
+                                                <option value="Servicio 2">Servicio 2</option> -->
+                    </lightning:select> 
+               
+            </div>
+           <div aura:id="unattended_blink" id="unattended_blink" style="position: absolute; bottom:1%; right:5%; margin-left:1%;" class="{!v.unattendedShiftNumber > 0 ?  v.isActiveAutomaticRecall == false ?  v.idSelectedStatus == 1 ? 'slds-col slds-size--1-of-2 blink unattendedcolor' : 'slds-col slds-size--1-of-2 ' : 'slds-col slds-size--1-of-2' : 'slds-col slds-size--1-of-2 '}"> 
+                <!--<div aura:id="unattended_blink" id="unattended_blink" class="slds-col slds-size-1-of-2">-->  <!--Add BLINK class-->
+                <!--<div class="slds-grid slds-position-fixed_icon ">-->
+                <div class="slds-grid slds-grid_align-end">
+                    <div id="unattended_clients" class="size_queue">{!v.unattendedShiftNumber}</div>
+                    <div style="padding-bottom:5%"  ><lightning:icon iconName="utility:people" size="small" class="{!v.unattendedShiftNumber > 0 ?  v.isActiveAutomaticRecall == false ? v.idSelectedStatus == 1 ? 'unattendedicon' : ' ' : ' ' : ' '}" title="{!$Label.c.QSF_Customers_queued_CL}" alternativeText="Personas en cola"/></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--BUTTONS: WITHOUT SHIFT & PRE-ATTENTION -->  
+        <div class="slds-align-bottom div_menu" style="padding-top:5%"> 
+            <div aura:id="displayNoTicket" class="slds-align-top div_menu">
+                <aura:if isTrue="{!v.withoutTicket}">
+                    <lightning:button aura:id="bt_atender_sinturno" class="slds-button slds-button_neutral bt-no-ticket-attention" onclick="{!c.WithoutShift}">{!$Label.c.QSF_Attention_without_ticket_CL}</lightning:button>
+                </aura:if>
+                <aura:if isTrue="{!v.quickAttention}">
+                    <lightning:button aura:id="bt_pre_atencion" class="slds-button slds-button_neutral bt-quick-attention" onclick="{!c.PreAttention}">{!$Label.c.QSF_Quick_attention_CL}</lightning:button>
+                </aura:if>
+            </div>
+        </div>  
+        
+        <!-- SELECT SERVICE PICKLIST (FROM WS CALLOUT)-->
+        <aura:if isTrue="{!v.serviceSelection}">
+            <div aura:id="displayServiceList" style="margin:4%" >
+                <div align="left">
+                    <div class="slds-form-element" >
+                        <div class="slds-form-element__control">
+                           <!-- <div class="" >slds-select_container-->
+                                <lightning:select aura:id="selectService" name="selectService" label="" 
+                                                  title="{!$Label.c.QSF_Service_selection_CL}" onchange="{!c.getNumber}"> <!-- class="slds-has-error" -->
+                                    <!--<option disabled="disabled" selected="true" value="-1" text="">Seleccione un servicio...</option>-->
+                                    
+                                    <option selected="true" value="">{!v.loadingMessageService}</option>
+                                    <aura:iteration items="{!v.availableServiceList}" var="availableService" indexVar="indx">
+                                        <option  value="{!indx}" text="{!availableService.nombre}"/>
+                                    </aura:iteration>
+                                    
+                                    <!--<option value="Servicio 1">Servicio 1</option>
+                                <option value="Servicio 2">Servicio 2</option> -->
+                                </lightning:select> 
+                            
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </aura:if>
+        
+        
+        <!--BUTTONS: PRIORITIZE & NEXT SHIFT-->
+        <div class="slds-col btn-group-vertical ">
+            <aura:if isTrue="{!v.prioritizeTurn}">
+                <div aura:id="displayPrioritize" class="slds-align-top div_menu">
+                    <lightning:button class="slds-button slds-button_neutral btpriorizar-turno" title="Acceda a una lista de tickets para su priorización" onclick="{!c.PriorityTurn}">
+                        {!$Label.c.QSF_Prioritize_turn_CL}
+                        <lightning:icon class="prioritize-icon" iconName="utility:resource_capacity" size="x-small" variant="bare"/>
+                    </lightning:button>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.callNext}">
+                <div aura:id="displayCallNext" class="slds-align-top div_menu"> 
+                    <lightning:button class="slds-button slds-button_neutral btsiguente-turno " title="{!$Label.c.QSF_Call_next_client_CL}" onclick="{!c.NextTurn}" >
+                        {!$Label.c.QSL_Next_Turn_CL}
+                        <lightning:icon class="call-next-icon" iconName="utility:announcement" size="x-small" variant="inverse"/>
+                    </lightning:button>
+                </div>
+            </aura:if>
+        </div>
+        
+        <!--ERROR MESSAGE NO CLIENTS-->
+        <aura:if isTrue="{!v.errorStatus}">
+            <div aura:id="displayError" class="slds-align-top div_menu error-display" style="padding-top:3%; width:300px"  > 
+                {!v.errorMessage}
+            </div>
+        </aura:if>
+        
+        
+        
+        <!--BUTTONS: USER CONFIGURATION-->
+        <div class="slds-grid slds-position-bottom" align="center" style="padding-right:6%">
+            <div class="slds-col slds-size--1-of-2" align="left"  style="padding-left:6%">
+                <!--<lightning:select aura:id="selectPermission" class="change-permission-button" name="selectPermission" title="simulación permisos de usuario" onchange="{!c.changePermission}">
+                    <option value="1">1 AS</option> <option value="2">2 AA</option> <option value="3">3 AP</option> <option value="4">4 APyAR</option> <option value="5">5 FA</option>  
+                </lightning:select>-->
+            </div>
+            <div class="slds-col slds-size--1-of-2" align="right"><!--slds-size-1-of-2-->
+                <h3 class="title_custom" style="padding-bottom:2%">{!$Label.c.QSF_User_Configuration_CL}</h3>
+                <lightning:buttonIcon class="slds-button slds-button_icon slds-button_icon-border-filled change-place-button" iconName="utility:replace" size="large" variant="bare" onclick="{!c.ChangePlace}" title="{!$Label.c.QSF_Change_place_CL}" alternativeText="Cambio puesto" />
+                <lightning:buttonIcon class="slds-button slds-button_icon slds-button_icon-border-filled free-place-button" iconName="utility:resource_absence" size="large" variant="bare" onclick="{!c.LogoutPlace}" title="{!$Label.c.QSF_Set_free_place_CL}" alternativeText="Liberar puesto" />
+            </div>
+        </div>
+        
+        
+    </div>	
+    
+</aura:component>

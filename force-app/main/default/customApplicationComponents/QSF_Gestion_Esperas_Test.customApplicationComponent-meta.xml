@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplicationComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buttonIconUrl>https://enelsud--gestturnos--c.cs91.visual.force.com/resource/1511270218000/icono1</buttonIconUrl>
+    <buttonText>Gestión Esperas</buttonText>
+    <height>480</height>
+    <isHeightFixed>true</isHeightFixed>
+    <isHidden>false</isHidden>
+    <isWidthFixed>true</isWidthFixed>
+    <visualforcePage>QSF_Gestion_Esperas_Test</visualforcePage>
+    <width>325</width>
+</CustomApplicationComponent>

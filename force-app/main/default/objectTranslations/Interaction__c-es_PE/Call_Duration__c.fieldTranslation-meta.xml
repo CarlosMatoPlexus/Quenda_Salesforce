@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Este campo se informa si la interaccion se crea proveniente de una llamada del CTI --></help>
+    <label>Duración de la llamada</label>
+    <name>Call_Duration__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplicationComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buttonText>Grabadora</buttonText>
+    <height>150</height>
+    <isHeightFixed>false</isHeightFixed>
+    <isHidden>true</isHidden>
+    <isWidthFixed>false</isWidthFixed>
+    <visualforcePage>ATCL_VFP050_RecordingComponent</visualforcePage>
+</CustomApplicationComponent>

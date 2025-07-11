@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsQueu__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines if the user corresponds to a caso queu.</description>
+    <inlineHelpText>Mark as true when creating a queu.</inlineHelpText>
+    <label>IsQueu</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

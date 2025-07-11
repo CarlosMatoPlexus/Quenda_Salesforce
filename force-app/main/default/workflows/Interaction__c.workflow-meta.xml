@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Default_Valueof_Comment</fullName>
+        <field>QSF_Comments__c</field>
+        <formula>&quot;Interaccion_Automatica_Canal_Digital&quot;</formula>
+        <name>Default Valueof Comment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Interacao_canal_automatico</fullName>
+        <description>Fecha interação de canal automático</description>
+        <field>Status__c</field>
+        <literalValue>ESTA003</literalValue>
+        <name>Interacao_canal_automatico</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OfficeUpdate</fullName>
+        <field>Office__c</field>
+        <formula>Owner:Queue.DeveloperName</formula>
+        <name>OfficeUpdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>UpdateOffice</fullName>
+        <actions>
+            <name>OfficeUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Interaction__c.OwnerId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Interaction__c.Interaction_Origin__c</field>
+            <operation>notEqual</operation>
+            <value>IO003</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.Country__c</field>
+            <operation>notEqual</operation>
+            <value>Colombia</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateStatusInteracao</fullName>
+        <actions>
+            <name>Interacao_canal_automatico</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Atualizar status de interação caso o usuário seja integração Brasil</description>
+        <formula>AND( Owner:User.Id = &apos;00536000004Pr85&apos;,  ISPICKVAL(Status__c, &apos;ESTA002&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>send default to comment field</fullName>
+        <actions>
+            <name>Default_Valueof_Comment</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Interaction__c.Interaction_Origin__c</field>
+            <operation>equals</operation>
+            <value>Canales Digitales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Interaction__c.Reason__c</field>
+            <operation>equals</operation>
+            <value>Interfaz exitosa -  Generar Caso</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

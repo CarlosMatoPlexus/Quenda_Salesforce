@@ -1,0 +1,143 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes">
+    <ltng:require styles="/resource/slds231/assets/styles/salesforce-lightning-design-system.css"
+                 scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' ,
+                           'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js',
+                           $Resource.CountTimer)}"
+                   afterScriptsLoaded="{!c.jsLoaded}"/>
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="timerCount" type="String" default=""/>
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="place" type="Object" default=""/>
+    <aura:attribute name="freeWorkplacesList" type="List"/>
+    <aura:attribute name="unattendedShiftNumber" type="Object"/>
+    <aura:attribute name="previousShiftInfo" type="Object"/>
+    <aura:attribute name="loadingMessage" type="String" default='{!$Label.c.QSF_Loading_Free_Places_CL}'/>
+    <aura:attribute name="spinnerMsg" type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="automaticAttentionTime" type="String"/> <!--Parametro tiempo para realizar La -->
+    <aura:attribute name="timerZero" type="String" default="00:00:00"/>
+    <aura:attribute name="isActiveAutomaticRecall" type="Boolean"/>
+     <aura:attribute name="idSelectedStatus" type="Long" /> 
+    
+    <!-- INDICADOR TIPO DE ENTORNO (CLASSIC O LIGHTNING) -->
+	<aura:attribute name="isLEX" type="Boolean" default=""/>
+
+    <!--ERROR DISPLAY ATTRIBUTES-->
+    <aura:attribute name="errorStatus" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    
+    <!--ATTRIBUTES FOR ACCESS TOKEN -->
+    <aura:attribute name="accessToken" type="String"/>
+    <!--<aura:attribute name="errorAccessToken" type="Boolean" default="false"/>  -->
+    <aura:attribute name="statusAccessToken" type="String" default="INIT"/> <!-- INIT / ERROR / OK-->
+    <aura:attribute name="failedFunctionName" type="String" default=""/>
+    
+    <!-- DO INIT & HANDLERS -->
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}" description="Call to the doInit method at the beginning"/>
+    <aura:handler name="change" value="{!v.statusAccessToken}" action="{!c.getAccessToken}"/>
+    <!--<aura:handler name="change" value="{!v.accessToken}" action="{!c.getFreeWorkPlaces}"/>-->
+    
+    <!-- EVENTS -->
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <!-- SPINNER -->
+    <lightning:spinner aura:id="mySpinner" variant="brand" size="large" class="slds-hide" title="{!v.spinnerMsg}" alternativeText="..."/>
+    <!--<c:QSF_Custom_Spinner show="{!v.showSpinner}" type="large" spinnerText="{!v.spinnerMsg}"/>-->
+    
+    
+    <div align="center">
+        <div class="slds-grid user-place">
+        </div>   
+        <div style="margin:4%">     
+            
+            <!-- USER & OFFICE INFO -->       
+            <div align="center">
+                <div align="left" class="slds-grid slds-grid--align-spread" style="padding-top:3%">
+                    <div class="slds-col slds-size--2-of-6"><h1 class="title_custom">{!$Label.c.QSF_Name_CL}:</h1></div>
+                    <div class="slds-col slds-size--4-of-6"><p>{!v.currentUser.Name} </p></div>
+                </div>
+                
+                <div align="left" class="slds-grid slds-grid--align-spread" style="padding-top:3%">
+                    <div class="slds-col slds-size--2-of-6"><h1 class="title_custom">{!$Label.c.QSF_Office_CL}:</h1></div>
+                    <div class="slds-col slds-size--4-of-6"><p>{!v.currentUser.QSF_Office__c}</p></div>
+                </div>
+                
+                <div align="center" style="padding-top:10%"><h3>{!$Label.c.QSF_Select_Place_CL}</h3></div>
+            </div>
+            <!-- FREE WORK PLACES LIST -->   
+            <div align="left" style="padding-top:3%; padding-bottom:5%">
+                <div class="slds-combobox_container" >
+                    <div class="slds-form-element ">
+                        <div class="slds-form-element__control slds-grow"> 
+                            <!--<div class="slds-select_container">--> 
+                                <lightning:select aura:id="selectPlace" name="selectPlace" class="slds-has-error"
+                                                  onchange="{!c.hideErrors}">
+                                    <option disabled="disabled" selected="true" value="" text="">{!v.loadingMessage}</option>
+                                    <aura:iteration items="{!v.freeWorkplacesList}" var="currentWorkplace" indexVar="indx">
+                                        <option value="{!indx}" selected="{!currentWorkplace.selected}">
+                                            {!$Label.c.QSF_Place_CL} - {!currentWorkplace.nombre}</option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            
+                        </div> 
+                        <div class="slds-form-element__help" id="error-message-unique-id"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- START BUTTON -->
+            <div align="center" class="slds-align-top" style="padding-top:5%">
+                <lightning:button aura:id="start_button" class="slds-button slds-button_neutral start_button" onclick="{!c.GoStart}">
+                    {!$Label.c.QSF_Start_CL}
+                    <lightning:icon class="start-icon" iconName="utility:right" size="small" variant="bare"/>
+                </lightning:button>
+            </div>
+            
+
+
+            
+            
+            
+            <!-- START BUTTON 
+            <div align="center" class="slds-align-top" style="padding-top:5%">
+                <lightning:button aura:id="start_button" class="slds-button slds-button_neutral start_button" onclick="{!c.goToComponent}">
+                    Component Test
+                    <lightning:icon class="start-icon" iconName="utility:right" size="small" variant="bare"/>
+                </lightning:button>
+            </div>-->
+            
+            
+          
+            <!-- TIMER PRUEBA -->
+           
+            
+           <!--  <div id="chronoExample">
+                <div class="values">00:00:00</div>
+                <div>
+                    <button class="startButton">Start</button>
+                    <button class="pauseButton" >Pause</button>
+                    <button class="stopButton">Stop</button>
+                    <button class="resetButton">Reset</button>
+                </div>
+            </div>-->
+            
+<!--             <div class="slds-col" align="center" style="padding-top:4%" >
+                <h3 id="timer_count" class='timer element'>00:00:00</h3>
+            </div>
+            <lightning:button aura:id="reiniciar" class="slds-button slds-button_neutral" onclick="{!c.RestartTimer}">Continuar</lightning:button>
+            <lightning:button aura:id="reiniciar" class="slds-button slds-button_neutral " onclick="{!c.StopTimer}">Parar</lightning:button>
+            <lightning:button aura:id="reiniciar" class="slds-button slds-button_neutral " onclick="{!c.PauseTimer}">Pausar</lightning:button>
+            <lightning:button aura:id="reiniciar" class="slds-button slds-button_neutral " onclick="{!c.CurrentTimer}">Current</lightning:button> 
+             <lightning:button aura:id="reiniciar" class="slds-button slds-button_neutral" onclick="{!c.Reiniciar}">Reiniciar</lightning:button>-->
+            
+            <!--ERROR MESSAGE-->
+            <aura:if isTrue="{!v.errorStatus}">
+                <div aura:id="displayError" class="slds-align-top div_menu error-display" style="padding-top:3%; width:300px"  > 
+                    {!v.errorMessage}
+                </div>
+            </aura:if>
+
+            <!-- <lightning:button aura:id="reiniciar" class="slds-button slds-button_neutral" onclick="{!c.CloseAllTabs}">CERRAR PESTAÑAS</lightning:button>-->
+        </div>
+    </div>
+</aura:component>

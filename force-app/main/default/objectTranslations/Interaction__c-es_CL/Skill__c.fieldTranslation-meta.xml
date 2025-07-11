@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Skill --></label>
+    <name>Skill__c</name>
+    <picklistValues>
+        <masterLabel>Alumbrado publico</masterLabel>
+        <translation><!-- Alumbrado publico --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BACK OFFICE Chilectra</masterLabel>
+        <translation><!-- BACK OFFICE Chilectra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comercial Konecta</masterLabel>
+        <translation><!-- Comercial Konecta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comercial Upcom</masterLabel>
+        <translation><!-- Comercial Upcom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electrica Colina</masterLabel>
+        <translation><!-- Electrica Colina --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emergencia Konecta</masterLabel>
+        <translation><!-- Emergencia Konecta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emergencia Upcom</masterLabel>
+        <translation><!-- Emergencia Upcom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GG.CC</masterLabel>
+        <translation><!-- GG.CC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IVR Fonoservicio</masterLabel>
+        <translation><!-- IVR Fonoservicio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOG SUPERVISORES</masterLabel>
+        <translation><!-- LOG SUPERVISORES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mesa Central</masterLabel>
+        <translation><!-- Mesa Central --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nivel 2 Comercial Konecta</masterLabel>
+        <translation><!-- Nivel 2 Comercial Konecta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nivel 2 Comercial Upcom</masterLabel>
+        <translation><!-- Nivel 2 Comercial Upcom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nuevas Conexiones</masterLabel>
+        <translation><!-- Nuevas Conexiones --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRIORITARIOS</masterLabel>
+        <translation><!-- PRIORITARIOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Venta Upcom</masterLabel>
+        <translation><!-- Post Venta Upcom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supervisores Upcom</masterLabel>
+        <translation><!-- Supervisores Upcom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test</masterLabel>
+        <translation><!-- Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ventas Upcom</masterLabel>
+        <translation><!-- Ventas Upcom --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

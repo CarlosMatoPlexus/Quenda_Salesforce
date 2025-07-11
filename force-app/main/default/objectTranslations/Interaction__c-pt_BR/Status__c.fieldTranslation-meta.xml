@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Status</label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>ESTA000</masterLabel>
+        <translation>Entrou</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA001</masterLabel>
+        <translation>Em porcesso</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA002</masterLabel>
+        <translation>Aberta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA003</masterLabel>
+        <translation>Fechada</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA004</masterLabel>
+        <translation><!-- ESTA004 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA005</masterLabel>
+        <translation><!-- ESTA005 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA006</masterLabel>
+        <translation><!-- ESTA006 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESTA007</masterLabel>
+        <translation><!-- ESTA007 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STS003</masterLabel>
+        <translation><!-- STS003 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STS004</masterLabel>
+        <translation><!-- STS004 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STS005</masterLabel>
+        <translation><!-- STS005 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

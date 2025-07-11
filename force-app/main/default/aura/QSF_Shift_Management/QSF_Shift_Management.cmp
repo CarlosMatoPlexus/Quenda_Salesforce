@@ -1,0 +1,67 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes" >
+    
+    <ltng:require styles="{!join(',', $Resource.slds231 + '/assets/styles/salesforce-lightning-design-system.css')}" 
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' , $Resource.CountIdsimple )}" 
+                  afterScriptsLoaded="{!c.jsLoaded}" />
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="timerCount" type="String" default=""/> 
+    <aura:attribute name="view" type="String" default="LoginAgent"/> 
+    <aura:attribute name="place" type="String"/>
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="nextShiftInfo" type="Object"/>
+    
+    <!-- EVENTS -->
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}" description="Call to the doInit method at the beginning"/>
+    <aura:handler name="changeView" event="c:QSF_Change_View_Event" action="{!c.handleChangeView}"/>
+    
+    
+    <aura:if isTrue="{!v.view == 'LoginAgent'}">
+        <!-- LOGIN -->
+        <c:QSF_Login_Agent currentUser="{!v.currentUser}"/>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.view == 'WaitingAgent'}">
+                <!-- WAITING AGENT -->
+                <c:QSF_Waiting_Agent place="{!v.place}" currentUser="{!v.currentUser}"/>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.view == 'AttentionProgress'}">
+                        <!-- ATTENTION IN PROGRESS -->
+                        <c:QSF_Attention_Progress place="{!v.place}" currentUser="{!v.currentUser}" nextShiftInfo="{!v.nextShiftInfo}"/>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.view == 'Prioritize'}">
+                                <!-- PRIORITIZE -->
+                                <c:QSF_Prioritize_Client place="{!v.place}" currentUser="{!v.currentUser}"/>                      
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!v.view == 'WithoutShift'}">
+                                        <!-- WITHOUT SHIFT -->
+                                        <c:QSF_Without_Shift place="{!v.place}" currentUser="{!v.currentUser}"/> 
+                                        <aura:set attribute="else">
+                                            <aura:if isTrue="{!v.view == 'PreAttentionSS'}">
+                                                <!-- PRE-ATTENTION SELECT SERVICE -->
+                                                <c:QSF_Pre_Attention_SS place="{!v.place}" currentUser="{!v.currentUser}"/>                      
+                                                <aura:set attribute="else">
+                                                    <aura:if isTrue="{!v.view == 'PreAttention'}">
+                                                        <!-- PRE-ATTENTION IN PROGRESS -->
+                                                        <c:QSF_Attention_Progress_From_PA place="{!v.place}" currentUser="{!v.currentUser}"/>                       
+                                                        <aura:set attribute="else">
+                                                            <aura:if isTrue="{!v.view == 'Forwarding'}"> 
+                                                                <c:QSF_Forwarding_Shift place="{!v.place}" timerCount="{!v.timerCount}" currentUser="{!v.currentUser}"/>
+                                                                <aura:set attribute="else"> Sus permisos personalizados no incluyen el uso de este Gestor de Turnos
+                                                                </aura:set>
+                                                            </aura:if>
+                                                        </aura:set>
+                                                    </aura:if>
+                                                </aura:set>
+                                            </aura:if>
+                                        </aura:set>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+
+</aura:component>

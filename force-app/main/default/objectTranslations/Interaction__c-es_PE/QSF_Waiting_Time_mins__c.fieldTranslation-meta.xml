@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Tiempo de espera (minutos) Quenda</label>
+    <name>QSF_Waiting_Time_mins__c</name>
+</CustomFieldTranslation>

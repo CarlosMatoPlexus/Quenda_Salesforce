@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Multisesion_Activa__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field to be used in order to skip the validation for just one active session</description>
+    <inlineHelpText>Mark it as TRUE if the user must be allowed to have several sessions</inlineHelpText>
+    <label>Multisesion Activa</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CompanySelectorAux__c</fullName>
+    <label>CompanySelectorAux</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMPLA</fullName>
+                <default>false</default>
+                <label>AMPLA</label>
+            </value>
+            <value>
+                <fullName>COELCE</fullName>
+                <default>false</default>
+                <label>COELCE</label>
+            </value>
+            <value>
+                <fullName>CELG</fullName>
+                <default>false</default>
+                <label>CELG</label>
+            </value>
+            <value>
+                <fullName>ENELSP</fullName>
+                <default>false</default>
+                <label>ENELSP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

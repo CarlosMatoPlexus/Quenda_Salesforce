@@ -1,0 +1,38 @@
+.THIS .title_custom {
+    color: #0070d2;
+    font-size: small;
+}
+/* Hidding error message before select any free place*/
+.THIS .hide-error-message > .slds-form-element__help {
+    display: none;
+}
+
+/*STAR BUTTON*/
+.THIS .start_button {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: "center";
+    background-color: #07d;  
+    width:300px;
+    height:40px;
+}
+
+.THIS .start-icon {
+    padding-left:4%;
+}
+
+/* User&Place header style at top */
+.THIS .user-place {
+    font-weight: bold;
+    text-align: center;
+    background-color: #C8C8C8;
+    color: #fff;  
+    width:auto;
+    height:25px;
+}
+
+.THIS .error-display{
+  font-size:12px;
+  font-weight: bold;
+  color: #0077DD; 
+}

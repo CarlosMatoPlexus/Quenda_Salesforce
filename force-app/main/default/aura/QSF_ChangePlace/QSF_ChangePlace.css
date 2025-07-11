@@ -1,0 +1,49 @@
+.THIS .user-place {
+    font-weight: bold;
+    text-align: center;
+    background-color: #C8C8C8;
+    color: #fff;  
+    width:auto;
+    height:25px;
+}
+.THIS .slds-spinner_container {
+  z-index: 10000;
+  position: fixed;
+   
+}
+
+.THIS .slds-rotate--90 {
+    transform: rotate(45deg);
+    color: #C8C8C8;
+}
+
+.THIS .div_menu {
+    padding-bottom:1%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:2%;
+}
+
+.THIS .error-display{
+    font-size:12px;
+    font-weight: bold;
+    color: #0077DD; 
+    padding-bottom:1%;
+    padding-top:4%;
+}
+
+.THIS .change_place_button {
+  text-transform: uppercase;
+  background-color:#177DD6;
+  color: #fff;  
+  width:148px;
+  height:40px;
+}
+
+.THIS .cancel_button {
+  text-transform: uppercase;
+  background-color: #DD4B39;
+  color: #fff; 
+  width:147px;
+  height:40px;
+}

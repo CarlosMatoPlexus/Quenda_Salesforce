@@ -1,0 +1,18 @@
+.THIS .user-place {
+    font-weight: bold;
+    text-align: center;
+    background-color: #C8C8C8;
+    color: #fff;  
+    width:auto;
+    height:25px;
+}
+
+.THIS .free_place_button {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: "center";
+    background-color: #07d;  
+    width:300px;
+    height:40px;
+    
+}

@@ -1,0 +1,71 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes">
+    <ltng:require styles="{!join(',', $Resource.slds231 + '/assets/styles/salesforce-lightning-design-system.css')}" 
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', $Resource.CountIdsimple )}" 
+                  afterScriptsLoaded="{!c.jsLoaded}" />
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="place" type="String"/>
+    <aura:attribute name="currentUser" type="User"/>
+    
+    <!-- EVENTS -->
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <div align="center" >
+        <!-- USER & PLACE-->
+        <div class="slds-grid"/>
+        <div class="user-place" align="center">{!$Label.c.QSF_User_CL}: {!v.currentUser.FirstName} -  {!v.place.nombre} </div>
+        
+        <!--STATUS & UNATTENDED CLIENT NUMBER-->
+        <div class="slds-grid slds-border_bottom" style="margin:2%">
+            <div class="slds-col slds-size--1-of-2"  vertical-align="middle" align="left" >{!$Label.c.QSF_Available_CL}</div>
+            <div class=" slds-col slds-size--1-of-2 blink">
+                <div class="slds-grid" style="padding-left:70%">
+                    <div id="unattended_clients" class="size_queue" style="padding-left:6%">5</div>
+                    <div style="padding-bottom:5%" ><lightning:icon iconName="utility:people" size="small" alternativeText="Personas en cola"/></div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin:4%">
+            <div class="slds-col btn-group-vertical">
+                <div style="padding-bottom:5%">   
+                    <!--BACK-->
+                    <div align="left">
+                        <lightning:buttonIcon iconName="utility:undo" variant="bare" onclick="{!c.handleClick}" alternativeText="{!$Label.c.QSF_Back_CL}" />
+                    </div>
+                    <!--INFO: TICKET/TIMER/SERVICE -->
+                    <div align="center" >                    
+                        <div class="slds-grid">
+                            <div class="slds-col" align="right">
+                                <h3 class="title_custom" title="ticket">Ticket: PA27</h3>
+                            </div>
+                            <div class="slds-col" align="left" style="padding-top:1%;padding-left:3%" >
+                                <lightning:icon iconName="utility:work_order_type" variant="" size="x-small"/>   
+                            </div>
+                        </div>
+                        <div class="slds-grid size_time" style="padding-top:3%">
+                            <div class="slds-col" align="center"><h3 id="timer_count" class='timer2 element'></h3></div>
+                        </div>
+                        <div class="slds-grid" style="padding-top:5%; padding-bottom:3%"> 
+                            <div class="slds-col slds-border_bottom" align="center" >
+                                <h3 class="title_custom">Servicio</h3>
+                                <h2 style="padding-bottom:3%" title="Motivo">Solicitud de duplicado de factura</h2>
+                            </div>
+                        </div>
+                        <!--BUTTONS: RESEND/END-ATTENTION/END-AND-NEXT -->
+                        <div style="padding-top:2%">
+                            
+                            <div class="slds-align-bottom div_menu" style="padding-top:3%" >
+                                <button id="btresend" class="slds-button slds-button_neutral btresend" onclick="{!c.Forwarding}">{!$Label.c.QSF_Resend_CL}</button>
+                                <button id="btendAttention" class="slds-button slds-button_neutral btendAttention" onclick="{!c.EndAttention}">{!$Label.c.QSF_End_and_Pause_CL}</button>
+                            </div>    
+                            <div class="slds-align-top div_menu" style="padding-top:4%;">
+                                <button id="btendAndNext" class="slds-button slds-button_neutral btendAndNext" onclick="{!c.EndAndNext}">{!$Label.c.QSF_Finish_and_Call_Next_CL}</button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	
+</aura:component>

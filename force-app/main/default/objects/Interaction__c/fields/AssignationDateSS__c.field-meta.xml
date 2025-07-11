@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AssignationDateSS__c</fullName>
+    <description>Assignation Date with Seconds</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Day( DATEVALUE(AsignationDate__c) ))&amp;&quot;/&quot;&amp; TEXT(Month( DATEVALUE(AsignationDate__c) )) &amp; &quot;/&quot; &amp; TEXT(Year( DATEVALUE(AsignationDate__c) )) &amp; &quot; &quot; &amp; 
+TEXT(VALUE(MID( TEXT(AsignationDate__c), 12, 2 ))-5) 
+&amp; &quot;:&quot; &amp; 
+MID( TEXT(AsignationDate__c), 15, 2 ) 
+&amp; &quot;:&quot; &amp; 
+MID( TEXT(AsignationDate__c), 18, 2 )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Date format: DD/MM/YYYY - HH:MM:SS</inlineHelpText>
+    <label>AssignationDateSS</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

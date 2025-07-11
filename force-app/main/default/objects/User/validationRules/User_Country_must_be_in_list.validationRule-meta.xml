@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Country_must_be_in_list</fullName>
+    <active>true</active>
+    <description>Checks if the User Country is included in the valid countries list.</description>
+    <errorConditionFormula>AND(  NOT( Country__c     =   &quot;CHILE&quot;),
+
+NOT(Country__c    =   &quot;PERU&quot;),
+
+NOT(Country__c    = &quot;BRASIL&quot;),
+
+NOT(Country__c    =   &quot;COLOMBIA&quot;),
+
+NOT(Country__c    =  &quot;ARGENTINA&quot;),
+
+NOT(Country__c    =  &quot;ITALY&quot;),
+
+NOT(Country__c    =  &quot;SOUTH AFRICA&quot;),
+
+NOT(Country__c    =  &quot;ROMANIA&quot;),
+
+NOT(Country__c    =  &quot;SPAIN&quot;),
+
+NOT(Country__c    =  &quot;GLOBAL&quot;)
+
+)</errorConditionFormula>
+    <errorMessage>Please include a valid country (CHILE, PERU, BRASIL, COLOMBIA, ARGENTINA, ITALY, SOUTH AFRICA, ROMANIA, SPAIN, GLOBAL)</errorMessage>
+</ValidationRule>

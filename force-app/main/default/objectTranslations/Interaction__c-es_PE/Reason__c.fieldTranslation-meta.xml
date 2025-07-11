@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Motivo --></help>
+    <label>Motivo</label>
+    <name>Reason__c</name>
+    <picklistValues>
+        <masterLabel>100</masterLabel>
+        <translation>DERIVADA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>101</masterLabel>
+        <translation>Caja</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>104</masterLabel>
+        <translation><!-- 104 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>105</masterLabel>
+        <translation><!-- 105 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>106</masterLabel>
+        <translation><!-- 106 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>107</masterLabel>
+        <translation><!-- 107 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>108</masterLabel>
+        <translation><!-- 108 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>109</masterLabel>
+        <translation><!-- 109 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>110</masterLabel>
+        <translation><!-- 110 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>111</masterLabel>
+        <translation><!-- 111 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>112</masterLabel>
+        <translation><!-- 112 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>113</masterLabel>
+        <translation><!-- 113 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>114</masterLabel>
+        <translation><!-- 114 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>115</masterLabel>
+        <translation><!-- 115 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>116</masterLabel>
+        <translation><!-- 116 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>117</masterLabel>
+        <translation><!-- 117 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>118</masterLabel>
+        <translation><!-- 118 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>119</masterLabel>
+        <translation><!-- 119 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>120</masterLabel>
+        <translation><!-- 120 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>121</masterLabel>
+        <translation><!-- 121 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>122</masterLabel>
+        <translation><!-- 122 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>123</masterLabel>
+        <translation><!-- 123 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>124</masterLabel>
+        <translation><!-- 124 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>125</masterLabel>
+        <translation><!-- 125 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>126</masterLabel>
+        <translation><!-- 126 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>127</masterLabel>
+        <translation><!-- 127 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>128</masterLabel>
+        <translation><!-- 128 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>129</masterLabel>
+        <translation><!-- 129 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>130</masterLabel>
+        <translation><!-- 130 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>131</masterLabel>
+        <translation><!-- 131 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>132</masterLabel>
+        <translation><!-- 132 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>133</masterLabel>
+        <translation><!-- 133 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>134</masterLabel>
+        <translation><!-- 134 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>135</masterLabel>
+        <translation><!-- 135 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>62</masterLabel>
+        <translation>Comprobante de pago</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>63</masterLabel>
+        <translation>Facilidades de pago</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>66</masterLabel>
+        <translation>Atención clientes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>67</masterLabel>
+        <translation>Cobros en boleta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>68</masterLabel>
+        <translation>Saldo de cuenta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>69</masterLabel>
+        <translation>Otro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>70</masterLabel>
+        <translation>Atención sin ticket</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>71</masterLabel>
+        <translation>Venta Empalme</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>72</masterLabel>
+        <translation>Nuevo acoplamiento</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>73</masterLabel>
+        <translation>Intercambio de titularidad</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>74</masterLabel>
+        <translation>Irregularidad en la medición</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>75</masterLabel>
+        <translation>Negociación de deuda</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>76</masterLabel>
+        <translation>Atención Preferencial</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>77</masterLabel>
+        <translation>Nuevos Suministros, Bajas y Cambios de Titularidad</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>78</masterLabel>
+        <translation>Pagos Parciales y Convenios de Pago</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>79</masterLabel>
+        <translation>Otras Consultas Técnicas y Comerciales</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80</masterLabel>
+        <translation>Clientes Tarifa 2 – Clientes Medios</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81</masterLabel>
+        <translation>Plazo para pago - Duplicado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>82</masterLabel>
+        <translation>Crédito fácil</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>83</masterLabel>
+        <translation>Seguros</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>84</masterLabel>
+        <translation>Otros PSVA&apos;S</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>85</masterLabel>
+        <translation>Energía</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>86</masterLabel>
+        <translation>Ofrecimiento</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>87</masterLabel>
+        <translation>Facturación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88</masterLabel>
+        <translation>Suministro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>89</masterLabel>
+        <translation>Modificaciones Generales</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90</masterLabel>
+        <translation>Recaudación</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>91</masterLabel>
+        <translation>FISE</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>92</masterLabel>
+        <translation>Enel X</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>93</masterLabel>
+        <translation>Corte y Reconexión</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>94</masterLabel>
+        <translation>Calidad de Suministro</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>95</masterLabel>
+        <translation>Grandes Clientes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>96</masterLabel>
+        <translation>Trabajo Contratistas</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>97</masterLabel>
+        <translation>Datos de Consumo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>98</masterLabel>
+        <translation>Emergencias</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>99</masterLabel>
+        <translation>Retorno</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Actualización de Contacto</masterLabel>
+        <translation><!-- Actualización de Contacto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aseo</masterLabel>
+        <translation><!-- Aseo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR01</masterLabel>
+        <translation><!-- BR01 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR02</masterLabel>
+        <translation><!-- BR02 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR03</masterLabel>
+        <translation><!-- BR03 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR04</masterLabel>
+        <translation><!-- BR04 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR05</masterLabel>
+        <translation><!-- BR05 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR06</masterLabel>
+        <translation><!-- BR06 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creación de Contacto</masterLabel>
+        <translation><!-- Creación de Contacto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ErrorCol_A</masterLabel>
+        <translation><!-- ErrorCol_A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ErrorCol_B</masterLabel>
+        <translation><!-- ErrorCol_B --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ErrorCol_C</masterLabel>
+        <translation><!-- ErrorCol_C --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Habeas Data</masterLabel>
+        <translation><!-- Habeas Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interfaz exitosa -  Generar Caso</masterLabel>
+        <translation><!-- Interfaz exitosa -  Generar Caso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOT001_COL</masterLabel>
+        <translation><!-- MOT001_COL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOT001_PERU</masterLabel>
+        <translation>Atención de Emergencias Perú</translation>
+    </picklistValues>
+</CustomFieldTranslation>

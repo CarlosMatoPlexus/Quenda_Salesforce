@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+      <!-- PROFILES -->
+    <types>
+        <members>Agente QSF</members>
+        <members>ENEL Bombero</members>
+        <members>Integration Profile QSF</members>
+        <members>Standard</members>
+        <name>Profile</name>
+    </types>
+    <!-- COMPONENTES AURA -->
+    <types>
+        <members>QSF_Attention_Progress</members>
+        <members>QSF_Attention_Progress_From_PA</members>
+        <members>QSF_ChangePlace</members>
+        <members>QSF_Change_View_Event</members>
+        <members>QSF_Forwarding_Shift</members>
+        <members>QSF_Login_Agent</members>
+        <members>QSF_Logout</members>
+        <members>QSF_Pre_Attention</members>
+        <members>QSF_Pre_Attention_SS</members>
+        <members>QSF_Prioritize_Client</members>
+        <members>QSF_Shift_Management</members>
+        <members>QSF_Shift_Management_App</members>
+        <members>QSF_Test</members>
+        <members>QSF_Test_Cambio_Vistas</members>
+        <members>QSF_Waiting_Agent</members>
+        <members>QSF_Without_Shift</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <!-- CLASES APEX -->
+    <types>
+        <members>QSF_Shift_Management_Controller</members>
+        <members>QSF_Shift_Management_Controller_Test</members>
+        <members>QSF_WS_Callouts_Controller</members>
+        <members>QSF_WS_InfoREST</members>
+        <members>QSF_WS_InfoREST_Test</members>
+        <members>QSF_WS_PUT_Controller</members>
+        <name>ApexClass</name>
+    </types>
+    <!-- PÁGINAS VISUALFORCE -->
+    <types>
+        <members>QSF_Gestion_Esperas_Test</members>
+        <name>ApexPage</name>
+    </types>
+    <!-- OBJETOS Y CAMPOS -->
+    <types>
+        <members>Interaction__c</members>
+        <members>Interaction_Connector__c</members>
+        <members>QSF_Audio_Recording__c</members>
+        <members>QSF_Office__c</members>
+        <members>QSF_Quenda_WS__c</members>
+        <members>QSF_User_and_Office_Junction__c</members>
+        <members>User</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>User.QSF_LastLoginDate__c</members>
+        <members>User.QSF_Office_Id__c</members>
+        <members>User.QSF_Office__c</members>
+        <members>User.QSF_Place_Id__c</members>
+        <members>User.QSF_Place__c</members>
+        <members>User.QSF_Quenda_User_Id__c</members>
+        <name>CustomField</name>
+    </types>
+    <!-- FLOWS -->
+    <types>
+        <members>QSF_Update_Office</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>QSF_Update_Office</members>
+        <name>FlowDefinition</name>
+    </types>
+    <!-- CUSTOM PERMISSIONS -->
+    <types>
+        <members>QSF_Advanced_Attention</members>
+        <!-- <members>QSF_Attention_with_priorization</members> -->
+        <members>QSF_Attention_with_priorization_and_quick_ticket</members>
+        <!--<members>QSF_Attention_with_quick_ticket_and_Ticket_printing_time</members>-->
+        <!-- <members>QSF_Attention_with_Quick_ticket_Without_Ticket_and_Ticket_printing_time</members> -->
+        <!-- <members>QSF_Full_Attention</members> -->
+        <!-- <members>QSF_Gestor_Quenda</members> -->
+        <members>QSF_Next_Call</members>
+        <members>QSF_No_Ticket_Attention</members>
+        <!-- <members>QSF_Office_Administrator</members> -->
+        <members>QSF_Priority_Attention</members>
+        <members>QSF_Quick_Attention</members>
+        <members>QSF_Service_Selection</members>
+        <members>QSF_Simple_Attention</members>
+        <!--<members>QSF_Simple_Attention_Quick_Attention</members> -->
+        <!-- <members>QSF_Simple_Attention_and_Quick_Ticket</members> -->
+        <members>QSF_Ticket_printing_time</members>
+      
+
+        <name>CustomPermission</name>
+    </types>
+    <!-- PERMISSION SETS -->
+    <types>
+        <members>QSF_Advanced_Attention</members>
+        <members>QSF_Attention_with_priorization</members>
+        <members>QSF_Attention_with_priorization_and_quick_ticket</members>
+        <members>QSF_Attention_with_quick_ticket_and_Ticket_printing_time</members>
+        <members>QSF_Attention_with_Quick_ticket_Without_Ticket_and_Ticket_printing_time</members>
+        <members>QSF_Full_Attention</members>
+        <members>QSF_Gestor_Quenda</members>
+        <members>QSF_Office_Administrator</members>
+        <members>QSF_Quick_Attention</members>
+        <members>QSF_Simple_Attention</members>
+        <members>QSF_Simple_Attention_Quick_Attention</members>
+        <members>QSF_Simple_Attention_and_Quick_Ticket</members>
+        <name>PermissionSet</name>
+    </types>
+    <!-- TRANSLATIONS -->
+    <types>
+        <members>Interaction__c-en_US</members>
+        <members>Interaction__c-es</members>
+        <members>Interaction__c-es_AR</members>
+        <members>Interaction__c-es_CL</members>
+        <members>Interaction__c-es_CO</members>
+        <members>Interaction__c-es_PE</members>
+        <members>Interaction__c-pt_BR</members>
+        <members>Interaction_Connector__c-en_US</members>
+        <members>Interaction_Connector__c-es</members>
+        <members>Interaction_Connector__c-es_CL</members>
+        <members>QSF_Audio_Recording__c-en_US</members>
+        <members>QSF_Audio_Recording__c-es</members>
+        <members>QSF_Audio_Recording__c-es_AR</members>
+        <members>QSF_Audio_Recording__c-es_CO</members>
+        <members>QSF_Audio_Recording__c-es_PE</members>
+        <members>QSF_Office__c-en_US</members>
+        <members>QSF_Office__c-es</members>
+        <members>QSF_Office__c-es_AR</members>
+        <members>QSF_Office__c-es_CL</members>
+        <members>QSF_Office__c-es_CO</members>
+        <members>QSF_Office__c-es_PE</members>
+        <members>QSF_Office__c-pt_BR</members>
+        <members>QSF_Quenda_WS__c-en_US</members>
+        <members>QSF_User_and_Office_Junction__c-en_US</members>
+        <members>QSF_User_and_Office_Junction__c-es</members>
+        <members>QSF_User_and_Office_Junction__c-es_AR</members>
+        <members>QSF_User_and_Office_Junction__c-es_CL</members>
+        <members>QSF_User_and_Office_Junction__c-es_CO</members>
+        <members>QSF_User_and_Office_Junction__c-es_PE</members>
+        <members>QSF_User_and_Office_Junction__c-pt_BR</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <!-- OTROS COMPONENTES -->
+    <types>
+        <members>QSF_Shift_WS_Https</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <!-- <members>QSF_Shift_Icons</members>
+        <members>QSF_Library</members>-->
+        <members>QSF_CountTimerNewVersion</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>QSF_Gestion_de_Esperas</members>
+        <name>ConnectedApp</name>
+    </types>
+    <types>
+        <members>Quenda_URL_Peru</members>
+        <members>quendaEnel</members>
+        <members>quendaLight</members>
+        <members>quendapreEnel</members>
+        <name>CspTrustedSite</name>
+    </types>
+    <types>
+        <members>Grabadora</members>
+        <members>QSF_Gestion_Esperas_Test</members>
+        <name>CustomApplicationComponent</name>
+    </types>
+    <types>
+        <members>https_quenda_enel_com</members>
+        <name>RedirectWhitelistUrl</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>SiteDotCom</name>
+    </types>
+    <types>
+        <members>Interaction__c</members>
+        <members>QSF_Gestor_Quenda</members>
+        <members>QSF_Office__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Interaction__c</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>Interaction__c</members>
+        <members>Interaction_Connector__c</members>
+        <members>QSF_Audio_Recording__c</members>
+        <members>QSF_Office__c</members>
+        <members>QSF_User_and_Office_Junction__c</members>
+        <name>TopicsForObjects</name>
+    </types>
+    <types>
+        <members>Interaction__c</members>
+        <members>Interaction_Connector__c</members>
+        <members>QSF_Audio_Recording__c</members>
+        <members>QSF_Office__c</members>
+        <members>QSF_User_and_Office_Junction__c</members>
+        <name>SharingRules</name>
+    </types>
+    <types>
+        <members>Interacciones_con_Audio</members>
+        <members>Interacciones_con_Casos</members>
+        <members>Interacciones_vacv</members>
+        <members>Interacoes_BR</members>
+        <members>Interactions</members>
+        <members>Interactions_and_Cases</members>
+        <members>Interactions_and_Cases_Quenda</members>
+        <name>ReportType</name>
+    </types>
+    <!--<types>
+         <members>B2C: IntraHora</members>
+        <members>CL_ReclamosLatam: InteraccionesQuenda</members> 
+        <name>ReportFolder</name>
+    </types>-->
+    <version>62.0</version>
+</Package>

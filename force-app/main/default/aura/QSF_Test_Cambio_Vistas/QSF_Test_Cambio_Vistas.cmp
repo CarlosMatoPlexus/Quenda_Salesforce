@@ -1,0 +1,142 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes" >
+    
+    <!-- ANTIGUO <ltng:require styles="{!join(',', $Resource.slds231 + '/assets/styles/salesforce-lightning-design-system.css','//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css')}" 
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js',
+                           $Resource.CountIdsimple, $Resource.CountTimer)}"
+                    afterScriptsLoaded="{!c.jsLoaded}" /> -->
+    <!-- NUEVO -->
+    <ltng:require styles="{!join(',', $Resource.slds231 + '/assets/styles/salesforce-lightning-design-system.css')}" 
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' ,'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js', $Resource.CountTimer)}"
+                  afterScriptsLoaded="{!c.jsLoaded}" />
+                   
+     <!--INDICADOR DE TIPO DE ENTORNO (LIGHTNING O CLASSIC)-->
+    <aura:attribute name="isLEX" type="Boolean" default=""/>
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="timerCount" type="String" default=""/> 
+    <aura:attribute name="view" type="String"/> 
+    <aura:attribute name="place" type="String"/>
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="errorStatus" type="Boolean"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    <aura:attribute name="nextShiftInfo" type="Object"/>
+    <aura:attribute name="previousView" type="String"/>
+    <aura:attribute name="programedInter" type="Interaction__c"/>
+    <aura:attribute name="newInter" type="Interaction__c"/>
+    <aura:attribute name="idSelectedService" type="Long" default=""/>
+    <aura:attribute name="previousShiftInfo" type="Object"/>
+    <aura:attribute name="automaticAttentionTime" type="String"/>
+    <aura:attribute name="interactionTabId" type="String"/>
+    <aura:attribute name="currentSeconds" type="String" default="0"/>
+    <aura:attribute name="isActiveAutomaticRecall" type="Boolean" default="false"/>
+    <aura:attribute name="idSelectedStatus" type="Long" />  
+    
+   
+    
+    <aura:attribute name="accessToken" type="String" />
+    <aura:attribute name="errorAccessToken" type="Boolean" default="false"/>
+    <aura:attribute name="RecoveredTicket" type="Boolean" default="false"/>
+
+    
+    <!-- PERMISOS PERSONALIZADOS DE USUARIO-->
+    <aura:attribute name="callNext" type="Boolean" default="false"/>
+    <aura:attribute name="quickAttention" type="Boolean" default="false"/>
+    <aura:attribute name="prioritizeTurn" type="Boolean" default="false"/>
+    <aura:attribute name="serviceSelection" type="Boolean" default="false"/>
+    <aura:attribute name="withoutTicket" type="Boolean" default="false"/>
+    <aura:attribute name="printingTicket" type="Boolean" default="false"/>
+    
+    <!-- EVENTS -->
+   <aura:handler name="init" value="{!this}"  action="{!c.doInit}" description="Call to the doInit method at the beginning"/>
+    
+    <aura:handler name="changeView" event="c:QSF_Change_View_Event" action="{!c.handleChangeView}"/>
+    
+    <div class="slds-hide"> {!v.place} - {!v.currentUser} - {!v.callNext} - {!v.nextShiftInfo} - {!v.quickAttention} - 
+        {!v.idSelectedService} - {!v.prioritizeTurn} - {!v.serviceSelection} - {!v.withoutTicket} - {!v.previousShiftInfo} - 
+        {!v.automaticAttentionTime} - {!v.accessToken} - {!v.currentSeconds}</div>
+    
+    <aura:if isTrue="{!v.view == 'LoginAgent'}">
+        <div>
+            <!--<c:QSF_Login_Agent currentUser="{!v.currentUser}" accessToken="{!v.accessToken}" isLEX="{!v.isLEX}" errorMessage="{!v.errorMessage}" errorStatus="{!v.errorStatus}"/>-->
+            <c:QSF_Login_Agent currentUser="{!v.currentUser}" accessToken="{!v.accessToken}" errorMessage="{!v.errorMessage}" errorStatus="{!v.errorStatus}"/>
+
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'WaitingAgent'}">
+        <c:QSF_Waiting_Agent place="{!v.place}" currentUser="{!v.currentUser}"
+                             callNext="{!v.callNext}" quickAttention="{!v.quickAttention}" idSelectedService="{!v.idSelectedService}"
+                             prioritizeTurn="{!v.prioritizeTurn}" serviceSelection="{!v.serviceSelection}"
+                             withoutTicket="{!v.withoutTicket}" previousShiftInfo="{!v.previousShiftInfo}"
+                             automaticAttentionTime="{!v.automaticAttentionTime}" accessToken="{!v.accessToken}" currentSeconds="{!v.currentSeconds}" isActiveAutomaticRecall="{!v.isActiveAutomaticRecall}"
+        					 previousView="{!v.previousView}" idSelectedStatus="{!v.idSelectedStatus}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'AttentionProgress'}">
+        <c:QSF_Attention_Progress place="{!v.place}" currentUser="{!v.currentUser}" nextShiftInfo="{!v.nextShiftInfo}"
+                                  idSelectedService="{!v.idSelectedService}" accessToken="{!v.accessToken}" interactionTabId="{!v.interactionTabId}"
+                                  previousView="{!v.previousView}"  timerCount="{!v.timerCount}" RecoveredTicket="{!v.RecoveredTicket}" 
+                                  automaticAttentionTime="{!v.automaticAttentionTime}" />
+    </aura:if>
+
+    <aura:if isTrue="{!v.view == 'Prioritize'}">
+        <c:QSF_Prioritize_Client idSelectedService="{!v.idSelectedService}"
+                                 place="{!v.place}" currentUser="{!v.currentUser}" 
+                                 nextShiftInfo="{!v.nextShiftInfo}" accessToken="{!v.accessToken}" currentSeconds="{!v.currentSeconds}" automaticAttentionTime="{!v.automaticAttentionTime}"
+                                 isActiveAutomaticRecall="{!v.isActiveAutomaticRecall}"/>                      
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'WithoutShift'}">
+        <c:QSF_Without_Shift place="{!v.place}" currentUser="{!v.currentUser}" nextShiftInfo="{!v.nextShiftInfo}"
+                             accessToken="{!v.accessToken}" interactionTabId="{!v.interactionTabId}" previousView="{!v.previousView}"
+                             timerCount="{!v.timerCount}" RecoveredTicket="{!v.RecoveredTicket}" 
+                             automaticAttentionTime="{!v.automaticAttentionTime}" /> 
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'PreAttentionSS'}">
+        <!--<c:QSF_Pre_Attention_SS place="{!v.place}" currentUser="{!v.currentUser}" isLEX="{!v.isLEX}"/>  -->
+         <c:QSF_Pre_Attention_SS place="{!v.place}" currentUser="{!v.currentUser}"/> 
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'PreAttention'}">     
+        <c:QSF_Attention_Progress_From_PA place="{!v.place}" currentUser="{!v.currentUser}" 
+                                          accessToken="{!v.accessToken}" printingTicket="{!v.printingTicket}" 
+                                          automaticAttentionTime="{!v.automaticAttentionTime}" />                     
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'Forwarding'}"> 
+        <c:QSF_Forwarding_Shift place="{!v.place}" timerCount="{!v.timerCount}" 
+                                currentUser="{!v.currentUser}" nextShiftInfo="{!v.nextShiftInfo}"
+                                previousView="{!v.previousView}"
+                                accessToken="{!v.accessToken}" interactionTabId="{!v.interactionTabId}" 
+                                automaticAttentionTime="{!v.automaticAttentionTime}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'Logout'}"> 
+        <c:QSF_Logout place="{!v.place}" currentUser="{!v.currentUser}"
+                      accessToken="{!v.accessToken}" idSelectedStatus="{!v.idSelectedStatus}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'ChangePlace'}"> 
+        <c:QSF_ChangePlace place="{!v.place}" currentUser="{!v.currentUser}"
+                           accessToken="{!v.accessToken}" idSelectedStatus="{!v.idSelectedStatus}"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'ErrorTokenView'}"> 
+        <div align="center">
+            <div aura:id="displayError" class="slds-align-top error-display" style="width:300px"> 	
+                {!$Label.c.QSF_Access_Token_Error_CL}
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.view == 'NotQuendaUser'}"> 
+        <div align="center">
+            <div aura:id="displayPermissionError" class="slds-align-top error-display" style="width:300px"> 	
+                {!$Label.c.QSF_User_permission_Error_CL}
+            </div>
+        </div>
+    </aura:if>
+    
+    
+</aura:component>

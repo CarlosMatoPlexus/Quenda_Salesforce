@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_User_Category__c</fullName>
+    <label>Internal User Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>User (default)</fullName>
+                <default>false</default>
+                <label>User (default)</label>
+            </value>
+            <value>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+                <label>Project Manager</label>
+            </value>
+            <value>
+                <fullName>Key Account Manager</fullName>
+                <default>false</default>
+                <label>Key Account Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

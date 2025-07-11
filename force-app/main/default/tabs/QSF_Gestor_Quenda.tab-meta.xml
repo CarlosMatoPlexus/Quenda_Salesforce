@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Gestor Quenda</label>
+    <motif>Custom100: TV Widescreen</motif>
+    <url>https://quenda.enel.com/quenda/validaUsuario.jsp?userSession={!API.Session_ID}&amp;userId={!User.Id}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerAssignmentNotAllowed</fullName>
+    <active>true</active>
+    <description>This validation rule prevent to update interaction owner to Integración Brasil user to avoid interruption in the emergency case creation process</description>
+    <errorConditionFormula>AND(OR(($Setup.OneOrg__c.B2C__c=true), ($Setup.OneOrg__c.B2B__c=true)),($Setup.OneOrg__c.BrasilValidationRules__c=true), OR(($Profile.Name =&apos;Brasil Service Agent&apos;),($Profile.Name =&apos;Brasil Service Agent Attention&apos;),($Profile.Name =&apos;Brasil Service Agent Attention Lightning&apos;),($Profile.Name =&apos;Brasil Service Agent Attention Massive&apos;),($Profile.Name =&apos;Brasil Service Agent Attention Massive Lightning&apos;)),ISCHANGED(OwnerId),(OwnerId =&apos;00536000004Pr85&apos;))</errorConditionFormula>
+    <errorMessage>Você não tem permissão para alterar o proprietário da interação para Usuário da Integración Brasil</errorMessage>
+</ValidationRule>

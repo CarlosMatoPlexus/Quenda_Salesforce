@@ -1,0 +1,104 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes">
+    <ltng:require styles="/resource/slds231/assets/styles/salesforce-lightning-design-system.css"
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'  ,
+                           'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js',
+                           $Resource.CountTimer)}"/>
+    
+   <!-- ATTRIBUTES -->
+    <aura:attribute name="place" type="String"/>
+    <aura:attribute name="unattendedShiftList" type="List" /> <!-- Lista de clientes por atender segun servicio -->
+    <aura:attribute name="selectedValue" type="String" default=""/>
+    <aura:attribute name="currentUser" type="User"/>     <!-- Usuario/agente actual -->
+    <aura:attribute name="nextShiftInfo" type="Object"/> <!-- Información del ticket actual -->
+    <aura:attribute name="programedInter" type="Interaction__c"/>
+    <aura:attribute name="idSelectedService" type="Long" default="0"/>
+    <aura:attribute name="spinnerMsg" type="String" default='Conectando...'/>
+    <aura:attribute name="loadingMessage" type="String" default='Cargando lista de citas...'/>
+    <aura:attribute name="currentSeconds" type="String" />
+    <aura:attribute name="automaticAttentionTime" type="String"/>
+    <aura:attribute name="AutoRecallIntervalId" type="String"/>
+    <aura:attribute name="isActiveAutomaticRecall" type="Boolean"/> 
+    <aura:attribute name="callAutomaticNow" type="Boolean"/>
+    
+    <!-- INDICADOR TIPO DE ENTORNO (CLASSIC O LIGHTNING) -->
+	<aura:attribute name="isLEX" type="Boolean" default=""/>
+    
+    <!--ERROR DISPLAY ATTRIBUTES-->
+    <aura:attribute name="errorStatus" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    
+    <!--ATTRIBUTES FOR ACCESS TOKEN -->
+    <aura:attribute name="accessToken" type="String"/>
+    <aura:attribute name="statusAccessToken" type="String" default="INIT"/> <!-- INIT / ERROR / OK-->
+    <aura:attribute name="failedFunctionName" type="String" default=""/>
+ 
+    <!-- DO INIT & HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.statusAccessToken}" action="{!c.getAccessToken}"/>
+    <aura:handler name="change" value="{!v.callAutomaticNow}" action="{!c.callNextNow}"/>
+   <!--<aura:handler name="change" value="{!v.automaticAttentionTime}" action="{!c.getCurrentSeconds}"/>-->
+    <!--<aura:handler name="change" value="{!v.idSelectedService}" action="{!c.serviceChange}"/>-->
+    
+    <!-- EVENTS -->
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <!-- SPINNER -->
+    <lightning:spinner aura:id="mySpinner" variant="brand" size="large" class="slds-hide" title="{!v.spinnerMsg}" alternativeText="{!v.spinnerMsg}"/>
+    
+    
+    
+    <div align="center" >
+        <div class="slds-grid"/>
+            <div class="user-place" align="center">{!$Label.c.QSF_User_CL}: {!v.currentUser.FirstName} - {!$Label.c.QSF_Place_CL}: {!v.place.nombre}
+            </div>
+        <div style="margin:4%">
+        <div class="slds-col btn-group-vertical">
+            <div class="slds-border_bottom" style="padding-bottom:30%;padding-top:2%;">               
+                <div class="slds-grid">
+                    <div class="slds-col slds-size--1-of-7" style="padding-top:2%">
+                        <lightning:buttonIcon iconName="utility:undo" variant="bare" onclick="{!c.backClick}" alternativeText="{!$Label.c.QSF_Back_CL}" />
+                    </div>
+                    <div align="left" class="slds-col slds-size--1-of-7">
+                        <lightning:icon iconName="action:new_group" size="x-small" alternativeText="{!$Label.c.QSF_People_in_Queue_CL}"/>
+                    </div>
+                    
+        <!-- NÚMERO DE CLIENTES SIN ATENDER (EN COLA)-->
+                    <div align="left" class="slds-col slds-size--4-of-7" style="padding-top:2%">
+                        <h1 class="size_queue"> {!v.unattendedShiftList.length} - {!$Label.c.QSF_People_in_Queue_CL} </h1>
+                    </div>
+                </div>                 
+                
+        <!--PICKLIST CLIENTES SIN ATENDER SEGÚN SERVICIO SELECCIONADO  -->
+                <div align="left" style="padding-left:2%; padding-top:7%">
+                    
+                    <lightning:select aura:id="selectTicket" name="selectTicket" >
+                        <option value="" disabled="disabled" selected="true">{!v.loadingMessage}</option>
+       					 <aura:iteration items="{!v.unattendedShiftList}" var="item" indexVar="indx">
+                             <option height="30%" value="{!indx}" selected="{!item.selected}">
+                                {!item.fechaCita} - {!item.codTicket} &nbsp;  {!item.Nombre} </option>
+                            <!-- <option height="30%" value="{!item.idCita}" selected="{!item.selected}">{!item.value}</option>-->
+         				</aura:iteration>
+    				</lightning:select>
+                </div>
+            </div>     
+            <div >      
+        <!--BOTÓN LLAMAR AHORA -->
+                <div class="slds-align-top div_menu">
+                    <lightning:button class="slds-button slds-button_neutral btprioritize" onclick="{!c.PriorityTurn}">
+                        {!$Label.c.QSF_Call_Now_CL}
+                        <lightning:icon class="call-next-icon" iconName="utility:announcement" size="x-small" variant="inverse"/>
+                    </lightning:button>
+                </div>  
+            </div>
+            
+         <aura:if isTrue="{!v.errorStatus}">
+            <div aura:id="displayError" class="slds-align-top div_menu error-display" style="padding-top:4%; width:300px"  > 
+              {!v.errorMessage}
+            </div>
+         </aura:if>
+            
+        </div>
+      </div>
+    </div>	
+    
+</aura:component>

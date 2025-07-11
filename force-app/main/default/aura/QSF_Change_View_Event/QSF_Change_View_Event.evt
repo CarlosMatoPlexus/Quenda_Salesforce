@@ -1,0 +1,23 @@
+<aura:event type="COMPONENT" description="This event manages view changes" > 
+    <aura:attribute name="view" type="String" />
+    <aura:attribute name="timerCount" type="String" default=""/> 
+    <aura:attribute name="place" type="String"/>
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="nextShiftInfo" type="Object"/>
+    <aura:attribute name="newInter" type="Interaction__c"/>
+    <aura:attribute name="previousView" type="String"/>
+    <aura:attribute name="errorStatus" type="Boolean"/>
+     <aura:attribute name="errorMessage" type="String"/>
+    <aura:attribute name="programedInter" type="Interaction__c"/>
+    <aura:attribute name="idSelectedService" type="long"/>
+    <aura:attribute name="previousShiftInfo" type="Object"/>
+    <aura:attribute name="automaticAttentionTime" type="string"/>
+    <aura:attribute name="accessToken" type="String"/>
+    <aura:attribute name="interactionTabId" type="String"/>
+    <aura:attribute name="isLEX" type="Boolean"/>
+    <aura:attribute name="currentSeconds" type="string"/>
+    <aura:attribute name="isActiveAutomaticRecall" type="Boolean"/>
+    <aura:attribute name="idSelectedStatus" type="Long" />  
+    
+    
+</aura:event>

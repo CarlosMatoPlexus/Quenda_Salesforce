@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isLicensed>false</isLicensed>
+    <label>Attention with priorization and quick-ticket</label>
+    <requiredPermission>
+        <customPermission>QSF_Next_Call</customPermission>
+        <dependency>true</dependency>
+    </requiredPermission>
+    <requiredPermission>
+        <customPermission>QSF_No_Ticket_Attention</customPermission>
+        <dependency>true</dependency>
+    </requiredPermission>
+    <requiredPermission>
+        <customPermission>QSF_Priority_Attention</customPermission>
+        <dependency>true</dependency>
+    </requiredPermission>
+    <requiredPermission>
+        <customPermission>QSF_Quick_Attention</customPermission>
+        <dependency>true</dependency>
+    </requiredPermission>
+</CustomPermission>

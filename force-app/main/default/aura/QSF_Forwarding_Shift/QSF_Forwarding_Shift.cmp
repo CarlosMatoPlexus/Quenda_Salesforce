@@ -1,0 +1,208 @@
+<aura:component controller="QSF_Shift_Management_Controller" implements="flexipage:availableForAllPageTypes" >
+    <!--<ltng:require styles="/resource/slds231/assets/styles/salesforce-lightning-design-system.css"/>-->
+    <lightning:workspaceAPI aura:id="workspace" />
+    
+    <ltng:require styles="{!join(',', $Resource.slds231 + '/assets/styles/salesforce-lightning-design-system.css')}" 
+                  scripts="{!join(',', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' ,
+                           'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js',
+                           $Resource.CountTimer)}"
+                   afterScriptsLoaded="{!c.jsLoaded}" />
+    
+    
+    <!--   <lightning:button variant="brand" label="Siguiente turno" onclick="{! c.handleClick }" /> -->
+    
+    <!-- ATTRIBUTE -->
+    <aura:attribute name="timerCount" type="String" default=""/> 
+    <aura:attribute name="place" type="String"/>
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="forwardingServiceList" type="List"/>
+    <aura:attribute name="forwardingPlaceList" type="List"/>
+    <aura:attribute name="nextShiftInfo" type="Object"/>
+    <aura:attribute name="previousView" type="String"/>
+    <aura:attribute name="sameService" type="Boolean"/>
+    <aura:attribute name="idSelectedService" type="Long"/>
+    <aura:attribute name="idSelectedPreviousService" type="Long"/>
+    <aura:attribute name="idSelectedPlace" type="Long"/>
+    <aura:attribute name="selectedTime" type="integer"/>
+    <aura:attribute name="errorStatus" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String"/>
+    <aura:attribute name="spinnerMsg" type="String"/>
+    <aura:attribute name="loadingMessage" type="String" default="Cargando servicios de reenvío disponibles..."/>
+    <aura:attribute name="loadingMessage2" type="String" default="{!$Label.c.QSF_Destination_Place_CL}"/>
+    <aura:attribute name="interactionTabId" type="String"/>
+     <aura:attribute name="automaticAttentionTime" type="String" /> <!--Parametro tiempo para realizar La -->
+    
+    <aura:attribute name="accessToken" type="String" />
+    <aura:attribute name="errorAccessToken" type="Boolean" default="false"/>
+    
+    <aura:attribute name="statusAccessToken" type="String" default="INIT"/> <!-- INIT / ERROR / OK-->
+    <aura:attribute name="failedFunctionName" type="String" default=""/>
+    
+    <aura:handler name="change" value="{!v.statusAccessToken}" action="{!c.getAccessToken}"/>
+    
+    <!-- INDICADOR TIPO DE ENTORNO (CLASSIC O LIGHTNING) -->
+	<aura:attribute name="isLEX" type="Boolean" default=""/>
+    
+    <!-- DO INIT -->
+    <aura:handler name="init" value="{!this}"  action="{!c.doInit}" description="Call to the doInit method at the beginning"/>
+    
+    <aura:registerEvent name="changeView" type="c:QSF_Change_View_Event"/>
+    
+    <!-- SPINNER -->
+    <lightning:spinner aura:id="mySpinner" variant="brand" size="large" class="slds-hide" title="{!v.spinnerMsg}" alternativeText="..."/>
+    
+    <div align="center">
+    <!-- USER & PLACE HEADER -->
+        <div class="slds-grid"/>
+            <div class="user-place" align="center">{!$Label.c.QSF_User_CL}: {!v.currentUser.FirstName} - {!$Label.c.QSF_Place_CL}: {!v.place.nombre}
+            </div>
+        
+        <div class="slds-col btn-group-vertical" style="margin:4%">
+            <div  align="left">            
+                
+            <!-- BACK BUTTON & ATTENTION TIME BEFORE FORWARDING-->
+                <div class="slds-grid">
+                <div align="left" class="slds-col slds-size--1-of-7" style="padding-top:1%" >
+                    <lightning:buttonIcon iconName="utility:undo" variant="bare" onclick="{!c.handleClick}" alternativeText="{!$Label.c.QSF_Back_CL}" />
+                </div>
+                
+                <div align="center" class="slds-col slds-size--6-of-7" style="padding-right:12%; display:none">
+                    <h3 class="timer_custom1">{!$Label.c.QSF_Duration_of_attention_CL}</h3>
+                    
+                    <h2 class="timer_custom2" title="Duracion">{!v.timerCount}</h2>
+                    
+                   <div class="slds-hide"><h3 id="timer_count" class='timer element'></h3></div>
+
+                </div>
+                </div>
+                
+         <!--INFO NAME & TICKET NUMBER-->
+                <div class="slds-grid" style="padding-top:4%"> 
+                    <div class="slds-col slds-size--1-of-7" style="padding-top:4%" >
+                        <lightning:icon iconName="action:user" variant="" size="xx-small"/>   
+                    </div>
+                    <div class="slds-col slds-size--4-of-7" style="padding-top:4%">
+                        <h3 class="title_custom" align="left">{!$Label.c.QSF_Service_CL}</h3>
+                            
+                            <!--<div align="left"  >
+                                <h2 title="Nombre">Javier</h2>
+                             </div>
+                            <div align="left" >
+                                <h2 title="Apellidos">Martín Gómez de la Serna</h2>
+                            </div>-->
+                        <div align="left" >
+                                <h2 title="Servicio">{!v.nextShiftInfo.servicio}</h2>
+                            </div>
+                            
+                    </div>
+                    <div class="slds-col slds-size--2-of-7" style="padding-top:4%">
+                        <div class="slds-grid" align="center">
+                            <div class="slds-col slds-size--2-of-3" align="center">
+                         		<h3 class="title_custom" title="ticket">{!$Label.c.QSF_Ticket_CL}:</h3>
+                         		<h2 title="ticket-number">{!v.nextShiftInfo.codTicket}</h2>
+                            </div>
+                            <div align="left" class="slds-col slds-size--1-of-3" style="padding-top:20%" >
+                        		<lightning:icon class="ticket-icon" iconName="utility:work_order_type" variant="" size="x-small" />   
+                      		</div>
+                    	</div>
+                    </div>
+                  </div>
+                
+                
+                <div align="left" style="padding-top:5%;">
+                         
+         <!--    FORWARDING SERVICE LIST   -->
+                    <div class="slds-combobox_container">
+                        <div class="slds-form-element" >
+                            <div class="slds-form-element__control slds-grow"> 
+                               <!-- <div class="slds-select_container">--> 
+                                    <lightning:select aura:id="selectForwardingService" name="selectForwardingService" onchange="{!c.getAvailablePlaces}" > 
+                                        <option value="" disabled="disabled" selected="true">{!v.loadingMessage}</option>
+                                        <!-- <option value="Servicio 1">Servicio 1</option>
+                                        <option value="Servicio 3">Servicio 3</option>
+                                        <option value="Servicio 4">Servicio 4</option>
+                                        <option value="Servicio 5">Servicio 5</option>-->
+                                        
+                                        <aura:iteration items="{!v.forwardingServiceList}" var="forwardingService" indexVar="indx">
+                                        <option value="{!indx}" text="{!forwardingService.nombre}"/>
+                                    	</aura:iteration>
+                                        
+                                    </lightning:select> 
+                                
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                
+               <!-- <aura:if isTrue="{!v.errorStatus}">
+            		<div aura:id="displayError" class="slds-align-top div_menu error-display" style="padding-top:4%; width:300px"  > 	
+              			{!v.errorMessage}
+            		</div>
+         		</aura:if>-->
+                
+                
+                <div class="slds-grid" style="padding-top:5%">
+          <!--  FORWARDING AVAILABLE PLACES LIST   -->
+                    <div class="slds-col" style="padding-right:1%">
+                        <div class="slds-combobox_container" >
+                            <div class="slds-form-element" >
+                                <div class="slds-form-element__control slds-grow"> 
+                                   <!-- <div class="slds-select_container"> -->
+                                        <lightning:select aura:id="selectForwardingPlace" name="selectForwardingPlace" > 
+                                            <option value="" disabled="disabled" selected="true">{!v.loadingMessage2}</option>
+                                            <!-- <option value="Puesto 1">Puesto 1</option>
+                                            <option value="Puesto 3">Puesto 3</option>
+                                            <option value="Puesto 4">Puesto 4</option>
+                                            <option value="Puesto 5">Puesto 5</option> -->
+                                            
+                                            <aura:iteration items="{!v.forwardingPlaceList}" var="forwardingPlace" indexVar="indx">
+                                        	<option value="{!indx}" selected="{!forwardingPlace.selected}">
+                                        {!$Label.c.QSF_Place_CL} - {!forwardingPlace.nombre}</option>
+                                    		</aura:iteration>
+                                            
+                                        </lightning:select> 
+                                    
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+          <!--    FORWARDING TIME   -->
+                    <div class="slds-col" style="padding-left:1%" >
+                        <div class="slds-combobox_container" >
+                            <div class="slds-form-element" >
+                                <div class="slds-form-element__control slds-grow"> 
+                                    <!--<div class="slds-select_container"> -->
+                                        <lightning:select aura:id="selectForwardingTime" name="selectForwardingTime" > 
+                                            <option value="" disabled="disabled" selected="true">{!$Label.c.QSF_When_Forwarding_CL}</option>
+                                            <option value="0">{!$Label.c.QSF_Now_Forwarding_CL}</option>
+                                            <option value="5">{!$Label.c.QSF_In_Five_Forwarding_CL}</option>
+                                            <option value="10">{!$Label.c.QSF_In_Ten_Forwarding_CL}</option>
+                                            <option value="15">{!$Label.c.QSF_In_15_Forwarding_CL}</option>
+                                            <option value="30">{!$Label.c.QSF_In_30_Forwarding_CL}</option>              
+                                        </lightning:select> 
+                                   
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        <!--    FORWARDING BUTTON   -->
+            <div>                  
+                <div class="slds-align-top" style="padding-top:6%">
+                    <lightning:button aura:id="btresend" class="slds-button slds-button_neutral btresend" onclick="{!c.Forwarding }">
+                        {!$Label.c.QSF_Resend_CL}
+                    <lightning:icon class="forwarding-icon" iconName="utility:internal_share" size="x-small" variant="bare"/>
+                    </lightning:button>
+                </div>  
+            </div>
+            
+            <aura:if isTrue="{!v.errorStatus}">
+                <div aura:id="displayError" class="slds-align-top div_menu error-display" style="padding-top:4%; width:300px"  > 	
+                    {!v.errorMessage}
+                </div>
+            </aura:if>
+        </div>
+    </div>	
+    
+</aura:component>

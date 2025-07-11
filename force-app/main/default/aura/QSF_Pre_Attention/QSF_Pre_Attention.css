@@ -1,0 +1,50 @@
+.THIS .user-place {
+  font-weight: bold;
+  text-align: center;
+  background-color: #C8C8C8;
+  color: #fff;  
+  width:auto;
+  height:auto;
+ }
+
+.THIS .size_time {
+  font-weight: bold;
+ }
+
+.THIS .title_custom {
+    color: #0070d2;
+}
+
+.THIS .btresend {
+  text-transform: uppercase;
+  
+  color: #fff;
+  background-color: #177DD6;  
+  width:120px;
+  height:30px;
+
+}
+
+.THIS .btendAttention {
+  text-transform: uppercase;
+  
+  color: #fff;
+  background-color: #d3d;  
+  width:120px;
+  height:30px;
+
+}
+.THIS .btendAndNext {
+  text-transform: uppercase;
+  
+  background-color: #DD4B39;
+  color: #fff; 
+  width:240px;
+  height:30px;
+
+}
+.THIS .error {
+  	color: #dd4b39;
+    font-size: 19px;
+    font-weight: bold;
+}

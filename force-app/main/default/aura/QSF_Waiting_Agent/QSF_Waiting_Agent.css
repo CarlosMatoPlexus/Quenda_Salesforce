@@ -1,0 +1,194 @@
+.THIS .btsiguente-turno {
+  text-transform: uppercase;
+  background-color: #7DCF64;
+  font-size:12px;
+  color: #fff;  
+  width:300px;
+  height:40px;
+
+}
+
+.THIS .btpriorizar-turno {
+  text-transform: uppercase;
+  background-color: #ff9664;
+  font-size:12px;
+  color: #fff; 
+  width:300px;
+  height:40px;
+
+}
+
+.THIS .btfree-place{
+  text-transform: uppercase;
+  background-color: #0077DD;
+  font-size:12px;
+  color: #fff; 
+  width:130px;
+  height:50px;
+}
+
+.THIS .bt-quick-attention {
+  /*text-transform: uppercase;*/
+  font-size:11px;
+  color: #0077DD;
+  font-weight: bold;
+  width:145px;
+  height:40px;
+
+}
+
+.THIS .bt-no-ticket-attention {
+  /*text-transform: uppercase;*/
+    line-height: 1.1;
+  font-size:11px;
+  color: #0077DD;
+  font-weight: bold;
+  /*line-height: 15px;*/
+  width:145px;
+  height:40px;
+
+}
+
+.THIS .title_custom {
+    color: #0070d2;
+    font-size: small;
+}
+
+.THIS .hideDiv {
+    display: none;
+}
+
+.THIS .change-place-button{
+  width:40px;
+  height:40px;
+}
+.THIS .error-display{
+  font-size:12px;
+  font-weight: bold;
+  color: #0077DD; 
+ 
+}
+
+.THIS .unattendedcolor{
+  color: #38FF32 !important; 
+}
+
+.THIS .unattendedicon svg{
+  fill: #38FF32; 
+}
+
+.THIS .change-permission-button{
+  width:46px;
+  height:30px;
+}
+
+.THIS .free-place-button{
+  width:40px;
+  height:40px;
+}
+
+.THIS .btchange-place{
+  text-transform: uppercase;
+  background-color: #1797C0;
+  font-size:10px;
+  color: #fff; 
+  width:130px;
+  height:50px;
+}
+
+.THIS .slds-position-bottom {
+  position:fixed; 
+  bottom:8px;
+  width:100%;
+}
+
+.THIS .slds-position-fixed_icon {
+  top:21px;
+  right:10px;
+  width:auto;
+}
+.THIS .slds-position-fixed_border_bottom {
+  position:fixed; 
+  top:29px;
+}
+
+
+.THIS .select-container-size {  
+  height:40px !important;
+}
+.THIS .call-next-icon {
+  padding-left: 4%;
+  padding-bottom:1%;
+}
+.THIS .prioritize-icon {
+  padding-left: 4%;
+  padding-bottom: 2%;
+}
+.THIS .no-ticket-icon {
+ padding-left: 4%;
+}
+.THIS .preAttention-icon {
+ padding-left: 4%;
+}
+
+.THIS .div_menu {
+    padding-bottom:2%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:2%;
+}
+
+.THIS .user-place {
+  
+  font-weight: bold;
+  text-align: center;
+  background-color: #C8C8C8;
+  color: #fff;  
+  width:auto;
+  height:auto;
+}
+
+.THIS .hide-error-message > .slds-form-element__help {
+    display: none;
+}
+
+.THIS .size_queue {  
+  font-size:15px;
+}
+
+.THIS .icon_animation {  
+  width: 100px;
+  height: 100px;
+  background: pink;
+  opacity:1;
+  transition: opacity .5s;
+}
+
+.THIS .icon_animation.fade {
+  opacity:0;
+}
+
+/* BLINKING STYLE */
+
+.THIS .blink{
+    -webkit-animation: blink 500ms infinite alternate;
+    -moz-animation: blink 500ms infinite alternate;
+    -o-animation: blink 500ms infinite alternate;
+    animation: blink 500ms infinite alternate;
+}
+@-webkit-keyframes blink {
+	from { opacity:1; }
+	to { opacity:0.2; }
+}
+@-o-keyframes blink {
+	from { opacity:1; }
+	to { opacity:0.2; }
+}
+@-moz-keyframes blink {
+	from { opacity:1; }
+	to { opacity:0.2; }
+}
+@keyframes blink {
+	from { opacity:1; }
+	to { opacity:0.2; }
+}

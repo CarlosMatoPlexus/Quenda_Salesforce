@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Transit_Attention_Time_Quenda__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(QSF_Forwarding_Time_Acc__c =0, ISBLANK(QSF_Forwarding_Time_Acc__c) ) ,
+  TEXT( FLOOR( (FinishDate__c  -   Call_Date__c) )) &amp; &quot; Días &quot;
+  &amp; TEXT( FLOOR( MOD( (FinishDate__c  -  Call_Date__c) * 24, 24 ) ) ) &amp; &quot; horas &quot;
+  &amp; TEXT( FLOOR( MOD( (FinishDate__c  -  Call_Date__c)* 24 * 60, 60 ) ) ) &amp; &quot; minutos &quot;
+ &amp; TEXT( ROUND( MOD( (FinishDate__c  -  Call_Date__c)* 24 * 60 * 60, 60 ), 0 ) ) &amp; &quot; segundos&quot;,
+   IF( AND(QSF_Forwarding_Time_Acc__c  &lt;&gt; 0,  NOT(ISBLANK(QSF_Forwarding_Time_Acc__c))) ,
+ TEXT( ROUND(No_Transit_Attention_Time__c/86400,0)) &amp; &quot; Días &quot; +
+TEXT(FLOOR(MOD(No_Transit_Attention_Time__c/3600,24))) + &quot; horas &quot; + 
+TEXT( FLOOR(MOD(No_Transit_Attention_Time__c,3600)/60)) + &quot; minutos &quot; +   
+TEXT(ROUND(MOD(MOD(No_Transit_Attention_Time__c,3600),60),0)) + &quot; segundos&quot;
+, &quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>No Transit Attention Time Quenda</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
